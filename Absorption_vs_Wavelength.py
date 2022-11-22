@@ -51,18 +51,32 @@ skull_linreg = np.array([0.11, 0.15, 0.23, 0.22, 0.16, 0.67, 0.54, 2.43, 3.33, 3
 # Two dimensional X array
 twoD_scalp_skull = np.vstack((scalp_linreg,skull_linreg)).T
 
+# Transform X array to polynomial fit
+
+transformer = PolynomialFeatures(degree=2, include_bias=False)
+
+transformer.fit(twoD_scalp_skull)
+
+X_ = transformer.transform(twoD_scalp_skull)
+# print(X_)
+
 # Y array - unknown coefficients
 
 brain_absorption = [statistics.mean(k) for k in zip(GM_800_abs, WM_800_abs)]
 brain_wavelengths = [800, 830, 850, 870, 900, 950,
             1000, 1064, 1100, 1150, 1200, 1250, 1300]
 
-model = LinearRegression().fit(twoD_scalp_skull,brain_absorption)
+model = LinearRegression().fit(twoD_scalp_skull, brain_absorption)
+model1 = LinearRegression().fit(X_,brain_absorption)
 
-r_sq = model.score(twoD_scalp_skull,brain_absorption)
-# print('coefficient of determintation: %f' %(r_sq))
+# r_sq = model.score(twoD_scalp_skull,brain_absorption) # Linear Regression
+# Linear regression r_sq = 0.704422
+r_sq = model1.score(X_,brain_absorption)
+print('coefficient of determintation: %f' %(r_sq))
+# Polynomial regression r_sq = 0.893192
 
-abs_predict = model.predict(twoD_scalp_skull)
+abs_predict2 = model.predict(twoD_scalp_skull) # Linear Regression
+abs_predict1 = model1.predict(X_) # Polynomial Regression
 predict_wavelengths = [801, 900, 980, 1000, 1100, 1200,
                           1300, 1400, 1465, 1500, 1600, 1700, 1740]
 
@@ -72,7 +86,8 @@ ax1.set_ylabel('Absorption Coefficient cm^-1')
 ax1.plot(scalp_wavelengths, scalp_absorption, label='Scalp')
 ax1.plot(skull_bone_wavelengths, skull_bone_absorption, label='Skull Bone')
 ax1.plot(brain_wavelengths, brain_absorption, label='Brain')
-ax1.plot(predict_wavelengths, abs_predict, label='LinReg')
+ax1.plot(predict_wavelengths, abs_predict2, label='LinReg')
+ax1.plot(predict_wavelengths, abs_predict1, label='PolyReg')
 ax1.legend(loc='upper left')
 
 plt.show()
