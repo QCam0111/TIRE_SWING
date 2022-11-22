@@ -3,7 +3,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 import statistics
 
 scalp_absorption = [0.52, 0.40, 0.39, 0.33, 0.19, 0.65,
@@ -71,8 +70,8 @@ model1 = LinearRegression().fit(X_,brain_absorption)
 
 # r_sq = model.score(twoD_scalp_skull,brain_absorption) # Linear Regression
 # Linear regression r_sq = 0.704422
-r_sq = model1.score(X_,brain_absorption)
-print('coefficient of determintation: %f' %(r_sq))
+# r_sq = model1.score(X_,brain_absorption)
+# print('coefficient of determintation: %f' %(r_sq))
 # Polynomial regression r_sq = 0.893192
 
 abs_predict2 = model.predict(twoD_scalp_skull) # Linear Regression
