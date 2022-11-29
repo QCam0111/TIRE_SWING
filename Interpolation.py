@@ -1,10 +1,12 @@
+# Linear and Polynomial regression did not yield promising results
+# import statistics
+# from sklearn.linear_model import LinearRegression
+# from sklearn.preprocessing import PolynomialFeatures
 import numpy as np
 from scipy.interpolate import interp1d
-from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import PolynomialFeatures
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
-import statistics
+
 
 ### Known data
 
@@ -56,6 +58,8 @@ skull_lambda = skull_interpolation(skull_interp_wv)
 GM_lambda = GM_interpolation(GM_interp_wv)
 WM_lambda = WM_interpolation(WM_interp_wv)
 
+### Gray Matter Vertical Offset
+
 GM_scalp_sum = 0
 overlap_length = 0
 
@@ -84,47 +88,100 @@ GM_est_scalp_abs = scalp_absorption + GM_scalp_avg_offset
 # Add avg skull offset to GM
 GM_est_skull_abs = skull_absorption + GM_skull_avg_offset
 
-# Interpolate vertically offset data points for scalp and skull
+### White Matter Vertical Offset
+
+WM_scalp_sum = 0
+overlap_length = 0
+
+# Avg scalp vertical offset over 805 nm to 1300 nm - White Matter
+for x in scalp_interp_wv:
+    if (x >= 805) and (x <= 1300):
+        WM_scalp_sum += WM_lambda[np.where(WM_interp_wv == x)] - scalp_lambda[np.where(scalp_interp_wv == x)]
+        overlap_length += 1
+
+WM_scalp_avg_offset = WM_scalp_sum/(overlap_length)
+
+WM_skull_sum = 0
+overlap_length = 0
+
+# Avg skull vertical offset over 801 nm to 1300 nm - White Matter
+for y in skull_interp_wv:
+    if (y >= 801) and (y <= 1300):
+        WM_skull_sum += WM_lambda[np.where(WM_interp_wv == y)] - skull_lambda[np.where(skull_interp_wv == y)]
+        overlap_length += 1
+
+WM_skull_avg_offset = WM_skull_sum/(overlap_length)
+
+# Add avg scalp offset to WM
+WM_est_scalp_abs = scalp_absorption + WM_scalp_avg_offset
+
+# Add avg skull offset to WM
+WM_est_skull_abs = skull_absorption + WM_skull_avg_offset
+
+# Interpolate vertically offset data points for scalp and skull - Gray Matter
 GM_est_scalp_interp = interp1d(scalp_wavelengths, GM_est_scalp_abs, kind='cubic')
 GM_est_skull_interp = interp1d(skull_wavelengths, GM_est_skull_abs, kind='cubic')
 
-# Interpolated functions for estimated Gray Matter scalp and skull
+# Interpolate vertically offset data points for scalp and skull - White Matter
+WM_est_scalp_interp = interp1d(scalp_wavelengths, WM_est_scalp_abs, kind='cubic')
+WM_est_skull_interp = interp1d(skull_wavelengths, WM_est_skull_abs, kind='cubic')
+
+# Interpolated functions for estimated Gray Matter scalp and skull - Gray Matter
 GM_scalp_estimation = GM_est_scalp_interp(scalp_interp_wv)
 GM_skull_estimation = GM_est_skull_interp(skull_interp_wv)
 
-# Average the interpolated functions
-# Note skull wavelength range is limited to match scalp wavelength range (805 nm - 2000 nm)
+# Interpolated functions for estimated Gray Matter scalp and skull - White Matter
+WM_scalp_estimation = WM_est_scalp_interp(scalp_interp_wv)
+WM_skull_estimation = WM_est_skull_interp(skull_interp_wv)
+
+# Average the interpolated functions - Gray Matter
+# Note: Skull wavelength range is limited to match scalp wavelength range (805 nm - 2000 nm)
 GM_avg_est_lambda = (GM_scalp_estimation + GM_skull_estimation[4:1999]) / 2
+
+# Average the interpolated functions - White Matter
+# Note: Skull wavelength range is limited to match scalp wavelength range (805 nm - 2000 nm)
+WM_avg_est_lambda = (WM_scalp_estimation + WM_skull_estimation[4:1999]) / 2
 
 ### Plots - dashed line plots are the interpolated functions
 
-fig, ax1 = plt.subplots()
-ax1.set_xlabel('Wavelength (nm)')
-ax1.set_ylabel('Absorption Coefficient cm^-1')
+plt.xlabel('Wavelength (nm)')
+plt.ylabel('Absorption Coefficient cm^-1')
 
 ### Scalp
-ax1.plot(scalp_interp_wv, scalp_lambda, '--')
-ax1.scatter(scalp_wavelengths, scalp_absorption, label='Scalp')
+plt.plot(scalp_interp_wv, scalp_lambda, '--', label='Scalp', color='red')
+plt.scatter(scalp_wavelengths, scalp_absorption, color='red')
 
 ### Skull
-ax1.plot(skull_interp_wv, skull_lambda, '--')
-ax1.scatter(skull_wavelengths, skull_absorption, label='Skull Bone')
+plt.plot(skull_interp_wv, skull_lambda, '--', label='Skull Bone', color='blue')
+plt.scatter(skull_wavelengths, skull_absorption, color='blue')
 
 ### Gray Matter
-ax1.plot(GM_interp_wv, GM_lambda, '--')
-ax1.scatter(GM_wavelengths, GM_absorption, label='Gray Matter')
+plt.plot(GM_interp_wv, GM_lambda, '--', label='Gray Matter', color='gray')
+plt.scatter(GM_wavelengths, GM_absorption, color='gray')
 
 ### White Matter
-ax1.plot(WM_interp_wv, WM_lambda, '--')
-ax1.scatter(WM_wavelengths, WM_absorption, label='White Matter')
+plt.plot(WM_interp_wv, WM_lambda, '--', label='White Matter', color='black')
+plt.scatter(WM_wavelengths, WM_absorption, color='black')
 
 ### Estimation for Gray Matter
-ax1.plot(scalp_interp_wv, GM_scalp_estimation, '--')
-ax1.plot(skull_interp_wv, GM_skull_estimation, '--')
-ax1.plot(scalp_interp_wv, GM_avg_est_lambda, '--', label='GM Avg b/t Scalp and Skull')
-ax1.scatter(scalp_wavelengths, GM_est_scalp_abs, label='GM Scalp Estimation')
-ax1.scatter(skull_wavelengths, GM_est_skull_abs, label='GM Skull Estimation')
 
-ax1.legend(loc='upper right')
+plt.plot(scalp_interp_wv, GM_scalp_estimation, '--', label='GM Scalp Estimation', color='darkgreen')
+plt.scatter(scalp_wavelengths, GM_est_scalp_abs, color='darkgreen')
 
+plt.plot(skull_interp_wv, GM_skull_estimation, '--', label='GM Skull Estimation', color='green')
+plt.scatter(skull_wavelengths, GM_est_skull_abs, color='green')
+
+plt.plot(scalp_interp_wv, GM_avg_est_lambda, '--', label='GM Avg b/t Scalp and Skull', color='lime')
+
+### Estimation for White Matter
+
+plt.plot(scalp_interp_wv, WM_scalp_estimation, '--', label='WM Scalp Estimation', color='darkviolet')
+plt.scatter(scalp_wavelengths, WM_est_scalp_abs, color='darkviolet')
+
+plt.plot(skull_interp_wv, WM_skull_estimation, '--', label='WM Skull Estimation', color='darkorchid')
+plt.scatter(skull_wavelengths, WM_est_skull_abs, color='darkorchid')
+
+plt.plot(scalp_interp_wv, WM_avg_est_lambda, '--', label='WM Avg b/t Scalp and Skull', color='purple')
+
+plt.legend(bbox_to_anchor=(1.0, 1.0), loc='upper left')
 plt.show()
