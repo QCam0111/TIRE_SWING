@@ -6,6 +6,8 @@ from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
 import statistics
 
+### Known data
+
 # Scalp wavelengths (805 - 2000 nm) and scalp absorption
 
 scalp_absorption = [0.52, 0.40, 0.39, 0.33, 0.19, 0.65,
@@ -57,7 +59,7 @@ WM_lambda = WM_interpolation(WM_interp_wv)
 GM_scalp_sum = 0
 overlap_length = 0
 
-# Avg vertical offset - Gray Matter
+# Avg scalp vertical offset over 805 nm to 1300 nm - Gray Matter
 for x in scalp_interp_wv:
     if (x >= 805) and (x <= 1300):
         GM_scalp_sum += GM_lambda[np.where(GM_interp_wv == x)] - scalp_lambda[np.where(scalp_interp_wv == x)]
@@ -68,6 +70,7 @@ GM_scalp_avg_offset = GM_scalp_sum/(overlap_length)
 GM_skull_sum = 0
 overlap_length = 0
 
+# Avg skull vertical offset over 801 nm to 1300 nm - Gray Matter
 for y in skull_interp_wv:
     if (y >= 801) and (y <= 1300):
         GM_skull_sum += GM_lambda[np.where(GM_interp_wv == y)] - skull_lambda[np.where(skull_interp_wv == y)]
@@ -75,51 +78,52 @@ for y in skull_interp_wv:
 
 GM_skull_avg_offset = GM_skull_sum/(overlap_length)
 
-# y = mx+b approach did not yield promising results
-# # b
-# GM_avg_offset = (GM_scalp_avg_offset + GM_skull_avg_offset)/2.0
-
-# scalp_slope = np.gradient(scalp_lambda)
-# skull_slope = np.gradient(skull_lambda)
-# # m
-# GM_avg_slope = (scalp_slope[np.where(scalp_interp_wv == 1550)] + skull_slope[np.where(skull_interp_wv == 1550)])/2.0
-
-# GM_1550 = (GM_avg_slope*1550)+GM_avg_offset
-
-GM_est_scalp_abs = scalp_absorption
-i = 0
-
 # Add avg scalp offset to GM
-for x in GM_est_scalp_abs:
-    x = x + GM_scalp_avg_offset
-    GM_est_scalp_abs[i] = x
-    i += 1
-
-GM_est_skull_abs = skull_absorption
-i = 0
+GM_est_scalp_abs = scalp_absorption + GM_scalp_avg_offset
 
 # Add avg skull offset to GM
-for x in GM_est_skull_abs:
-    x = x + GM_skull_avg_offset
-    GM_est_skull_abs[i] = x
-    i += 1
+GM_est_skull_abs = skull_absorption + GM_skull_avg_offset
 
-### Plots
+# Interpolate vertically offset data points for scalp and skull
+GM_est_scalp_interp = interp1d(scalp_wavelengths, GM_est_scalp_abs, kind='cubic')
+GM_est_skull_interp = interp1d(skull_wavelengths, GM_est_skull_abs, kind='cubic')
+
+# Interpolated functions for estimated Gray Matter scalp and skull
+GM_scalp_estimation = GM_est_scalp_interp(scalp_interp_wv)
+GM_skull_estimation = GM_est_skull_interp(skull_interp_wv)
+
+# Average the interpolated functions
+# Note skull wavelength range is limited to match scalp wavelength range (805 nm - 2000 nm)
+GM_avg_est_lambda = (GM_scalp_estimation + GM_skull_estimation[4:1999]) / 2
+
+### Plots - dashed line plots are the interpolated functions
 
 fig, ax1 = plt.subplots()
 ax1.set_xlabel('Wavelength (nm)')
 ax1.set_ylabel('Absorption Coefficient cm^-1')
+
+### Scalp
+ax1.plot(scalp_interp_wv, scalp_lambda, '--')
 ax1.scatter(scalp_wavelengths, scalp_absorption, label='Scalp')
+
+### Skull
+ax1.plot(skull_interp_wv, skull_lambda, '--')
 ax1.scatter(skull_wavelengths, skull_absorption, label='Skull Bone')
+
+### Gray Matter
+ax1.plot(GM_interp_wv, GM_lambda, '--')
 ax1.scatter(GM_wavelengths, GM_absorption, label='Gray Matter')
+
+### White Matter
+ax1.plot(WM_interp_wv, WM_lambda, '--')
 ax1.scatter(WM_wavelengths, WM_absorption, label='White Matter')
 
-ax1.plot(scalp_interp_wv, scalp_lambda, '--')
-ax1.plot(skull_interp_wv, skull_lambda, '--')
-ax1.plot(GM_interp_wv, GM_lambda, '--')
-ax1.plot(WM_interp_wv, WM_lambda, '--')
-ax1.scatter(scalp_wavelengths, GM_est_scalp_abs, label='GM Extended')
-ax1.scatter(skull_wavelengths, GM_est_skull_abs, label='WM Extended')
+### Estimation for Gray Matter
+ax1.plot(scalp_interp_wv, GM_scalp_estimation, '--')
+ax1.plot(skull_interp_wv, GM_skull_estimation, '--')
+ax1.plot(scalp_interp_wv, GM_avg_est_lambda, '--', label='GM Avg b/t Scalp and Skull')
+ax1.scatter(scalp_wavelengths, GM_est_scalp_abs, label='GM Scalp Estimation')
+ax1.scatter(skull_wavelengths, GM_est_skull_abs, label='GM Skull Estimation')
 
 ax1.legend(loc='upper right')
 
