@@ -57,7 +57,7 @@ WM_lambda = WM_interpolation(WM_interp_wv)
 GM_scalp_sum = 0
 overlap_length = 0
 
-# Avg vertical offset
+# Avg vertical offset - Gray Matter
 for x in scalp_interp_wv:
     if (x >= 805) and (x <= 1300):
         GM_scalp_sum += GM_lambda[np.where(GM_interp_wv == x)] - scalp_lambda[np.where(scalp_interp_wv == x)]
@@ -75,16 +75,34 @@ for y in skull_interp_wv:
 
 GM_skull_avg_offset = GM_skull_sum/(overlap_length)
 
-# b
-GM_avg_offset = (GM_scalp_avg_offset + GM_skull_avg_offset)/2.0
+# y = mx+b approach did not yield promising results
+# # b
+# GM_avg_offset = (GM_scalp_avg_offset + GM_skull_avg_offset)/2.0
 
-scalp_slope = np.gradient(scalp_lambda)
-skull_slope = np.gradient(skull_lambda)
+# scalp_slope = np.gradient(scalp_lambda)
+# skull_slope = np.gradient(skull_lambda)
+# # m
+# GM_avg_slope = (scalp_slope[np.where(scalp_interp_wv == 1550)] + skull_slope[np.where(skull_interp_wv == 1550)])/2.0
 
-# m
-GM_avg_slope = (scalp_slope[np.where(scalp_interp_wv == 1550)] + skull_slope[np.where(skull_interp_wv == 1550)])/2.0
+# GM_1550 = (GM_avg_slope*1550)+GM_avg_offset
 
-GM_1550 = (GM_avg_slope*1550)+GM_avg_offset
+GM_est_scalp_abs = scalp_absorption
+i = 0
+
+# Add avg scalp offset to GM
+for x in GM_est_scalp_abs:
+    x = x + GM_scalp_avg_offset
+    GM_est_scalp_abs[i] = x
+    i += 1
+
+GM_est_skull_abs = skull_absorption
+i = 0
+
+# Add avg skull offset to GM
+for x in GM_est_skull_abs:
+    x = x + GM_skull_avg_offset
+    GM_est_skull_abs[i] = x
+    i += 1
 
 ### Plots
 
@@ -100,7 +118,8 @@ ax1.plot(scalp_interp_wv, scalp_lambda, '--')
 ax1.plot(skull_interp_wv, skull_lambda, '--')
 ax1.plot(GM_interp_wv, GM_lambda, '--')
 ax1.plot(WM_interp_wv, WM_lambda, '--')
-ax1.plot(1550, GM_1550, marker='o')
+ax1.scatter(scalp_wavelengths, GM_est_scalp_abs, label='GM Extended')
+ax1.scatter(skull_wavelengths, GM_est_skull_abs, label='WM Extended')
 
 ax1.legend(loc='upper right')
 
