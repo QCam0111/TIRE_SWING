@@ -148,42 +148,42 @@ plt.xlabel('Wavelength (nm)')
 plt.ylabel('Absorption Coefficient cm^-1')
 
 ### Scalp
-plt.plot(scalp_interp_wv, scalp_lambda, '--', label='Scalp', color='red')
-plt.scatter(scalp_wavelengths, scalp_absorption, color='red')
+plt.plot(scalp_interp_wv, scalp_lambda, ':', label='Scalp', color='#DDCC77')
+plt.scatter(scalp_wavelengths, scalp_absorption, color='#DDCC77')
 
 ### Skull
-plt.plot(skull_interp_wv, skull_lambda, '--', label='Skull Bone', color='blue')
-plt.scatter(skull_wavelengths, skull_absorption, color='blue')
+plt.plot(skull_interp_wv, skull_lambda, ':', label='Skull Bone', color='#88CCEE')
+plt.scatter(skull_wavelengths, skull_absorption, color='#88CCEE')
 
 ### Gray Matter
-plt.plot(GM_interp_wv, GM_lambda, '--', label='Gray Matter', color='gray')
-plt.scatter(GM_wavelengths, GM_absorption, color='gray')
+plt.plot(GM_interp_wv, GM_lambda, ':', label='Gray Matter', color='#44AA99')
+plt.scatter(GM_wavelengths, GM_absorption, color='#44AA99')
 
 ### White Matter
-plt.plot(WM_interp_wv, WM_lambda, '--', label='White Matter', color='black')
-plt.scatter(WM_wavelengths, WM_absorption, color='black')
+plt.plot(WM_interp_wv, WM_lambda, ':', label='White Matter', color='#882255')
+plt.scatter(WM_wavelengths, WM_absorption, color='#882255')
 
 ### Estimation for Gray Matter
 
-plt.plot(scalp_interp_wv, GM_scalp_estimation, '--', label='GM Scalp Estimation', color='darkgreen')
-plt.scatter(scalp_wavelengths, GM_est_scalp_abs, color='darkgreen')
+plt.plot(skull_interp_wv, GM_skull_estimation, ls=(5, (10, 3)), label='GM Skull Estimation', color='#117733')
+plt.scatter(skull_wavelengths, GM_est_skull_abs, color='#117733')
 
-plt.plot(skull_interp_wv, GM_skull_estimation, '--', label='GM Skull Estimation', color='green')
-plt.scatter(skull_wavelengths, GM_est_skull_abs, color='green')
+plt.plot(scalp_interp_wv, GM_avg_est_lambda, '-.', label='GM Avg b/t Scalp and Skull', color='#117733')
 
-plt.plot(scalp_interp_wv, GM_avg_est_lambda, '--', label='GM Avg b/t Scalp and Skull', color='lime')
+plt.plot(scalp_interp_wv, GM_scalp_estimation, '--', label='GM Scalp Estimation', color='#117733')
+plt.scatter(scalp_wavelengths, GM_est_scalp_abs, color='#117733')
 
 ### Estimation for White Matter
 
-plt.plot(scalp_interp_wv, WM_scalp_estimation, '--', label='WM Scalp Estimation', color='darkviolet')
-plt.scatter(scalp_wavelengths, WM_est_scalp_abs, color='darkviolet')
+plt.plot(skull_interp_wv, WM_skull_estimation, ls=(5, (10, 3)), linewidth=2, label='WM Skull Estimation', color='#332288')
+plt.scatter(skull_wavelengths, WM_est_skull_abs, color='#332288')
 
-plt.plot(skull_interp_wv, WM_skull_estimation, '--', label='WM Skull Estimation', color='darkorchid')
-plt.scatter(skull_wavelengths, WM_est_skull_abs, color='darkorchid')
+plt.plot(scalp_interp_wv, WM_avg_est_lambda, '-.', linewidth=2, label='WM Avg b/t Scalp and Skull', color='#332288')
 
-plt.plot(scalp_interp_wv, WM_avg_est_lambda, '--', label='WM Avg b/t Scalp and Skull', color='purple')
+plt.plot(scalp_interp_wv, WM_scalp_estimation, '--', linewidth=2, label='WM Scalp Estimation', color='#332288')
+plt.scatter(scalp_wavelengths, WM_est_scalp_abs, color='#332288')
 
-plt.axvline(x = 1550, color = 'crimson', label = '1550 nm')
+plt.axvline(x = 1550, color = '#CC6677', label = '1550 nm')
 plt.axvline(x = 1300, color = 'black', label = 'End of GM/WM Known Data', linestyle = '--')
 
 # Add 1550 nm absorption labels
