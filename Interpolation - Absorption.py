@@ -3,6 +3,7 @@
 # from sklearn.linear_model import LinearRegression
 # from sklearn.preprocessing import PolynomialFeatures
 import numpy as np
+import matplotlib as mpl
 from scipy.interpolate import interp1d
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
@@ -144,8 +145,10 @@ WM_avg_est_lambda = (WM_scalp_estimation + WM_skull_estimation[4:1999]) / 2
 
 ### Plots - dashed line plots are the interpolated functions
 
-plt.xlabel('Wavelength (nm)')
-plt.ylabel('Absorption Coefficient cm^-1')
+mpl.rc('font', family='Times New Roman')
+
+plt.xlabel('Wavelength (nm)', fontsize='xx-large')
+plt.ylabel('Absorption Coefficient cm^-1', fontsize='xx-large')
 
 ### Scalp
 plt.plot(scalp_interp_wv, scalp_lambda, ':', label='Scalp', color='#DDCC77')
@@ -187,11 +190,12 @@ plt.axvline(x = 1550, color = '#CC6677', label = '1550 nm')
 plt.axvline(x = 1300, color = 'black', label = 'End of GM/WM Known Data', linestyle = '--')
 
 # Add 1550 nm absorption labels
-plt.annotate("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(1550)) + " cm^-1", xy=(1550, scalp_interpolation(1550)), xytext=(1590, -0.5), arrowprops=dict(arrowstyle="->"))
-plt.annotate("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(1550)) + " cm^-1", xy=(1550, skull_interpolation(1550)), xytext=(1650, 0), arrowprops=dict(arrowstyle="->"))
-plt.annotate("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==1550)])) + " cm^-1", xy=(1550, WM_avg_est_lambda[np.where(scalp_interp_wv==1550)]), xytext=(1710, 0.5), arrowprops=dict(arrowstyle="->"))
-plt.annotate("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1", xy=(1550, GM_skull_estimation[np.where(skull_interp_wv==1550)]), xytext=(1780, 1.0), arrowprops=dict(arrowstyle="->"))
-plt.annotate("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1", xy=(1550, WM_skull_estimation[np.where(skull_interp_wv==1550)]), xytext=(1830, 1.5), arrowprops=dict(arrowstyle="->"))
+# plt.annotate("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(1550)) + " cm^-1", xy=(1550, scalp_interpolation(1550)), xytext=(1590, -0.5), arrowprops=dict(arrowstyle="->"))
+# plt.annotate("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(1550)) + " cm^-1", xy=(1550, skull_interpolation(1550)), xytext=(1650, 0), arrowprops=dict(arrowstyle="->"))
+# plt.annotate("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==1550)])) + " cm^-1", xy=(1550, WM_avg_est_lambda[np.where(scalp_interp_wv==1550)]), xytext=(1710, 0.5), arrowprops=dict(arrowstyle="->"))
+# plt.annotate("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1", xy=(1550, GM_skull_estimation[np.where(skull_interp_wv==1550)]), xytext=(1780, 1.0), arrowprops=dict(arrowstyle="->"))
+# plt.annotate("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1", xy=(1550, WM_skull_estimation[np.where(skull_interp_wv==1550)]), xytext=(1830, 1.5), arrowprops=dict(arrowstyle="->"))
 
-plt.legend(loc='upper right')
+plt.title('Absorption Coefficient Approximation', fontsize='xx-large')
+plt.legend(loc='best', fontsize='xx-large')
 plt.show()
