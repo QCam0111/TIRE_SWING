@@ -132,8 +132,11 @@ GM_scalp_estimation = GM_est_scalp_interp(scalp_interp_wv)
 GM_skull_estimation = GM_est_skull_interp(skull_interp_wv)
 
 # Interpolated functions for estimated Gray Matter scalp and skull - White Matter
-WM_scalp_estimation = WM_est_scalp_interp(scalp_interp_wv)
-WM_skull_estimation = WM_est_skull_interp(skull_interp_wv)
+# 5.52 constant is used to align the predicted WM data with the last point of the 
+# known WM data. This provides a better fit of the data.
+WM_scalp_estimation = WM_est_scalp_interp(scalp_interp_wv) - 5.52
+WM_skull_estimation = WM_est_skull_interp(skull_interp_wv) - 5.52
+
 
 # Average the interpolated functions - Gray Matter
 # Note: Skull wavelength range is limited to match scalp wavelength range (805 nm - 2000 nm)
@@ -179,12 +182,12 @@ plt.scatter(scalp_wavelengths, GM_est_scalp_abs, color='#117733')
 ### Estimation for White Matter
 
 plt.plot(skull_interp_wv, WM_skull_estimation, ls=(5, (10, 3)), linewidth=2, label='WM Skull Estimation', color='#332288')
-plt.scatter(skull_wavelengths, WM_est_skull_abs, color='#332288')
+plt.scatter(skull_wavelengths, WM_est_skull_abs - 5.52, color='#332288')
 
 plt.plot(scalp_interp_wv, WM_avg_est_lambda, '-.', linewidth=2, label='WM Avg b/t Scalp and Skull', color='#332288')
 
 plt.plot(scalp_interp_wv, WM_scalp_estimation, '--', linewidth=2, label='WM Scalp Estimation', color='#332288')
-plt.scatter(scalp_wavelengths, WM_est_scalp_abs, color='#332288')
+plt.scatter(scalp_wavelengths, WM_est_scalp_abs - 5.52, color='#332288')
 
 plt.axvline(x = 1550, color = '#CC6677', label = '1550 nm')
 plt.axvline(x = 1300, color = 'black', label = 'End of GM/WM Known Data', linestyle = '--')
