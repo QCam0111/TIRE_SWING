@@ -150,8 +150,8 @@ WM_avg_est_lambda = (WM_scalp_estimation + WM_skull_estimation[4:1999]) / 2
 
 mpl.rc('font', family='Times New Roman')
 
-plt.xlabel('Wavelength (nm)', fontsize='xx-large')
-plt.ylabel('scattering Coefficient cm^-1', fontsize='xx-large')
+plt.xlabel('Wavelength (nm)', fontsize='x-large')
+plt.ylabel('Scattering Coefficient cm^-1', fontsize='x-large')
 
 ### Scalp
 plt.plot(scalp_interp_wv, scalp_lambda, ':', label='Scalp', color='#DDCC77')
@@ -174,17 +174,17 @@ plt.scatter(WM_wavelengths, WM_scattering, color='#882255')
 plt.plot(skull_interp_wv, GM_skull_estimation, ls=(5, (10, 3)), label='GM Skull Estimation', color='#117733')
 plt.scatter(skull_wavelengths, GM_est_skull_abs, color='#117733')
 
-plt.plot(scalp_interp_wv, GM_avg_est_lambda, '-.', label='GM Avg b/t Scalp and Skull', color='#117733')
+plt.plot(scalp_interp_wv, GM_avg_est_lambda, '-.', label='GM Avg. Scalp and Skull', color='#117733')
 
 plt.plot(scalp_interp_wv, GM_scalp_estimation, '--', label='GM Scalp Estimation', color='#117733')
 plt.scatter(scalp_wavelengths, GM_est_scalp_abs, color='#117733')
 
 ### Estimation for White Matter
-
+6
 plt.plot(skull_interp_wv, WM_skull_estimation, ls=(5, (10, 3)), linewidth=2, label='WM Skull Estimation', color='#332288')
 plt.scatter(skull_wavelengths, WM_est_skull_abs - 5.52, color='#332288')
 
-plt.plot(scalp_interp_wv, WM_avg_est_lambda, '-.', linewidth=2, label='WM Avg b/t Scalp and Skull', color='#332288')
+plt.plot(scalp_interp_wv, WM_avg_est_lambda, '-.', linewidth=2, label='WM Avg. Scalp and Skull', color='#332288')
 
 plt.plot(scalp_interp_wv, WM_scalp_estimation, '--', linewidth=2, label='WM Scalp Estimation', color='#332288')
 plt.scatter(scalp_wavelengths, WM_est_scalp_abs - 5.52, color='#332288')
@@ -199,15 +199,15 @@ plt.axvline(x = 1300, color = 'black', label = 'End of GM/WM Known Data', linest
 # plt.annotate("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1", xy=(1550, GM_skull_estimation[np.where(skull_interp_wv==1550)]), xytext=(1780, 1.0), arrowprops=dict(arrowstyle="->"))
 # plt.annotate("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1", xy=(1550, WM_skull_estimation[np.where(skull_interp_wv==1550)]), xytext=(1830, 1.5), arrowprops=dict(arrowstyle="->"))
 
-print("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(1550)) + " cm^-1")
-print("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(1550)) + " cm^-1")
-print("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
-print("Avg. Gray Matter Extrapolation: " + "{:.3f}".format(float(GM_avg_est_lambda[np.where(scalp_interp_wv==1550)])) + " cm^-1")
-print("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
-print("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
-print("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==1550)])) + " cm^-1")
-print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
+# print("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(1550)) + " cm^-1")
+# print("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(1550)) + " cm^-1")
+# print("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
+# print("Avg. Gray Matter Extrapolation: " + "{:.3f}".format(float(GM_avg_est_lambda[np.where(scalp_interp_wv==1550)])) + " cm^-1")
+# print("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
+# print("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
+# print("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==1550)])) + " cm^-1")
+# print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
 
-# plt.title('Scattering Coefficient Approximation', fontsize='xx-large')
-# plt.legend(loc='best', fontsize='xx-large')
-# plt.show()
+plt.title('Scattering Coefficient Approximation', fontsize='x-large')
+plt.legend(loc='best', fontsize='large')
+plt.show()
