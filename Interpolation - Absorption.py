@@ -146,9 +146,11 @@ WM_avg_est_lambda = (WM_scalp_estimation + WM_skull_estimation[4:1999]) / 2
 ### Plots - dashed line plots are the interpolated functions
 
 mpl.rc('font', family='Times New Roman')
+plt.rc('xtick', labelsize=27)    # fontsize of the tick labels
+plt.rc('ytick', labelsize=27)    # fontsize of the tick labels
 
-plt.xlabel('Wavelength (nm)', fontsize='xx-large')
-plt.ylabel('Absorption Coefficient cm^-1', fontsize='xx-large')
+plt.xlabel('Wavelength (nm)', fontsize=35)
+plt.ylabel('Absorption Coefficient cm^-1', fontsize=35)
 
 ### Scalp
 plt.plot(scalp_interp_wv, scalp_lambda, ':', label='Scalp', color='#DDCC77')
@@ -171,7 +173,7 @@ plt.scatter(WM_wavelengths, WM_absorption, color='#882255')
 plt.plot(skull_interp_wv, GM_skull_estimation, ls=(5, (10, 3)), label='GM Skull Estimation', color='#117733')
 plt.scatter(skull_wavelengths, GM_est_skull_abs, color='#117733')
 
-plt.plot(scalp_interp_wv, GM_avg_est_lambda, '-.', label='GM Avg b/t Scalp and Skull', color='#117733')
+plt.plot(scalp_interp_wv, GM_avg_est_lambda, '-.', label='GM Avg. Scalp and Skull', color='#117733')
 
 plt.plot(scalp_interp_wv, GM_scalp_estimation, '--', label='GM Scalp Estimation', color='#117733')
 plt.scatter(scalp_wavelengths, GM_est_scalp_abs, color='#117733')
@@ -181,7 +183,7 @@ plt.scatter(scalp_wavelengths, GM_est_scalp_abs, color='#117733')
 plt.plot(skull_interp_wv, WM_skull_estimation, ls=(5, (10, 3)), linewidth=2, label='WM Skull Estimation', color='#332288')
 plt.scatter(skull_wavelengths, WM_est_skull_abs, color='#332288')
 
-plt.plot(scalp_interp_wv, WM_avg_est_lambda, '-.', linewidth=2, label='WM Avg b/t Scalp and Skull', color='#332288')
+plt.plot(scalp_interp_wv, WM_avg_est_lambda, '-.', linewidth=2, label='WM Avg. Scalp and Skull', color='#332288')
 
 plt.plot(scalp_interp_wv, WM_scalp_estimation, '--', linewidth=2, label='WM Scalp Estimation', color='#332288')
 plt.scatter(scalp_wavelengths, WM_est_scalp_abs, color='#332288')
@@ -208,8 +210,6 @@ plt.axvline(x = 1300, color = 'black', label = 'End of GM/WM Known Data', linest
 # print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
 
 
-
-
-plt.title('Absorption Coefficient Approximation', fontsize='x-large')
-plt.legend(loc='best', fontsize='x-large')
+plt.title('Absorption Coefficient Approximation', fontsize=35)
+plt.legend(loc='best', fontsize=30)
 plt.show()
