@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1684981785 "d:/OPREL-Git/Alternate-Transactions-Articles-LaTeX-template/SWING.tex" "SWING.pdf" "SWING" 1684981786 0
+["pdflatex"] 1685047779 "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" "SWING.pdf" "SWING" 1685047780 0
   "LOGO-generic-web.eps" 1684864158 96860 991288daab2defa3899e7c0d849884be ""
-  "SWING.aux" 1684981786 560 21b621445fce99e6daf7dda0400f453e "pdflatex"
-  "SWING.tex" 1684981786 5191 0a3e7a623e589c33f3081c1886db0e24 ""
+  "SWING.aux" 1685047780 692 4aed191b70c6be04cee240f03c78a1f7 "pdflatex"
+  "SWING.tex" 1685047777 5273 132767eb52918ae525003c2e3fcd8572 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1684778437 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1684778880 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1684779220 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -78,7 +78,7 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1684782593 4683009 81ac55e6554f9124653631026fb1fc4e ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1684782795 7888781 41e60ff471aa4396cbcb39e3cf419962 ""
   "c:/texlive/2023/texmf.cnf" 1684782571 713 e69b156964470283e0530f5060668171 ""
-  "d:/OPREL-Git/Alternate-Transactions-Articles-LaTeX-template/SWING.tex" 1684981786 5191 0a3e7a623e589c33f3081c1886db0e24 ""
+  "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" 1685047777 5273 132767eb52918ae525003c2e3fcd8572 ""
   "generic.sty" 1684864158 192 e8d3ecc691fbbb2da183dfc84a675b29 ""
   "ieeecolor.cls" 1684864158 224773 9f9540495f1e1a992a162661c1be18be ""
   (generated)
