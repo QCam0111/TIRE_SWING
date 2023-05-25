@@ -179,7 +179,7 @@ WM_avg_est_lambda = (WM_scalp_estimation + WM_skull_estimation[4:1999]) / 2
 
 coef_of_determ = r2_score(skull_interpolation(skull_interp_wv)[4:1999], skull_est_scalp_interp(scalp_interp_wv))
 
-print(coef_of_determ)
+# print(coef_of_determ)
 
 ### Plots - dashed line plots are the interpolated functions
 
@@ -242,50 +242,50 @@ plt.axvline(x = 1300, color = 'black', label = 'End of GM/WM Known Data', linest
 # plt.annotate("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1", xy=(1550, WM_scalp_estimation[np.where(skull_interp_wv==1550)]), xytext=(1850, 1.5), arrowprops=dict(arrowstyle="->"))
 # plt.annotate("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1", xy=(1550, GM_scalp_estimation[np.where(skull_interp_wv==1550)]), xytext=(1870, 1.0), arrowprops=dict(arrowstyle="->"))
 
-""" Print out 1550 nm coefficients """
-# print("1550")
-# print("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(1550)) + " cm^-1")
-# print("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(1550)) + " cm^-1")
-# print("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
-# print("Avg. Gray Matter Extrapolation: " + "{:.3f}".format(float(GM_avg_est_lambda[np.where(scalp_interp_wv==1550)])) + " cm^-1")
-# print("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
-# print("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
-# print("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==1550)])) + " cm^-1")
-# print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
+# Print out 810 nm coefficients
+print("810")
+print("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(810)) + " cm^-1")
+print("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(810)) + " cm^-1")
+print("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==810)])) + " cm^-1")
+print("Avg. Gray Matter Extrapolation: " + "{:.3f}".format(float(GM_avg_est_lambda[np.where(scalp_interp_wv==810)])) + " cm^-1")
+print("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==810)])) + " cm^-1")
+print("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==810)])) + " cm^-1")
+print("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==810)])) + " cm^-1")
+print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==810)])) + " cm^-1")
 
-# # Print out 1064 nm coefficients
-# print("1064")
-# print("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(1064)) + " cm^-1")
-# print("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(1064)) + " cm^-1")
-# print("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==1064)])) + " cm^-1")
-# print("Avg. Gray Matter Extrapolation: " + "{:.3f}".format(float(GM_avg_est_lambda[np.where(scalp_interp_wv==1064)])) + " cm^-1")
-# print("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==1064)])) + " cm^-1")
-# print("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==1064)])) + " cm^-1")
-# print("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==1064)])) + " cm^-1")
-# print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==1064)])) + " cm^-1")
+# Print out 980 nm coefficients
+print("980")
+print("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(980)) + " cm^-1")
+print("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(980)) + " cm^-1")
+print("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==980)])) + " cm^-1")
+print("Avg. Gray Matter Extrapolation: " + "{:.3f}".format(float(GM_avg_est_lambda[np.where(scalp_interp_wv==980)])) + " cm^-1")
+print("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==980)])) + " cm^-1")
+print("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==980)])) + " cm^-1")
+print("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==980)])) + " cm^-1")
+print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==980)])) + " cm^-1")
 
-# # Print out 980 nm coefficients
-# print("980")
-# print("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(980)) + " cm^-1")
-# print("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(980)) + " cm^-1")
-# print("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==980)])) + " cm^-1")
-# print("Avg. Gray Matter Extrapolation: " + "{:.3f}".format(float(GM_avg_est_lambda[np.where(scalp_interp_wv==980)])) + " cm^-1")
-# print("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==980)])) + " cm^-1")
-# print("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==980)])) + " cm^-1")
-# print("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==980)])) + " cm^-1")
-# print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==980)])) + " cm^-1")
+# Print out 1064 nm coefficients
+print("1064")
+print("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(1064)) + " cm^-1")
+print("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(1064)) + " cm^-1")
+print("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==1064)])) + " cm^-1")
+print("Avg. Gray Matter Extrapolation: " + "{:.3f}".format(float(GM_avg_est_lambda[np.where(scalp_interp_wv==1064)])) + " cm^-1")
+print("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==1064)])) + " cm^-1")
+print("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==1064)])) + " cm^-1")
+print("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==1064)])) + " cm^-1")
+print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==1064)])) + " cm^-1")
 
-# # Print out 810 nm coefficients
-# print("810")
-# print("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(810)) + " cm^-1")
-# print("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(810)) + " cm^-1")
-# print("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==810)])) + " cm^-1")
-# print("Avg. Gray Matter Extrapolation: " + "{:.3f}".format(float(GM_avg_est_lambda[np.where(scalp_interp_wv==810)])) + " cm^-1")
-# print("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==810)])) + " cm^-1")
-# print("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==810)])) + " cm^-1")
-# print("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==810)])) + " cm^-1")
-# print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==810)])) + " cm^-1")
+# Print out 1550 nm coefficients
+print("1550")
+print("Scalp Interpolation: " + "{:.3f}".format(scalp_interpolation(1550)) + " cm^-1")
+print("Skull Interpolation: " + "{:.3f}".format(skull_interpolation(1550)) + " cm^-1")
+print("Gray Matter Skull Extrapolation: " + "{:.3f}".format(float(GM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
+print("Avg. Gray Matter Extrapolation: " + "{:.3f}".format(float(GM_avg_est_lambda[np.where(scalp_interp_wv==1550)])) + " cm^-1")
+print("Gray Matter Scalp Extrapolation: " + "{:.3f}".format(float(GM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
+print("White Matter Skull Extrapolation: " + "{:.3f}".format(float(WM_skull_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
+print("Avg. White Matter Extrapolation: " + "{:.3f}".format(float(WM_avg_est_lambda[np.where(scalp_interp_wv==1550)])) + " cm^-1")
+print("White Matter Scalp Extrapolation: " + "{:.3f}".format(float(WM_scalp_estimation[np.where(skull_interp_wv==1550)])) + " cm^-1")
 
-plt.title('Absorption Coefficient Approximation', fontsize=14)
-plt.legend(loc='best', fontsize=12)
-plt.show()
+# plt.title('Absorption Coefficient Approximation', fontsize=14)
+# plt.legend(loc='best', fontsize=12)
+# plt.show()
