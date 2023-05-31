@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1684942737 "d:/OPREL-Git/Alternate-Transactions-Articles-LaTeX-template/generic-color.tex" "generic-color.pdf" "generic-color" 1684942738 0
+["pdflatex"] 1685494377 "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/generic-color.tex" "generic-color.pdf" "generic-color" 1685494379 0
   "LOGO-generic-web.eps" 1684864158 96860 991288daab2defa3899e7c0d849884be ""
   "a1.png" 1684864157 89332 12d1d346be8c3c66b1cb5e684b683f5e ""
   "a2.png" 1684864157 85241 2ac7c661abb8afc7204ea4b9eb1019fa ""
@@ -126,9 +126,9 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1684782593 4683009 81ac55e6554f9124653631026fb1fc4e ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1684782795 7888781 41e60ff471aa4396cbcb39e3cf419962 ""
   "c:/texlive/2023/texmf.cnf" 1684782571 713 e69b156964470283e0530f5060668171 ""
-  "d:/OPREL-Git/Alternate-Transactions-Articles-LaTeX-template/generic-color.tex" 1684942736 49904 f4280cce5c24360b43dfa275c6c29346 ""
+  "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/generic-color.tex" 1684942736 49904 f4280cce5c24360b43dfa275c6c29346 ""
   "fig1.png" 1684864157 13815 016052f2e09fbe31a21f6dc821b31ed9 ""
-  "generic-color.aux" 1684942738 6491 65c2b8d85941982eeccc7708c1cfdb05 "pdflatex"
+  "generic-color.aux" 1685494379 6491 65c2b8d85941982eeccc7708c1cfdb05 "pdflatex"
   "generic-color.tex" 1684942736 49904 f4280cce5c24360b43dfa275c6c29346 ""
   "generic.sty" 1684864158 192 e8d3ecc691fbbb2da183dfc84a675b29 ""
   "ieeecolor.cls" 1684864158 224773 9f9540495f1e1a992a162661c1be18be ""

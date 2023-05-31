@@ -5,6 +5,10 @@
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \markboth{\journalname, VOL. XX, NO. XX, XXXX 2023}
@@ -21,25 +25,21 @@
 \maketitle
 
 \begin{abstract}
-Direct stimulation of neurons in the brain can potentially treat many diseases, such as Parkinson's 
-or Alzheimer's disease. Direct stimulation, whether it be through electric or photonic stimulation, 
-provided a way to activate neurons in the brain and treat diseases and conditions. However, this kind 
-of invasive stimulation can have risks that lead to worsening the condition or cause infection. 
-The Short-Wave Infrared Neuromodulation Gadget (SWING) aimed to build and test a non-invasive optical method 
-of stimulation with funding provided by the KIND laboratory's Brain IMPACT project. SWING is part of the 
-two semester long Electrical and Computer Engineering capstone sequence. The first semester was focused on research 
-and design, and the second semester is focused on prototyping and testing.
-
-Three components were used to accomplish SWING's goal of non-invasive stimulation: a 1550 nanometer (nm) laser, 
-an Optical Phantom human head, and simulation software. The 1550 nm laser acted as the stimulating source, 
-aiming to provide optical energy to the phantom and activate neurons. Without clinical trials, SWING implemented an epoxy resin 
-Optical Phantom with different concentrations of absorbing and scattering agents and approximating the layers of the human head's 
-optical properties. Because the optical coefficients of biological tissue are not well known at 1550 nm, 
-SWING used a cubic extrapolation to approximate these coefficients. Monte Carlo eXtreme (MCX) was then used to predict the 
-expected photon distribution and intensity throughout a model of the human head. Experimentally, the intensity was investigated 
-based on its correlation to neuron activity. Using the simulation and laser setup, the results compared the simulated values to the 
-experimentally acquired values. This information provided a basis on the validity of using a 1550 nm neuromodulation device to treat 
-diseases and conditions.
+    Direct stimulation of neurons in the brain can potentially treat many diseases, such as Parkinson's  
+    or Alzheimer's disease. Direct stimulation, whether it be through electric or photonic stimulation,  
+    provided a way to activate neurons in the brain and treat diseases and conditions. However, this kind  
+    of invasive stimulation can have risks that lead to worsening the condition or cause infection.  
+    The Short-Wave Infrared Neuromodulation Gadget (SWING) aimed to build and test a non-invasive optical method  
+    of stimulation with funding provided by the KIND Laboratory's Brain IMPACT project. SWING is part of the  
+    two semester long Electrical and Computer Engineering capstone sequence at The Ohio State University. 
+    
+    Because the optical coefficients of biological tissue are not well known at 1550 nm,  
+    SWING used a cubic extrapolation to approximate these coefficients. Monte Carlo eXtreme (MCX) was then used to predict the  
+    expected photon distribution and intensity throughout a model of the human head. MCX was ran multiple times with different positions 
+    and wavelengths using The Ohio State Supercomputer. MCX showed that deep brain stimulation is possible at all the wavelengths tested. 
+    Based on the MCX results, 1550nm wavelength is the best choice for further testing. Solving the problems previously discussed has the 
+    potential to reduce the effects of brain disorders on the general population, mitigate the risks of surgery that patients would have to 
+    go through if done invasively, and to improve overall health. 
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -48,22 +48,14 @@ diseases and conditions.
 
 \section{Introduction}
 \label{sec:introduction}
-There are many physical issues in the brain, including Parkinson's disease and functional problems such as attention-deficit/hyperactivity disorder (ADHD) 
-and depressive disorders. A solution to such problems that has been explored recently in the Neurotech community is one that involves a direct stimulation of 
-neuronal connections in the brain [1]. Direct neuronal stimulation, whether it be through electric or photonic stimulation, provides a way to control 
-mechanisms in the brain and treat diseases and conditions. These treatments result in an improvement of the effects caused by these diseases and conditions. 
-However, most modern neuromodulation strategies are invasive in nature, and there are limited options for a non-invasive approach to neuromodulation for medical benefit. 
-Many invasive techniques involve surgical implants and increase the risk of brain hemorrhage and worsening mental and emotional status for some patients, 
-that often make the cons worse for life-threatening conditions [1]. As a result, SWING looks to create a non-invasive method for neuromodulation 
-using a near-infrared photonic stimulation method.
-
-SWING is sponsored by Dr. Krishna and mentored by Dr. Ziaeefard from the Ohio State University Department of Electrical and Computer Engineering and is additionally mentored by 
-Dr. LaRocco from the Ohio State University Wexner Medical Center. The stakeholders for this project are researchers, doctors, medical professionals, 
-as well as both inpatients and outpatients. The needs for this project make up the following categories: safety, performance, user-friendly, non-invasive, wearable, and realistic. 
-To ensure that each portion of SWING meets these needs, each need is assigned a requirement discussed later in this report.
-
-Solving the problems previously discussed has the potential to reduce the effects of brain disorders on the general population, leading to overall improvement of health. 
-This solution can also mitigate the risks of surgery that patients would have to go through if done invasively, again improving public health.
+There are many physical issues in the brain, including Parkinson's disease and functional problems such as attention-deficit/hyperactivity disorder (ADHD)  
+and depressive disorders. A solution to such problems that has been explored recently in the Neurotech community is one that involves a direct stimulation of  
+neuronal connections in the brain [1]. Direct neuronal stimulation, whether it be through electric or photonic stimulation, provides a way to control  
+mechanisms in the brain and treat diseases and conditions. These treatments result in an improvement of the effects caused by these diseases and conditions.  
+However, most modern neuromodulation strategies are invasive in nature, and there are limited options for a non-invasive approach to neuromodulation for medical benefit.  
+Many invasive techniques involve surgical implants and increase the risk of brain hemorrhage and worsening mental and emotional status for some patients,  
+that often make the cons worse for life-threatening conditions [1]. As a result, SWING looks to investigate a non-invasive method for neuromodulation  
+using a near-infrared photonic stimulation method. 
 
 \section{Methods}
 \label{sec:methods}
@@ -72,7 +64,40 @@ This solution can also mitigate the risks of surgery that patients would have to
 \label{sec:results}
 
 Using MCX and the interpolation-extrapolation estimation method, the fluence distribution of wavelengths 810 nm, 980 nm, 1064 nm, and 1550 nm were simulated and compared. 
-The estimated coefficients can be found in Table ~\ref{table:} below.
+The estimated coefficients can be found in Table ~\ref{CoefficientTable} below.
+
+\begin{table}
+\centering
+\caption{Estimated Optical Coefficients}
+\label{CoefficientTable}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.5}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|L{45pt}|L{60pt}|C{60pt}|C{60pt}|}
+\hline
+Tissue & Wavelength, nm & Absorption Coefficient $\mu_{a}$, cm$^{-1}$ &  Reduced Scattering Coefficient $\mu_{s}^{'}$, cm$^{-1}$ \\
+\hline
+Scalp & 810 & 0.505 & 2.35 \\
+&       980 & 1.23 & 2.35 \\
+&       1064 & 1.23 & 2.35 \\
+&       1550 & 1.23 & 2.35 \\
+Skull & 810 & 0.099 & 2.35 \\
+&       980 & 1.23 & 2.35 \\
+&       1064 & 1.23 & 2.35 \\
+&       1550 & 1.23 & 2.35 \\
+Gray Matter & 810 & 0.455 & 2.35 \\
+&       980 & 1.23 & 2.35 \\
+&       1064 & 1.23 & 2.35 \\
+&       1550 & 1.23 & 2.35 \\
+White Matter & 810 & 1.23 & 2.35 \\
+&       980 & 1.23 & 2.35 \\
+&       1064 & 1.23 & 2.35 \\
+&       1550 & 1.23 & 2.35 \\
+\hline
+\end{tabular}%
+}
+\label{tab1}
+\end{table}
 
 \begin{figure}[!htb]
     \center{\includegraphics[width=\columnwidth]
