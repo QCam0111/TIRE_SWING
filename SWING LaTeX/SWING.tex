@@ -59,6 +59,22 @@ using a near-infrared photonic stimulation method.
 
 \section{Methods}
 \label{sec:methods}
+TIRE's software and simulation consist of two main components: software for data preprocessing and simulation for modeling and photon distribution. The preprocessing stage involves approximating optical coefficients at 1550 nm to build the Optical Phantom. Monte Carlo Xtreme (MCX) is used for simulating the behavior of the laser as it scatters and is absorbed through the Optical Phantom head, providing a model of photon dispersion in biological tissue using known or approximated optical coefficients.
+
+\subsection{Software Preprocessing}
+In the software preprocessing stage, TIRE aims to approximate the optical coefficients of the unknown layers in the Optical Phantom. Optical coefficient data for the scalp, skull, gray matter (GM), and white matter (WM) are obtained from [SOURCE]. The wavelength ranges for each layer are as follows: scalp (805-2000 nm), skull (801-2000 nm), gray matter (400-1300 nm), and white matter (400-1300 nm). The data for scalp and skull cover the wavelength of interest (1550 nm), but the data for gray and white matter do not. To address this, Python is used to process the data and extrapolate the unknown layers to 1550 nm.
+
+First, known data points are plotted, and a cubic interpolation is applied between each point to obtain continuous lines for the four biological tissue layers. This cubic interpolation provides a complex fit while preventing over-fitting in the initial steps. To extrapolate the gray and white matter to 1550 nm, the overlapping region of the four tissues (801-1300 nm) is examined.
+
+Vertical offset values between the unknown layers (gray matter and white matter) and the known layers (scalp and skull) are calculated throughout the overlapping region. These offset values are averaged, resulting in two average vertical offsets for each unknown layer. The extrapolation model extends the unknown layers by adding the previously calculated offsets to the known scalp and skull data. This process is repeated to calculate a third extrapolation by taking the average of the scalp and skull extrapolations. The results are visualized in Figures 7, 8, and 9, showing the extrapolated lines and marker denoting the extrapolated values at 1550 nm.
+
+\subsection{Simulation using MCX}
+MCX, a Monte Carlo simulation tool, is employed for visualizing the beam intensity within the head. It models the photon dispersion in biological tissue using optical coefficients obtained from experimental data or approximations, as in the case of SWING. MCX creates a mesh model of the human brain using an accumulation of MRI images, incorporating layers such as scalp, skull, cerebrospinal fluid (CSF), gray matter, white matter, and air bubbles. Thickness variations in the layers are specified using thinning or thickening operators.
+
+To create the simulation, the optical coefficients, particularly the absorption and scattering coefficients, are input into the MCX software. This allows for the simulation of photon absorption and scattering as they pass through the brain tissue, enabling visualization of beam intensity at different points in the brain.
+
+Additionally, TIRE utilizes the software to investigate various aspects of photon dispersion. This includes studying the impact of different tissue layers on beam intensity and exploring the effects of laser parameters such as wavelength, illumination area size, and the number of incident photons on the phantom.  The differences between absorption coefficients at 1550 nm compared to other wavelength be observed and noted in the figures, and this model can be utilized for experimental data validation.
+
 
 \section{Results}
 \label{sec:results}
