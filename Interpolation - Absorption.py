@@ -179,7 +179,7 @@ WM_avg_est_lambda = (WM_scalp_estimation + WM_skull_estimation[4:1999]) / 2
 
 coef_of_determ = r2_score(skull_interpolation(skull_interp_wv)[4:1999], skull_est_scalp_interp(scalp_interp_wv))
 
-# print(coef_of_determ)
+print(coef_of_determ)
 
 ### Plots - dashed line plots are the interpolated functions
 

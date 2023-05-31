@@ -63,8 +63,10 @@ using a near-infrared photonic stimulation method.
 \section{Results}
 \label{sec:results}
 
-Using MCX and the interpolation-extrapolation estimation method, the fluence distribution of wavelengths 810 nm, 980 nm, 1064 nm, and 1550 nm were simulated and compared. 
-The estimated coefficients can be found in Table ~\ref{CoefficientTable} below.
+Table ~\ref{CoefficientTable} below displays the estimated absorption and scattering coefficients for each of the biological tissue layers as well as each wavelength.
+These values were calculated using the interpolation-extrapolation method detailed in ~\ref(sec:methods). To determine the reliability of this prediction method, SWING used
+the Python library "scikit-learn" to calculate the R-squared value when predicting known data. This R-squared value was calculated as 0.4980, indicating that 49.80\% of the 
+variability in the unknown coefficients is explained by SWING's predicition model.
 
 \begin{table}
 \centering
@@ -195,7 +197,7 @@ White Matter & 810 & 1.23 & 2.35 \\
     \caption{\label{fig:1550-Intra} 1550 nm Intranasal Position}
 \end{figure}
 
-\section{Next Steps}
+\section{Discussion}
 \label{sec:next steps}
 
 \section{Conclusion}
