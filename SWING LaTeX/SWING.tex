@@ -58,38 +58,87 @@ Many invasive techniques involve surgical implants and increase the risk of brai
 that often make the cons worse for life-threatening conditions \cite{b1,b3}. As a result, SWING looks to investigate a non-invasive method for neuromodulation  
 using a near-infrared photonic stimulation method. 
 
+
 \section{Methods}
 \label{sec:methods}
-TIRE's software and simulation consist of two main components: software for data preprocessing and simulation for modeling and photon distribution. 
-The preprocessing stage involves approximating optical coefficients at 1550 nm to build the Optical Phantom. Monte Carlo eXtreme (MCX) is used for simulating the 
-behavior of the laser as it scatters and is absorbed through the Optical Phantom head, providing a model of photon dispersion in biological tissue using known or 
+SWING's software and simulation consisted of two main components: software for data preprocessing and simulation for modeling and photon distribution. 
+The preprocessing stage involved approximating optical coefficients at 1550 nm.. Monte Carlo eXtreme (MCX) is used for simulating the 
+behavior of the laser as it scatters and is absorbed through brain tissue, providing a model of photon dispersion in biological tissue using known or 
 approximated optical coefficients.
 
 \subsection{Software Preprocessing}
-In the software preprocessing stage, TIRE aims to approximate the optical coefficients of the unknown layers in the Optical Phantom. Optical coefficient data for 
-the scalp, skull, gray matter (GM), and white matter (WM) are obtained from [SOURCE]. The wavelength ranges for each layer are as follows: scalp (805-2000 nm), 
+In the software preprocessing stage, the model approximated the optical coefficients of layers in the brain where it is unknown for 1550nm sources. Optical coefficient data for the scalp, skull, gray matter (GM), and white matter (WM) are obtained from [SOURCE]. The wavelength ranges for each layer are as follows: scalp (805-2000 nm), 
 skull (801-2000 nm), gray matter (400-1300 nm), and white matter (400-1300 nm). The data for scalp and skull cover the wavelength of interest (1550 nm), but the data 
-for gray and white matter do not. To address this, Python is used to process the data and extrapolate the unknown layers to 1550 nm.
+for GM and WM do not. To address this, cubic extrapolation and interpolation methods are used to process the data and extrapolate the unknown layers to 1550nm. 
 
-First, known data points are plotted, and a cubic interpolation is applied between each point to obtain continuous lines for the four biological tissue layers. 
-This cubic interpolation provides a complex fit while preventing over-fitting in the initial steps. To extrapolate the gray and white matter to 1550 nm, the overlapping 
-region of the four tissues (801-1300 nm) is examined.
+The cubic interpolation method approximates the optical coefficients for the gray matter (GM) and white matter (WM) layers at 1550 nm based on the known data points. Let $x$ represent the wavelength and $y$ represent the absorption coefficient. The cubic interpolation function can be defined as follows:
 
-Vertical offset values between the unknown layers (gray matter and white matter) and the known layers (scalp and skull) are calculated throughout the overlapping region. 
-These offset values are averaged, resulting in two average vertical offsets for each unknown layer. The extrapolation model extends the unknown layers by adding the 
-previously calculated offsets to the known scalp and skull data. This process is repeated to calculate a third extrapolation by taking the average of the scalp and skull 
-extrapolations. The results are visualized in Figures 7, 8, and 9, showing the extrapolated lines and marker denoting the extrapolated values at 1550 nm.
+\[
+y(x) = a(x-x_1)^3 + b(x-x_1)^2 + c(x-x_1) + d
+\]
+
+where $(x_1, y_1)$, $(x_2, y_2)$, $(x_3, y_3)$, and $(x_4, y_4)$ are the known data points for a specific layer (GM or WM).
+
+To determine the coefficients $a$, $b$, $c$, and $d$, the model solves the following system of equations using the known data points:
+
+\[
+\begin{aligned}
+y_1 &= a(x_1-x_1)^3 + b(x_1-x_1)^2 + c(x_1-x_1) + d \\
+y_2 &= a(x_2-x_1)^3 + b(x_2-x_1)^2 + c(x_2-x_1) + d \\
+y_3 &= a(x_3-x_1)^3 + b(x_3-x_1)^2 + c(x_3-x_1) + d \\
+y_4 &= a(x_4-x_1)^3 + b(x_4-x_1)^2 + c(x_4-x_1) + d \\
+\end{aligned}
+\]
+
+Solving this system of equations provides the coefficients $a$, $b$, $c$, and $d$ specific to the cubic interpolation for the respective layer.
+
+To apply the cubic interpolation in this study, Python programming language was used to process the known data points and calculate the coefficients. Once the coefficients are obtained, the cubic interpolation function is used to estimate the absorption coefficient at any desired wavelength within the range. This cubic interpolation provides a complex fit while preventing over-fitting in the initial steps. This allows extrapolation of the gray and white matter absorption coefficients to 1550 nm within the overlapping region (801-1300 nm), providing continuous lines for the unknown layers.
+
+To extrapolate the optical coefficients of the gray matter (GM) and white matter (WM) layers to 1550 nm, the overlapping region of the four tissues (801-1300 nm) is examined. Vertical offset values between the unknown layers (GM and WM) and the known layers (scalp and skull) are calculated throughout this overlapping region.
+
+Let \( \lambda \) represent the wavelength and \( \mu \) represent the absorption coefficient. The vertical offset values can be calculated as the difference between the absorption coefficients of the unknown layers and the known layers at each wavelength in the overlapping region. These offset values are averaged to obtain two average vertical offsets, one for each unknown layer. Let \( \text{AvgOffsetGM} \) represent the average vertical offset of the gray matter, and \( \text{AvgOffsetWM} \) represent the average vertical offset of the white matter. The extrapolation model then extends the unknown layers by adding the previously calculated offsets to the known scalp and skull data.
+
+The average vertical offsets of the gray matter and white matter can be expressed as:
+
+$$
+\text{AvgOffsetGM} = \frac{1}{N} \sum_{i=1}^{N} (\mu_{\text{GM,unknown}}(\lambda_i) - \mu_{\text{GM,known}}(\lambda_i))
+$$
+$$
+\text{AvgOffsetWM} = \frac{1}{N} \sum_{i=1}^{N} (\mu_{\text{WM,unknown}}(\lambda_i) - \mu_{\text{WM,known}}(\lambda_i))
+$$
+
+where \( N \) represents the number of data points within the overlapping region, \( \mu_{\text{GM,unknown}}(\lambda_i) \) and \( \mu_{\text{WM,unknown}}(\lambda_i) \) denote the absorption coefficients of the unknown layers at the \( i \)-th wavelength, and \( \mu_{\text{GM,known}}(\lambda_i) \) and \( \mu_{\text{WM,known}}(\lambda_i) \) denote the absorption coefficients of the known layers at the \( i \)-th wavelength.
+
+In this study, Python programming language was used to process the absorption coefficient data and calculate the vertical offset values. The following equations were used to perform the extrapolation:
+
+\[
+\mu_{\text{GM,extrapolated}}(\lambda) = \mu_{\text{GM,known}}(\lambda) + \text{AvgOffsetGM}
+\]
+\[
+\mu_{\text{WM,extrapolated}}(\lambda) = \mu_{\text{WM,known}}(\lambda) + \text{AvgOffsetWM}
+\]
+
+To ensure accuracy and account for variations, this process of calculating vertical offsets and performing extrapolation is repeated for multiple data points within the overlapping region.
+
+Figures 7, 8, and 9 visualize the results of the extrapolation process. Figure 7 shows the overlapping region of absorption coefficients, and Figures 8 and 9 display the extrapolated absorption coefficients at 1550 nm. These figures, generated using Python, provide a graphical representation of the extrapolation results and aid in understanding the estimated optical coefficients of the GM and WM layers at the wavelength of interest.
+
+% By applying this cubic interpolation method to the known data points using Python, continuous curves are generated for the optical coefficients of the gray matter and white matter layers. These curves provide an estimation of the absorption coefficients at the wavelength of interest, facilitating further analysis and simulation in the TIRE project.
+
+
+% First, known data points are plotted, and a cubic interpolation is applied between each point to obtain continuous lines for the four biological tissue layers. 
+% This cubic interpolation provides a complex fit while preventing over-fitting in the initial steps. To extrapolate the gray and white matter to 1550 nm, the overlapping 
+% region of the four tissues (801-1300 nm) is examined.
+
+% Vertical offset values between the unknown layers (gray matter and white matter) and the known layers (scalp and skull) are calculated throughout the overlapping region. 
+% These offset values are averaged, resulting in two average vertical offsets for each unknown layer. The extrapolation model extends the unknown layers by adding the 
+% previously calculated offsets to the known scalp and skull data. This process is repeated to calculate a third extrapolation by taking the average of the scalp and skull 
+% extrapolations. The results are visualized in Figures 7, 8, and 9, showing the extrapolated lines and marker denoting the extrapolated values at 1550 nm.
 
 \subsection{Simulation using MCX}
-MCX, a Monte Carlo simulation tool, is employed for visualizing the beam intensity within the head. It models the photon dispersion in biological tissue using optical 
-coefficients obtained from experimental data or approximations, as in the case of SWING. MCX creates a mesh model of the human brain using an accumulation of MRI images, 
-incorporating layers such as scalp, skull, cerebrospinal fluid (CSF), gray matter, white matter, and air bubbles. Thickness variations in the layers are specified using thinning or thickening operators.
-To create the simulation, the optical coefficients, particularly the absorption and scattering coefficients, are input into the MCX software. This allows for the simulation 
-of photon absorption and scattering as they pass through the brain tissue, enabling visualization of beam intensity at different points in the brain.
-Additionally, TIRE utilizes the software to investigate various aspects of photon dispersion. This includes studying the impact of different tissue layers on beam intensity 
-and exploring the effects of laser parameters such as wavelength, illumination area size, and the number of incident photons on the phantom.  The differences between absorption 
-coefficients at 1550 nm compared to other wavelength be observed and noted in the figures, and this model can be utilized for experimental data validation.
-
+MCX, a Monte Carlo simulation tool, is employed for visualizing the optical intensity and behavior of a laser source within the head and brain tissue. It models the photon dispersion in biological tissue using optical 
+coefficients obtained from experimental data or approximations, as in the case of SWING. MCX creates a mesh model of the human brain using an accumulation of MRI images, incorporating layers such as scalp, skull, Cerebral Spinal Fluid (CSF), GM, WM, and air bubbles. Thickness variations in the layers are specified using thinning or thickening operators.
+To create the simulation, the optical coefficients, particularly the absorption and scattering coefficients, are input into the MCX software. This allows for the simulation of photon absorption and scattering as light passes through the brain tissue, enabling visualization of beam intensity at different points in the brain.
+Additionally, SWING utilizes the software to investigate various aspects of photon dispersion. This includes studying the impact of different tissue layers on beam intensity and exploring the effects of laser parameters such as wavelength, illumination area size, and the number of incident photons on the phantom.  The differences between absorption coefficients at 1550 nm compared to other wavelength be observed and noted in the figures, and this model can be utilized for experimental data validation.
 
 \section{Results}
 \label{sec:results}
