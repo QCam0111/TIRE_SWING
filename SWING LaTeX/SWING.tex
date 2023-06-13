@@ -9,12 +9,13 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
-\markboth{\journalname, VOL. XX, NO. XX, XXXX 2023}
-{Author \MakeLowercase{\textit{et al.}}: Short Wave Infrared Neuromodulation Gadget (May 2023)}
+\markboth{\journalname, VOL. XX, NO. XX, May 2023}
+{Cameron R. \MakeLowercase{\textit{et al.}}: Short Wave Infrared Neuromodulation Gadget (May 2023)}
 \begin{document}
-\title{Short Wave Infrared Neuromodulation Gadget (May 2023)}
+\title{Short Wave Infrared Neuromodulation Gadget}
 \author{Cameron R. Author, \IEEEmembership{Member, IEEE}, Matthew T. Author, Bibhus L. Author, 
         Krishna S. Sponsor, \IEEEmembership{Member, IEEE}, John L. Mentor, \IEEEmembership{Member, IEEE}
 \thanks{ }
@@ -33,13 +34,13 @@
     of stimulation with funding provided by the KIND Laboratory's Brain IMPACT project. SWING is part of the  
     two semester long Electrical and Computer Engineering capstone sequence at The Ohio State University. 
     
-    Because the optical coefficients of biological tissue are not well known at 1550 nm,  
-    SWING used a cubic extrapolation to approximate these coefficients. Monte Carlo eXtreme (MCX) was then used to predict the  
-    expected photon distribution and intensity throughout a model of the human head. MCX was ran multiple times with different positions 
-    and wavelengths using The Ohio State Supercomputer. MCX showed that deep brain stimulation is possible at all the wavelengths tested. 
-    Based on the MCX results, 1550nm wavelength is the best choice for further testing. Solving the problems previously discussed has the 
-    potential to reduce the effects of brain disorders on the general population, mitigate the risks of surgery that patients would have to 
-    go through if done invasively, and to improve overall health. 
+    SWING used a cubic extrapolation to approximate the optical coefficients of biological tissue at 1550 nm. 
+    Monte Carlo eXtreme (MCX) was then used to predict the expected photon distribution and intensity throughout a model of 
+    the human head. MCX was ran multiple times with different positions and wavelengths using The Ohio State Supercomputer. 
+    MCX showed that deep brain stimulation is possible at all the wavelengths tested. Based on the MCX results, 1550nm wavelength 
+    is the best choice for further testing. Solving the problems previously discussed has the potential to reduce the effects of 
+    brain disorders on the general population, mitigate the risks of surgery that patients would have to go through if done invasively, 
+    and to improve overall health. 
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -48,13 +49,13 @@
 
 \section{Introduction}
 \label{sec:introduction}
-There are many physical issues in the brain, including Parkinson's disease and functional problems such as attention-deficit/hyperactivity disorder (ADHD)  
+\IEEEPARstart{T}{here} are many physical issues in the brain, including Parkinson's disease and functional problems such as attention-deficit/hyperactivity disorder (ADHD)  
 and depressive disorders. A solution to such problems that has been explored recently in the Neurotech community is one that involves a direct stimulation of  
-neuronal connections in the brain [1]. Direct neuronal stimulation, whether it be through electric or photonic stimulation, provides a way to control  
+neuronal connections in the brain \cite{b1,b2}. Direct neuronal stimulation, whether it be through electric or photonic stimulation, provides a way to control  
 mechanisms in the brain and treat diseases and conditions. These treatments result in an improvement of the effects caused by these diseases and conditions.  
 However, most modern neuromodulation strategies are invasive in nature, and there are limited options for a non-invasive approach to neuromodulation for medical benefit.  
 Many invasive techniques involve surgical implants and increase the risk of brain hemorrhage and worsening mental and emotional status for some patients,  
-that often make the cons worse for life-threatening conditions [1]. As a result, SWING looks to investigate a non-invasive method for neuromodulation  
+that often make the cons worse for life-threatening conditions \cite{b1,b3}. As a result, SWING looks to investigate a non-invasive method for neuromodulation  
 using a near-infrared photonic stimulation method. 
 
 
@@ -62,7 +63,7 @@ using a near-infrared photonic stimulation method.
 \label{sec:methods}
 SWING's software and simulation consisted of two main components: software for data preprocessing and simulation for modeling and photon distribution. 
 The preprocessing stage involved approximating optical coefficients at 1550 nm.. Monte Carlo eXtreme (MCX) is used for simulating the 
-behavior of the laser as it scatters and is absorbed through the Optical Phantom head, providing a model of photon dispersion in biological tissue using known or 
+behavior of the laser as it scatters and is absorbed through brain tissue, providing a model of photon dispersion in biological tissue using known or 
 approximated optical coefficients.
 
 \subsection{Software Preprocessing}
@@ -137,50 +138,72 @@ Figures 7, 8, and 9 visualize the results of the extrapolation process. Figure 7
 MCX, a Monte Carlo simulation tool, is employed for visualizing the optical intensity and behavior of a laser source within the head and brain tissue. It models the photon dispersion in biological tissue using optical 
 coefficients obtained from experimental data or approximations, as in the case of SWING. MCX creates a mesh model of the human brain using an accumulation of MRI images, incorporating layers such as scalp, skull, Cerebral Spinal Fluid (CSF), GM, WM, and air bubbles. Thickness variations in the layers are specified using thinning or thickening operators.
 To create the simulation, the optical coefficients, particularly the absorption and scattering coefficients, are input into the MCX software. This allows for the simulation of photon absorption and scattering as light passes through the brain tissue, enabling visualization of beam intensity at different points in the brain.
-Additionally, TIRE utilizes the software to investigate various aspects of photon dispersion. This includes studying the impact of different tissue layers on beam intensity and exploring the effects of laser parameters such as wavelength, illumination area size, and the number of incident photons on the phantom.  The differences between absorption coefficients at 1550 nm compared to other wavelength be observed and noted in the figures, and this model can be utilized for experimental data validation.
-
-
+Additionally, SWING utilizes the software to investigate various aspects of photon dispersion. This includes studying the impact of different tissue layers on beam intensity and exploring the effects of laser parameters such as wavelength, illumination area size, and the number of incident photons on the phantom.  The differences between absorption coefficients at 1550 nm compared to other wavelength be observed and noted in the figures, and this model can be utilized for experimental data validation.
 
 \section{Results}
 \label{sec:results}
 
-Table ~\ref{CoefficientTable} below displays the estimated absorption and scattering coefficients for each of the biological tissue layers as well as each wavelength.
-These values were calculated using the interpolation-extrapolation method detailed in ~\ref(sec:methods). To determine the reliability of this prediction method, SWING used
+Table~\ref{CoefficientTable} displays the estimated absorption and scattering coefficients for each of the biological tissue layers as well as each wavelength.
+These values were calculated using the interpolation-extrapolation method detailed in Section~\ref{sec:methods}. To determine the reliability of this prediction method, SWING used
 the Python library "scikit-learn" to calculate the R-squared value when predicting known data. This R-squared value was calculated as 0.4980, indicating that 49.80\% of the 
 variability in the unknown coefficients is explained by SWING's predicition model.
 
-\begin{table}
+\begin{table}[h]
 \centering
 \caption{Estimated Optical Coefficients}
 \label{CoefficientTable}
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.5}
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{|L{45pt}|L{60pt}|C{60pt}|C{60pt}|}
+\begin{tabular}{|L{45pt}|L{55pt}|C{80pt}|C{80pt}|}
 \hline
-Tissue & Wavelength, nm & Absorption Coefficient $\mu_{a}$, cm$^{-1}$ &  Reduced Scattering Coefficient $\mu_{s}^{'}$, cm$^{-1}$ \\
+Tissue Type & Wavelength, nm & Absorption Coefficient $\mu_{a}$, cm$^{-1}$ &  Scattering Coefficient $\mu_{s}^{'}$, cm$^{-1}$ \\
 \hline
-Scalp & 810 & 0.505 & 2.35 \\
-&       980 & 1.23 & 2.35 \\
-&       1064 & 1.23 & 2.35 \\
-&       1550 & 1.23 & 2.35 \\
-Skull & 810 & 0.099 & 2.35 \\
-&       980 & 1.23 & 2.35 \\
-&       1064 & 1.23 & 2.35 \\
-&       1550 & 1.23 & 2.35 \\
-Gray Matter & 810 & 0.455 & 2.35 \\
-&       980 & 1.23 & 2.35 \\
-&       1064 & 1.23 & 2.35 \\
-&       1550 & 1.23 & 2.35 \\
-White Matter & 810 & 1.23 & 2.35 \\
-&       980 & 1.23 & 2.35 \\
-&       1064 & 1.23 & 2.35 \\
-&       1550 & 1.23 & 2.35 \\
+Scalp & 810 & 0.505 & 14.145 \\
+&       980 & 0.365 & 16.714 \\
+&       1064 & 0.168 & 17.029 \\
+&       1550 & 1.649 & 14.578 \\
+\hline
+Skull & 810 & 0.099 & 19.248 \\
+&       980 & 0.230 & 17.380 \\
+&       1064 & 0.101 & 16.180 \\
+&       1550 & 2.715 & 15.543 \\
+\hline
+Gray Matter & 810 & [0.455,0.605,0.744] & [3.896,6.030,8.211] \\
+&       980 & [0.586,0.601,0.610] & [6.343,6.380,6.444] \\
+&       1064 & [0.413,0.438,0.457] & [5.143,5.938,6.740] \\
+&       1550 & [1.870,2.485,3.071] & [4.246,4.393,4.506] \\
+\hline
+White Matter & 810 & [0.737,0.888,1.027] & [24.237,26.403,28.617] \\
+&       980 & [0.868,0.883,0.893] & [26.749,26.753,26.785] \\
+&       1064 & [0.696,0.720,0.739] & [25.549,26.311,27.081] \\
+&       1550 & [2.153,2.767,3.353] & [24.587,24.767,24.911] \\
 \hline
 \end{tabular}%
 }
 \label{tab1}
 \end{table}
+
+\section{Discussion}
+\label{sec:next steps}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+\section*{Acknowledgment}
+
+\begin{thebibliography}{00}
+
+\bibitem{b1} ``Novel Neuromodulation Techniques,`` in \emph{IEEE Pulse}, Aug. 2016. 
+\underline{https://www.embs.org/pulse/articles/novel-neuromodulation-techniques/} 
+
+\bibitem{b2} ``Deep Brain stimulation,`` in \emph{Mayo Clinic}, Sep. 2021. 
+\underline{https://www.mayoclinic.org/tests-procedures/deep-brain-stimulation/about/pac-20384562}
+
+\bibitem{b3} C. C. medical professional, ``Deep Brain Stimulation (DBS): What it is, Purpose \& procedure,`` in \emph{Cleveland Clinic}, 
+\underline{https://my.clevelandclinic.org/health/treatments/21088-deep-brain-stimulation\#risks--benefits}
+
+\end{thebibliography}
 
 \begin{figure}[!htb]
     \center{\includegraphics[width=\columnwidth]
@@ -278,14 +301,5 @@ White Matter & 810 & 1.23 & 2.35 \\
     \caption{\label{fig:1550-Intra} 1550 nm Intranasal Position}
 \end{figure}
 
-\section{Discussion}
-\label{sec:next steps}
-
-\section{Conclusion}
-\label{sec:conclusion}
-
-\section*{Acknowledgment}
-
-\section*{References}
 
 \end{document}
