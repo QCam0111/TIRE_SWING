@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1685566044 "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" "SWING.pdf" "SWING" 1685566045 0
+["pdflatex"] 1687311032 "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" "SWING.pdf" "SWING" 1687311033 0
   "Figures/Fluence_Distribution_1064nm_45deg.png" 1684764256 384619 eddc3fc7356f9a2185e740d38bd6eccd ""
   "Figures/Fluence_Distribution_1064nm_CZ.png" 1684764295 378031 e95a4633b1adb5e16b76b765d17dbb5b ""
   "Figures/Fluence_Distribution_1064nm_Cochlear.png" 1684764315 365715 658a78fa664d6a9975a8c00465013833 ""
@@ -17,8 +17,8 @@
   "Figures/Fluence_Distribution_980nm_Cochlear.png" 1684764321 407699 fed2f79d40245aa27162e3bc17fbb456 ""
   "Figures/Fluence_Distribution_980nm_Intranasal.png" 1684764281 410021 36b39553e03460f879803cf3f5bf64ec ""
   "LOGO-generic-web.eps" 1685565760 277078 8c03e5cf2f70479534c2bd188ccaef23 ""
-  "SWING.aux" 1685566045 3861 d657c361938f60d01bd25c324bf46e18 "pdflatex"
-  "SWING.tex" 1685566042 13649 0b13612d67eb8c356bc01f04bea38f2d ""
+  "SWING.aux" 1687311033 3880 d16522a3b1491955bf85bb5c413dc7ae "pdflatex"
+  "SWING.tex" 1687311030 13656 f34c60e3a221524cbad567342731f7d3 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1684778437 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1684778880 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1684779220 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -106,7 +106,7 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1684782593 4683009 81ac55e6554f9124653631026fb1fc4e ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1684782795 7888781 41e60ff471aa4396cbcb39e3cf419962 ""
   "c:/texlive/2023/texmf.cnf" 1684782571 713 e69b156964470283e0530f5060668171 ""
-  "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" 1685566042 13649 0b13612d67eb8c356bc01f04bea38f2d ""
+  "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" 1687311030 13656 f34c60e3a221524cbad567342731f7d3 ""
   "generic.sty" 1684864158 192 e8d3ecc691fbbb2da183dfc84a675b29 ""
   "ieeecolor.cls" 1684864158 224773 9f9540495f1e1a992a162661c1be18be ""
   (generated)

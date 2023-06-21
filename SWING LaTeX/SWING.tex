@@ -26,21 +26,19 @@
 \maketitle
 
 \begin{abstract}
-    Direct stimulation of neurons in the brain can potentially treat many diseases, such as Parkinson's  
-    or Alzheimer's disease. Direct stimulation, whether it be through electric or photonic stimulation,  
-    provided a way to activate neurons in the brain and treat diseases and conditions. However, this kind  
-    of invasive stimulation can have risks that lead to worsening the condition or cause infection.  
-    The Short-Wave Infrared Neuromodulation Gadget (SWING) aimed to build and test a non-invasive optical method  
-    of stimulation with funding provided by the KIND Laboratory's Brain IMPACT project. SWING is part of the  
-    two semester long Electrical and Computer Engineering capstone sequence at The Ohio State University. 
-    
-    SWING used a cubic extrapolation to approximate the optical coefficients of biological tissue at 1550 nm. 
-    Monte Carlo eXtreme (MCX) was then used to predict the expected photon distribution and intensity throughout a model of 
-    the human head. MCX was ran multiple times with different positions and wavelengths using The Ohio State Supercomputer. 
-    MCX showed that deep brain stimulation is possible at all the wavelengths tested. Based on the MCX results, 1550nm wavelength 
-    is the best choice for further testing. Solving the problems previously discussed has the potential to reduce the effects of 
-    brain disorders on the general population, mitigate the risks of surgery that patients would have to go through if done invasively, 
-    and to improve overall health. 
+Direct stimulation of neurons in the brain can potentially treat many diseases, such as Parkinson's  
+or Alzheimer's disease. Direct stimulation, whether it be through electric or photonic stimulation,  
+provided a way to activate neurons in the brain and treat diseases and conditions. However, this kind  
+of invasive stimulation can have risks that lead to worsening the condition or cause infection.  
+The Short-Wave Infrared Neuromodulation Gadget (SWING) aimed to build and test a non-invasive optical method  
+of stimulation with funding provided by the KIND Laboratory's Brain IMPACT project. SWING is part of the  
+two semester long Electrical and Computer Engineering capstone sequence at The Ohio State University. 
+
+SWING used a cubic extrapolation to approximate the optical coefficients of biological tissue at 1550 nm. 
+Monte Carlo eXtreme (MCX) was then used to predict the expected photon distribution and intensity throughout a model 
+of the human head. MCX was ran multiple times with different positions and wavelengths using The Ohio State Supercomputer. 
+MCX showed that deep brain stimulation is possible at all the wavelengths tested. Based on the MCX results, 1550nm wavelength 
+is the most compelling choice for further testing.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -49,14 +47,16 @@
 
 \section{Introduction}
 \label{sec:introduction}
-\IEEEPARstart{T}{here} are many physical issues in the brain, including Parkinson's disease and functional problems such as attention-deficit/hyperactivity disorder (ADHD)  
-and depressive disorders. A solution to such problems that has been explored recently in the Neurotech community is one that involves a direct stimulation of  
-neuronal connections in the brain \cite{b1,b2}. Direct neuronal stimulation, whether it be through electric or photonic stimulation, provides a way to control  
-mechanisms in the brain and treat diseases and conditions. These treatments result in an improvement of the effects caused by these diseases and conditions.  
-However, most modern neuromodulation strategies are invasive in nature, and there are limited options for a non-invasive approach to neuromodulation for medical benefit.  
-Many invasive techniques involve surgical implants and increase the risk of brain hemorrhage and worsening mental and emotional status for some patients,  
-that often make the cons worse for life-threatening conditions \cite{b1,b3}. As a result, SWING looks to investigate a non-invasive method for neuromodulation  
-using a near-infrared photonic stimulation method. 
+\IEEEPARstart{T}{here} are many physical issues in the brain, including Parkinson's disease and functional 
+problems such as attention-deficit/hyperactivity disorder (ADHD) and depressive disorders. 
+A solution to such problems that has been explored recently in the Neurotech community is one that involves a direct stimulation of  
+neuronal connections in the brain \cite{b1,b2,b3}. Direct neuronal stimulation, whether it be through electric or photonic 
+stimulation, provides a way to control mechanisms in the brain and treat diseases and conditions. These treatments result 
+in an improvement of the effects caused by these diseases and conditions. However, most modern neuromodulation strategies 
+are invasive in nature, and there are limited options for a non-invasive approach to neuromodulation for medical benefit. Many invasive 
+techniques involve surgical implants and increase the risk of brain hemorrhage and worsening mental and emotional status for some patients,  
+that often make the cons worse for life-threatening conditions \cite{b1,b4}. As a result, the Short-Wave Infrared Neuromodulation Gadget (SWING) 
+looks to investigate a non-invasive method for neuromodulation using a near-infrared photonic stimulation method. 
 
 \section{Methods}
 \label{sec:methods}
@@ -148,10 +148,13 @@ White Matter & 810 & [0.737,0.888,1.027] & [24.237,26.403,28.617] \\
 \bibitem{b1} ``Novel Neuromodulation Techniques,`` in \emph{IEEE Pulse}, Aug. 2016. 
 \underline{https://www.embs.org/pulse/articles/novel-neuromodulation-techniques/} 
 
-\bibitem{b2} ``Deep Brain stimulation,`` in \emph{Mayo Clinic}, Sep. 2021. 
+\bibitem{b2} ``Improvements in clinical signs of Parkinson's disease using photobiomodulation: a prospective proof-of-concept study,`` in \emph{BMC Neurol21}, Jul. 2021. 
+\underline{https://www.embs.org/pulse/articles/novel-neuromodulation-techniques/} 
+
+\bibitem{b3} ``Deep Brain stimulation,`` in \emph{Mayo Clinic}, Sep. 2021. 
 \underline{https://www.mayoclinic.org/tests-procedures/deep-brain-stimulation/about/pac-20384562}
 
-\bibitem{b3} C. C. medical professional, ``Deep Brain Stimulation (DBS): What it is, Purpose \& procedure,`` in \emph{Cleveland Clinic}, 
+\bibitem{b4} C. C. medical professional, ``Deep Brain Stimulation (DBS): What it is, Purpose \& procedure,`` in \emph{Cleveland Clinic}, 
 \underline{https://my.clevelandclinic.org/health/treatments/21088-deep-brain-stimulation\#risks--benefits}
 
 \end{thebibliography}
