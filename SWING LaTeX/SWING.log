@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.22)  24 JUN 2023 16:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.22)  24 JUN 2023 16:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -328,6 +328,21 @@ LaTeX Font Info:    Trying to load font information for T1+phv on input line 50.
  (c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 55.
+
+
+LaTeX Warning: Citation `b2' on page 1 undefined on input line 55.
+
+
+LaTeX Warning: Citation `b3' on page 1 undefined on input line 55.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `b4' on page 1 undefined on input line 60.
+
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 71.
 Package epstopdf Info: Source file: <LOGO-generic-web.eps>
@@ -337,206 +352,25 @@ Package epstopdf Info: Source file: <LOGO-generic-web.eps>
 (epstopdf)                    date: 2023-05-31 16:42:43
 (epstopdf)                    size: 16928 bytes
 (epstopdf)             Command: <repstopdf --outfile=LOGO-generic-web-eps-converted-to.pdf LOGO-generic-web.eps>
-(epstopdf)             \includegraphics on input line 98.
+(epstopdf)             \includegraphics on input line 103.
 Package epstopdf Info: Output file is already uptodate.
-<LOGO-generic-web-eps-converted-to.pdf, id=1, 48.18pt x 24.09pt>
-File: LOGO-generic-web-eps-converted-to.pdf Graphic file (type pdf)
-<use LOGO-generic-web-eps-converted-to.pdf>
-Package pdftex.def Info: LOGO-generic-web-eps-converted-to.pdf  used on input line 98.
-(pdftex.def)             Requested size: 48.0pt x 23.99985pt.
+d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex:103: I can't write on file `SWING.pdf'.
+(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
+Please type another file name for output
+d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex:103: Emergency stop.
+<argument> \pdfximage 
+                      \ifnum 0\ifx \Gin@decode \@empty \else 1\fi \ifGin@int...
+l.103 
+      
+*** (job aborted, file error in nonstop mode)
 
-Overfull \hbox (259.0pt too wide) has occurred while \output is active
-[][] 
- []
-
-
-Overfull \hbox (12.0pt too wide) has occurred while \output is active
-[] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-
-Overfull \vbox (19.99985pt too high) has occurred while \output is active []
-
- [1{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
-
-
- <./LOGO-generic-web-eps-converted-to.pdf>]
-\width=\dimen175
-
-Overfull \vbox (5.0pt too high) has occurred while \output is active []
-
- [2]
-<Figures/Fluence_Distribution_810nm_Cochlear.png, id=37, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_810nm_Cochlear.png Graphic file (type png)
-<use Figures/Fluence_Distribution_810nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Cochlear.png  used on input line 191.
-(pdftex.def)             Requested size: 119.70154pt x 81.25037pt.
-<Figures/Fluence_Distribution_980nm_Cochlear.png, id=38, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_980nm_Cochlear.png Graphic file (type png)
-<use Figures/Fluence_Distribution_980nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Cochlear.png  used on input line 197.
-(pdftex.def)             Requested size: 126.0pt x 85.51837pt.
-<Figures/Fluence_Distribution_1064nm_Cochlear.png, id=39, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1064nm_Cochlear.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1064nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Cochlear.png  used on input line 204.
-(pdftex.def)             Requested size: 119.70154pt x 81.25037pt.
-<Figures/Fluence_Distribution_1550nm_Cochlear.png, id=40, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1550nm_Cochlear.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1550nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Cochlear.png  used on input line 210.
-(pdftex.def)             Requested size: 126.0pt x 85.51837pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--243
-[]\OT1/ptm/m/n/8 ``Improvements in clin-i-cal signs of Parkin-son's dis-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--243
-\OT1/ptm/m/n/8 ease us-ing pho-to-biomod-u-la-tion: a prospec-tive proof-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--243
-\OT1/ptm/m/n/8 of-concept study,`` in \OT1/ptm/m/it/8 BMC Neu-rol21\OT1/ptm/m/n/8 , Jul. 2021.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--246
-[]\OT1/ptm/m/n/8 ``Deep Brain stim-u-la-tion,`` in \OT1/ptm/m/it/8 Mayo Clinic\OT1/ptm/m/n/8 , Sep. 2021.
- []
-
-
-Overfull \hbox (52.74097pt too wide) in paragraph at lines 244--246
-[]$ 
- []
-
-
-Underfull \hbox (badness 6808) in paragraph at lines 247--249
-[]\OT1/ptm/m/n/8 C. C. med-i-cal pro-fes-sional, ``Deep Brain Stim-u-la-tion (DBS):
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--249
-\OT1/ptm/m/n/8 What it is, Pur-pose & pro-ce-dure,`` in \OT1/ptm/m/it/8 Cleve-land Clinic\OT1/ptm/m/n/8 ,
- []
-
-
-Overfull \hbox (63.98845pt too wide) in paragraph at lines 247--249
-[]$ 
- []
-
-<Figures/Fluence_Distribution_810nm_CZ.png, id=41, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_810nm_CZ.png Graphic file (type png)
-<use Figures/Fluence_Distribution_810nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_CZ.png  used on input line 254.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_810nm_45deg.png, id=42, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_810nm_45deg.png Graphic file (type png)
-<use Figures/Fluence_Distribution_810nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_45deg.png  used on input line 260.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-File: Figures/Fluence_Distribution_810nm_Cochlear.png Graphic file (type png)
-<use Figures/Fluence_Distribution_810nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Cochlear.png  used on input line 266.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_810nm_Intranasal.png, id=43, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_810nm_Intranasal.png Graphic file (type png)
-<use Figures/Fluence_Distribution_810nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Intranasal.png  used on input line 272.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_980nm_CZ.png, id=44, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_980nm_CZ.png Graphic file (type png)
-<use Figures/Fluence_Distribution_980nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_CZ.png  used on input line 278.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_980nm_45deg.png, id=45, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_980nm_45deg.png Graphic file (type png)
-<use Figures/Fluence_Distribution_980nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_45deg.png  used on input line 284.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-File: Figures/Fluence_Distribution_980nm_Cochlear.png Graphic file (type png)
-<use Figures/Fluence_Distribution_980nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Cochlear.png  used on input line 290.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_980nm_Intranasal.png, id=46, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_980nm_Intranasal.png Graphic file (type png)
-<use Figures/Fluence_Distribution_980nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Intranasal.png  used on input line 296.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1064nm_CZ.png, id=47, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1064nm_CZ.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1064nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_CZ.png  used on input line 302.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1064nm_45deg.png, id=48, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1064nm_45deg.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1064nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_45deg.png  used on input line 308.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-File: Figures/Fluence_Distribution_1064nm_Cochlear.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1064nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Cochlear.png  used on input line 314.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1064nm_Intranasal.png, id=49, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1064nm_Intranasal.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1064nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Intranasal.png  used on input line 320.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1550nm_CZ.png, id=50, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1550nm_CZ.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1550nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_CZ.png  used on input line 326.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1550nm_45deg.png, id=51, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1550nm_45deg.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1550nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_45deg.png  used on input line 332.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-File: Figures/Fluence_Distribution_1550nm_Cochlear.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1550nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Cochlear.png  used on input line 338.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1550nm_Intranasal.png, id=52, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1550nm_Intranasal.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1550nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Intranasal.png  used on input line 344.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <7> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 349.
-
-Overfull \vbox (5.0pt too high) has occurred while \output is active []
-
- [3 <./Figures/Fluence_Distribution_810nm_Cochlear.png> <./Figures/Fluence_Distribution_980nm_Cochlear.png> <./Figures/Fluence_Distribution_1064nm_Cochlear.png> <./Figures/Fluence_Distribution_1550nm_Cochlear.png> <./Figures/Fluence_Distribution_810nm_CZ.png> <./Figures/Fluence_Distribution_810nm_45deg.png>]
-Overfull \vbox (5.0pt too high) has occurred while \output is active []
-
- [4 <./Figures/Fluence_Distribution_810nm_Intranasal.png> <./Figures/Fluence_Distribution_980nm_CZ.png> <./Figures/Fluence_Distribution_980nm_45deg.png> <./Figures/Fluence_Distribution_980nm_Intranasal.png>]
-Overfull \vbox (5.0pt too high) has occurred while \output is active []
-
- [5 <./Figures/Fluence_Distribution_1064nm_CZ.png> <./Figures/Fluence_Distribution_1064nm_45deg.png> <./Figures/Fluence_Distribution_1064nm_Intranasal.png> <./Figures/Fluence_Distribution_1550nm_CZ.png> <./Figures/Fluence_Distribution_1550nm_45deg.png>]
-Overfull \vbox (5.0pt too high) has occurred while \output is active []
-
- [6
-
- <./Figures/Fluence_Distribution_1550nm_Intranasal.png>] (./SWING.aux) ) 
+ 
 Here is how much of TeX's memory you used:
- 5556 strings out of 476097
- 95866 string characters out of 5795129
- 1883845 words of memory out of 5000000
- 25853 multiletter control sequences out of 15000+600000
- 570998 words of font info for 125 fonts, out of 8000000 for 9000
+ 5351 strings out of 476097
+ 88309 string characters out of 5795129
+ 1865845 words of memory out of 5000000
+ 25687 multiletter control sequences out of 15000+600000
+ 551490 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,19n,66p,762b,471s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on SWING.pdf (6 pages, 5843809 bytes).
-PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 57i,8n,63p,668b,342s stack positions out of 10000i,1000n,20000p,200000b,200000s
+d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex:103:  ==> Fatal error occurred, no output PDF file produced!
