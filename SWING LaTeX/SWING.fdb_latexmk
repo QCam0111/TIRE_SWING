@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1687636533 "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" "SWING.pdf" "SWING" 1687636538 0
+["pdflatex"] 1687638744 "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" "SWING.pdf" "SWING" 1687638749 0
   "Figures/Fluence_Distribution_1064nm_45deg.png" 1687636058 395174 07b017981c1a5db25c935d185f29b777 ""
   "Figures/Fluence_Distribution_1064nm_CZ.png" 1687636078 387673 f1b69f0b959a3b7f7011fd3c31c4b510 ""
   "Figures/Fluence_Distribution_1064nm_Cochlear.png" 1687636067 377212 dfd24e689010227c353b67d90eb9892e ""
@@ -17,8 +17,8 @@
   "Figures/Fluence_Distribution_980nm_Cochlear.png" 1687635725 418617 f48dd964ada791e798aa94c55a9575e5 ""
   "Figures/Fluence_Distribution_980nm_Intranasal.png" 1687635699 420879 4c67dd3fea0b6f3e11377f58fc254a29 ""
   "LOGO-generic-web.eps" 1685565760 277078 8c03e5cf2f70479534c2bd188ccaef23 ""
-  "SWING.aux" 1687636537 3880 83abee3659523a3aaceab11fbc26b38f "pdflatex"
-  "SWING.tex" 1687311072 18548 bfb71acfebaf43dc36a3ef2a0a97620d ""
+  "SWING.aux" 1687638748 4494 984c2a7c4b49286dc458f39bbfc28585 "pdflatex"
+  "SWING.tex" 1687638743 21167 f8c6f4d679a662bc7da56225c06ee4a9 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1684778437 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1684778880 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1684779220 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -91,6 +91,9 @@
   "c:/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty" 1684777136 2444 70065bddd85997dc1fd0bb7ae634e5fa ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty" 1684779675 5319 48d7f3cfa322abd2788e3c09d624b922 ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty" 1684779675 2894 f2f8ee7d4fb94263f9f255fa22cab2d3 ""
+  "c:/texlive/2023/texmf-dist/tex/latex/caption/caption.sty" 1684777743 55778 14d5c99aa26410e440820bb9ea5b8b3a ""
+  "c:/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty" 1684777743 71836 1a735454ad10692452eb2f2fc37f3865 ""
+  "c:/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty" 1684777743 12462 ecf33913ce1e8012075d24e1f47f0d9b ""
   "c:/texlive/2023/texmf-dist/tex/latex/cite/cite.sty" 1684777875 26218 19edeff8cdc2bcb704e8051dc55eb5a7 ""
   "c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1684778594 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1684779120 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
@@ -112,7 +115,7 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1684782593 4683009 81ac55e6554f9124653631026fb1fc4e ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1684782795 7888781 41e60ff471aa4396cbcb39e3cf419962 ""
   "c:/texlive/2023/texmf.cnf" 1684782571 713 e69b156964470283e0530f5060668171 ""
-  "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" 1687311072 18548 bfb71acfebaf43dc36a3ef2a0a97620d ""
+  "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" 1687638743 21167 f8c6f4d679a662bc7da56225c06ee4a9 ""
   "generic.sty" 1684864158 192 e8d3ecc691fbbb2da183dfc84a675b29 ""
   "ieeecolor.cls" 1684864158 224773 9f9540495f1e1a992a162661c1be18be ""
   (generated)

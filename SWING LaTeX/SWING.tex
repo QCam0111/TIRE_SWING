@@ -4,6 +4,8 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
+\usepackage[skip=0.333\baselineskip]{caption}
+\usepackage{subcaption}
 \usepackage{textcomp}
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -135,7 +137,7 @@ Figures 7, 8, and 9 visualize the results of the extrapolation process. Figure 7
 % extrapolations. The results are visualized in Figures 7, 8, and 9, showing the extrapolated lines and marker denoting the extrapolated values at 1550 nm.
 
 \subsection{Simulation using MCX}
-MCX, a Monte Carlo simulation tool, is employed for visualizing the optical intensity and behavior of a laser source within the head and brain tissue. It models the photon dispersion in biological tissue using optical 
+MCX, a Monte Carlo simulation tool [SOURCE], is employed for visualizing the optical intensity and behavior of a laser source within the head and brain tissue. It models the photon dispersion in biological tissue using optical 
 coefficients obtained from experimental data or approximations, as in the case of SWING. MCX creates a mesh model of the human brain using an accumulation of MRI images, incorporating layers such as scalp, skull, Cerebral Spinal Fluid (CSF), GM, WM, and air bubbles. Thickness variations in the layers are specified using thinning or thickening operators.
 To create the simulation, the optical coefficients, particularly the absorption and scattering coefficients, are input into the MCX software. This allows for the simulation of photon absorption and scattering as light passes through the brain tissue, enabling visualization of beam intensity at different points in the brain.
 Additionally, SWING utilizes the software to investigate various aspects of photon dispersion. This includes studying the impact of different tissue layers on beam intensity and exploring the effects of laser parameters such as wavelength, illumination area size, and the number of incident photons on the phantom.  The differences between absorption coefficients at 1550 nm compared to other wavelength be observed and noted in the figures, and this model can be utilized for experimental data validation.
@@ -143,52 +145,91 @@ Additionally, SWING utilizes the software to investigate various aspects of phot
 \section{Results}
 \label{sec:results}
 
+\begin{table}[h!]
+    \centering
+    \caption{Estimated Optical Coefficients}
+    \label{CoefficientTable}
+    \setlength{\tabcolsep}{3pt}
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{|L{45pt}|L{55pt}|C{80pt}|C{80pt}|}
+    \hline
+    Tissue Type & Wavelength, nm & Absorption Coefficient $\mu_{a}$, cm$^{-1}$ &  Scattering Coefficient $\mu_{s}^{'}$, cm$^{-1}$ \\
+    \hline
+    Scalp & 810 & 0.505 & 14.145 \\
+    &       980 & 0.365 & 16.714 \\
+    &       1064 & 0.168 & 17.029 \\
+    &       1550 & 1.649 & 14.578 \\
+    \hline
+    Skull & 810 & 0.099 & 19.248 \\
+    &       980 & 0.230 & 17.380 \\
+    &       1064 & 0.101 & 16.180 \\
+    &       1550 & 2.715 & 15.543 \\
+    \hline
+    Gray Matter & 810 & [0.455,0.605,0.744] & [3.896,6.030,8.211] \\
+    &       980 & [0.586,0.601,0.610] & [6.343,6.380,6.444] \\
+    &       1064 & [0.413,0.438,0.457] & [5.143,5.938,6.740] \\
+    &       1550 & [1.870,2.485,3.071] & [4.246,4.393,4.506] \\
+    \hline
+    White Matter & 810 & [0.737,0.888,1.027] & [24.237,26.403,28.617] \\
+    &       980 & [0.868,0.883,0.893] & [26.749,26.753,26.785] \\
+    &       1064 & [0.696,0.720,0.739] & [25.549,26.311,27.081] \\
+    &       1550 & [2.153,2.767,3.353] & [24.587,24.767,24.911] \\
+    \hline
+    \end{tabular}%
+    }
+    \label{tab1}
+\end{table}
+
 Table~\ref{CoefficientTable} displays the estimated absorption and scattering coefficients for each of the biological tissue layers as well as each wavelength.
 These values were calculated using the interpolation-extrapolation method detailed in Section~\ref{sec:methods}. To determine the reliability of this prediction method, SWING used
 the Python library "scikit-learn" to calculate the R-squared value when predicting known data. This R-squared value was calculated as 0.4980, indicating that 49.80\% of the 
 variability in the unknown coefficients is explained by SWING's predicition model.
 
-\begin{table}[h]
-\centering
-\caption{Estimated Optical Coefficients}
-\label{CoefficientTable}
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.5}
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{|L{45pt}|L{55pt}|C{80pt}|C{80pt}|}
-\hline
-Tissue Type & Wavelength, nm & Absorption Coefficient $\mu_{a}$, cm$^{-1}$ &  Scattering Coefficient $\mu_{s}^{'}$, cm$^{-1}$ \\
-\hline
-Scalp & 810 & 0.505 & 14.145 \\
-&       980 & 0.365 & 16.714 \\
-&       1064 & 0.168 & 17.029 \\
-&       1550 & 1.649 & 14.578 \\
-\hline
-Skull & 810 & 0.099 & 19.248 \\
-&       980 & 0.230 & 17.380 \\
-&       1064 & 0.101 & 16.180 \\
-&       1550 & 2.715 & 15.543 \\
-\hline
-Gray Matter & 810 & [0.455,0.605,0.744] & [3.896,6.030,8.211] \\
-&       980 & [0.586,0.601,0.610] & [6.343,6.380,6.444] \\
-&       1064 & [0.413,0.438,0.457] & [5.143,5.938,6.740] \\
-&       1550 & [1.870,2.485,3.071] & [4.246,4.393,4.506] \\
-\hline
-White Matter & 810 & [0.737,0.888,1.027] & [24.237,26.403,28.617] \\
-&       980 & [0.868,0.883,0.893] & [26.749,26.753,26.785] \\
-&       1064 & [0.696,0.720,0.739] & [25.549,26.311,27.081] \\
-&       1550 & [2.153,2.767,3.353] & [24.587,24.767,24.911] \\
-\hline
-\end{tabular}%
-}
-\label{tab1}
-\end{table}
+\begin{figure}[hbt!]
+    \begin{subfigure}{.475\linewidth}
+      \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_810nm_Cochlear.png}
+      \caption{810 nm Fluence Distribution}
+      \label{MLEDdet}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.5\linewidth}
+      \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_980nm_Cochlear.png}
+      \caption{980 nm Fluence Distribution}
+      \label{energydetPSK}
+    \end{subfigure}
+    
+    \medskip
+    \begin{subfigure}{.475\linewidth}
+      \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_1064nm_Cochlear.png}
+      \caption{1064 nm Fluence Distribution}
+      \label{velcomp}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.5\linewidth}
+      \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_1550nm_Cochlear.png}
+      \caption{1550 nm Fluence Distribution}
+      \label{estcomp}
+    \end{subfigure}
+    
+    \caption{Cochlear Fluence Distribution 810 nm - 1550 nm}
+    \label{fig:roc}
+\end{figure}
 
 \section{Discussion}
 \label{sec:next steps}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \section{Conclusion}
 \label{sec:conclusion}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \section*{Acknowledgment}
 
