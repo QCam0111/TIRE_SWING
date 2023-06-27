@@ -73,7 +73,7 @@ approximated optical coefficients.
 
 \subsection{Software Preprocessing}
 In the software preprocessing stage, the model approximated the optical coefficients of layers in the brain where it is unknown for 1550 nm sources. 
-Optical coefficient data for the scalp, skull, gray matter (GM), and white matter (WM) are obtained from [SOURCE]. The wavelength ranges for each layer are as follows: scalp (805-2000 nm), 
+Optical coefficient data for the scalp, skull, gray matter (GM), and white matter (WM) are obtained from \cite{b7}. The wavelength ranges for each layer are as follows: scalp (805-2000 nm), 
 skull (801-2000 nm), gray matter (400-1300 nm), and white matter (400-1300 nm). The data for scalp and skull cover the wavelength of interest (1550 nm), but the data 
 for GM and WM do not. To address this, cubic extrapolation and interpolation methods are used to process the data and extrapolate the unknown layers to 1550 nm. 
 
@@ -102,7 +102,13 @@ Solving this system of equations provides the coefficients $a$, $b$, $c$, and $d
 To apply the cubic interpolation in this study, Python programming language was used to process the known data points and calculate the coefficients. 
 Once the coefficients are obtained, the cubic interpolation function is used to estimate the absorption coefficient at any desired wavelength within the range. 
 This cubic interpolation provides a complex fit while preventing over-fitting in the initial steps. This allows extrapolation of the gray and white matter 
-absorption coefficients to 1550 nm within the overlapping region (801-1300 nm), providing continuous lines for the unknown layers.
+absorption coefficients to 1550 nm within the overlapping region (801-1300 nm), providing continuous lines for the unknown layers, as seen in Figure \ref{fig:Known}.
+
+\begin{figure}[!htb]
+    \center{\includegraphics[width=\columnwidth]
+    {Figures/KnownCoefficients.png}}
+    \caption{\label{fig:Known} Cubic interpolation of known optical coefficients}
+\end{figure}
 
 To extrapolate the optical coefficients of the gray matter (GM) and white matter (WM) layers to 1550 nm, the overlapping region of the four tissues 
 (801-1300 nm) is examined. Vertical offset values between the unknown layers (GM and WM) and the known layers (scalp and skull) are calculated throughout 
@@ -117,15 +123,20 @@ previously calculated offsets to the known scalp and skull data.
 The average vertical offsets of the gray matter and white matter can be expressed as:
 
 $$
-\text{AvgOffsetGM} = \frac{1}{N} \sum_{i=1}^{N} (\mu_{\text{GM,unknown}}(\lambda_i) - \mu_{\text{GM,known}}(\lambda_i))
+\text{AvgOffsetGM} = \frac{1}{N} \sum_{i=1}^{N} (\mu_{\text{GM,known}}(\lambda_i) - \mu_{\text{Scalp, Skull, known}}(\lambda_i))
 $$
 $$
-\text{AvgOffsetWM} = \frac{1}{N} \sum_{i=1}^{N} (\mu_{\text{WM,unknown}}(\lambda_i) - \mu_{\text{WM,known}}(\lambda_i))
+\text{AvgOffsetWM} = \frac{1}{N} \sum_{i=1}^{N} (\mu_{\text{WM,known}}(\lambda_i) - \mu_{\text{Scalp, Skull, known}}(\lambda_i))
 $$
 
-where \( N \) represents the number of data points within the overlapping region, \( \mu_{\text{GM,unknown}}(\lambda_i) \) and \( \mu_{\text{WM,unknown}}(\lambda_i) \) 
-denote the absorption coefficients of the unknown layers at the \( i \)-th wavelength, and \( \mu_{\text{GM,known}}(\lambda_i) \) and 
-\( \mu_{\text{WM,known}}(\lambda_i) \) denote the absorption coefficients of the known layers at the \( i \)-th wavelength.
+where \( N \) represents the number of data points within the overlapping region, \( \mu_{\text{GM,known}}(\lambda_i) \) and \( \mu_{\text{WM, known}}(\lambda_i) \) 
+denote the absorption coefficients of the unknown layers at the \( i \)-th wavelength, and \( \mu_{\text{Scalp, Skull, known}}(\lambda_i) \) denotes the absorption coefficients of the known layers at the \( i \)-th wavelength. This is illustrated in Figure \ref{fig:Overlap}.
+
+\begin{figure}[!htb]
+    \center{\includegraphics[width=\columnwidth]
+    {Figures/OverlapDemonstration.png}}
+    \caption{\label{fig:Overlap} Vertical Offset between different structures used for extrapolation process}
+\end{figure}
 
 In this study, Python programming language was used to process the absorption coefficient data and calculate the vertical offset values. 
 The following equations were used to perform the extrapolation:
@@ -140,10 +151,12 @@ The following equations were used to perform the extrapolation:
 To ensure accuracy and account for variations, this process of calculating vertical offsets and performing extrapolation is repeated for 
 multiple data points within the overlapping region.
 
-Figures 7, 8, and 9 visualize the results of the extrapolation process. Figure 7 shows the overlapping region of absorption coefficients, and 
-Figures 8 and 9 display the extrapolated absorption coefficients at 1550 nm. These figures, generated using Python, provide a graphical representation 
-of the extrapolation results and aid in understanding the estimated optical coefficients of the GM and WM layers at the wavelength of interest.
-
+Figure \ref{fig:Extrapolation} visualizes the results of the extrapolation process.  These figures, generated using Python, provide a graphical representation of the extrapolation results and aid in understanding the estimated optical coefficients of the GM and WM layers at the wavelength of interest.
+\begin{figure}[!htb]
+    \center{\includegraphics[width=\columnwidth]
+    {Figures/ExtrapolationGraph.png}}
+    \caption{\label{fig:Extrapolation} Completed Extrapolation Graph}
+\end{figure}
 % By applying this cubic interpolation method to the known data points using Python, continuous curves are generated for the optical coefficients of the gray matter and white matter layers. These curves provide an estimation of the absorption coefficients at the wavelength of interest, facilitating further analysis and simulation in the TIRE project.
 
 
@@ -157,7 +170,7 @@ of the extrapolation results and aid in understanding the estimated optical coef
 % extrapolations. The results are visualized in Figures 7, 8, and 9, showing the extrapolated lines and marker denoting the extrapolated values at 1550 nm.
 
 \subsection{Simulation using MCX}
-MCX, a Monte Carlo simulation tool [SOURCE], is employed for visualizing the optical intensity and behavior of a laser source within the head and brain tissue. 
+MCX, a Monte Carlo simulation tool \cite{b6}, is employed for visualizing the optical intensity and behavior of a laser source within the head and brain tissue. 
 It models the photon dispersion in biological tissue using optical coefficients obtained from experimental data or approximations, as in the case of SWING. 
 MCX creates a mesh model of the human brain using an accumulation of MRI images, incorporating layers such as scalp, skull, Cerebral Spinal Fluid (CSF), GM, WM, 
 and air bubbles. Thickness variations in the layers are specified using thinning or thickening operators. To create the simulation, the optical coefficients, particularly the absorption and scattering coefficients, are input into the MCX software. This allows 
@@ -257,6 +270,7 @@ explained by SWING's predicition model.
     \label{fig:fluence_quarters}
 \end{figure}
 
+<<<<<<< Updated upstream
 Fig. \ref{fig:fluence_quarters} shows the MCX simulations at the wavelengths 810, 980, 1064, and 1550 nm. Each simulation uses the same number
 of photons, \num{1.0e11}, and duration, \SI{100}{\milli\second}. The variables controlling the coverage of the light are 
 $\mu_{a}$, and $\mu_{s}^{'}$ found in Table \ref{CoefficientTable}. SWING's considerations for an effective wavelength for treatment are: 
@@ -271,6 +285,15 @@ Planck's equation for calculating the energy of a photon:
 \end{equation}
 where $h$ is Planck's constant: \SI{6.626e-34}{\joule\second}, $c$ is the velocity of light: \SI{3.0e8}{\meter\per\second}, and $\lambda$ is 
 the wavelength of the photon, e.g. \SI{1550e-9}{\meter}.
+=======
+\begin{figure}[!htb]
+    \center{\includegraphics[width=\columnwidth]
+    {Figures/Avg1550.png}}
+    \caption{\label{fig:Avg1550} Average Energy and Fluence in the Striatum at 1550nm}
+\end{figure}
+
+The average energy in the striatum at 1550nm resulting from cochlear penetration, as shown in \ref{fig:Avg1550} is calculated to be $1.8008669*10^-4$. This value holds significance in the context of neuromodulation within the striatum. 
+>>>>>>> Stashed changes
 
 \begin{equation}
     E = \frac{\num{6.626e-34}\cdot\num{3.0e8}}{\num{810e-9}} = \SI{2.454e-19}{\joule}
@@ -321,6 +344,9 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr
 
 \bibitem{b5} Pedregosa et al., ``Scikit-learn: Machine Learning in Python`` in \emph{JMLR 12}, pp. 2825-2830, 2011.
 
+\bibitem{b6} Q. Fang and D. Boas, "Monte Carlo Simulation of Photon Migration in 3D Turbid Media Accelerated by Graphics Processing Units," Opt. Express, vol. 17, issue 22, pp. 20178-20190, 2009.
+
+\bibitem{b7} V. V. Tuchin, “Table 2.1,” in Tissue optics: Light scattering methods and instruments for 	medical diagnosis, Bellingham, WA, USA: SPIE Press, 2015, pp. 148–163. 
 \end{thebibliography}
 
 \begin{figure}[!htb]
