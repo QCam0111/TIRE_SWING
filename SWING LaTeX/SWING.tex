@@ -205,10 +205,24 @@ model can be utilized for experimental data validation.
     \label{tab1}
 \end{table}
 
-Table~\ref{CoefficientTable} displays the estimated absorption and scattering coefficients for each of the biological tissue layers as well as each wavelength.
-These values were calculated using the interpolation-extrapolation method detailed in Section~\ref{sec:methods}. To determine the reliability of this prediction method, SWING used
-the Python library "scikit-learn" to calculate the R-squared value when predicting known data. This R-squared value was calculated as 0.4980, indicating that 49.80\% of the 
-variability in the unknown coefficients is explained by SWING's predicition model.
+Table~\ref{CoefficientTable} displays the estimated absorption and scattering coefficients for each of the biological tissue 
+layers as well as each wavelength. These values were calculated using the interpolation-extrapolation method detailed in 
+Section~\ref{sec:methods}. To determine the reliability of this prediction method, SWING used the Python library scikit-learn\cite{b5} 
+to calculate the $R^2$ value when predicting known data. The $R^2$ value is calculated as referenced in \cite{b5} as follows:
+\begin{equation}
+    SS_{res} = \sum_{i}{(y_i-f_i)^2}
+\end{equation}
+where $y_i$ is the known variable, $f_i$ is the predicted value,
+\begin{equation}
+    SS_{tot} = \sum_{i}{(y_i-\overline{y})^2}
+\end{equation}
+and $\overline{y}$ is the mean of the known data.
+\begin{equation}
+    R^2 = 1 - \frac{SS_{res}}{SS_{tot}}
+\end{equation}
+
+This $R^2$ value was calculated as 0.4980, indicating that 49.80\% of the variability in the unknown coefficients is 
+explained by SWING's predicition model.
 
 \begin{figure}[hbt!]
     \begin{subfigure}{.475\linewidth}
@@ -272,6 +286,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr
 
 \bibitem{b4} C. C. medical professional, ``Deep Brain Stimulation (DBS): What it is, Purpose \& procedure,`` in \emph{Cleveland Clinic}, 
 \url{https://my.clevelandclinic.org/health/treatments/21088-deep-brain-stimulation\#risks--benefits}
+
+\bibitem{b5} Pedregosa et al., ``Scikit-learn: Machine Learning in Python`` in \emph{JMLR 12}, pp. 2825-2830, 2011.
 
 \end{thebibliography}
 

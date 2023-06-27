@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.22)  26 JUN 2023 14:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.22)  27 JUN 2023 11:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -494,137 +494,137 @@ Overfull \vbox (5.0pt too high) has occurred while \output is active []
 <Figures/Fluence_Distribution_810nm_Cochlear.png, id=76, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_810nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_810nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Cochlear.png  used on input line 215.
+Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Cochlear.png  used on input line 229.
 (pdftex.def)             Requested size: 119.70154pt x 81.25037pt.
 <Figures/Fluence_Distribution_980nm_Cochlear.png, id=77, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_980nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_980nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Cochlear.png  used on input line 221.
+Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Cochlear.png  used on input line 235.
 (pdftex.def)             Requested size: 126.0pt x 85.51837pt.
 <Figures/Fluence_Distribution_1064nm_Cochlear.png, id=78, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1064nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1064nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Cochlear.png  used on input line 228.
+Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Cochlear.png  used on input line 242.
 (pdftex.def)             Requested size: 119.70154pt x 81.25037pt.
 <Figures/Fluence_Distribution_1550nm_Cochlear.png, id=79, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1550nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1550nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Cochlear.png  used on input line 234.
+Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Cochlear.png  used on input line 248.
 (pdftex.def)             Requested size: 126.0pt x 85.51837pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
+Underfull \hbox (badness 10000) in paragraph at lines 284--286
 \OT1/ptm/m/n/8 mayoclinic . org / tests -[] procedures / deep -[] brain -[] stimulation / about / pac -[]
  []
 
 <Figures/Fluence_Distribution_810nm_CZ.png, id=84, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_810nm_CZ.png Graphic file (type png)
 <use Figures/Fluence_Distribution_810nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_CZ.png  used on input line 280.
+Package pdftex.def Info: Figures/Fluence_Distribution_810nm_CZ.png  used on input line 296.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_810nm_45deg.png, id=85, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_810nm_45deg.png Graphic file (type png)
 <use Figures/Fluence_Distribution_810nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_45deg.png  used on input line 286.
+Package pdftex.def Info: Figures/Fluence_Distribution_810nm_45deg.png  used on input line 302.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 File: Figures/Fluence_Distribution_810nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_810nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Cochlear.png  used on input line 292.
+Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Cochlear.png  used on input line 308.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_810nm_Intranasal.png, id=86, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_810nm_Intranasal.png Graphic file (type png)
 <use Figures/Fluence_Distribution_810nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Intranasal.png  used on input line 298.
+Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Intranasal.png  used on input line 314.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_980nm_CZ.png, id=87, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_980nm_CZ.png Graphic file (type png)
 <use Figures/Fluence_Distribution_980nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_CZ.png  used on input line 304.
+Package pdftex.def Info: Figures/Fluence_Distribution_980nm_CZ.png  used on input line 320.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_980nm_45deg.png, id=88, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_980nm_45deg.png Graphic file (type png)
 <use Figures/Fluence_Distribution_980nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_45deg.png  used on input line 310.
+Package pdftex.def Info: Figures/Fluence_Distribution_980nm_45deg.png  used on input line 326.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 File: Figures/Fluence_Distribution_980nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_980nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Cochlear.png  used on input line 316.
+Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Cochlear.png  used on input line 332.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_980nm_Intranasal.png, id=89, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_980nm_Intranasal.png Graphic file (type png)
 <use Figures/Fluence_Distribution_980nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Intranasal.png  used on input line 322.
+Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Intranasal.png  used on input line 338.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_1064nm_CZ.png, id=90, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1064nm_CZ.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1064nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_CZ.png  used on input line 328.
+Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_CZ.png  used on input line 344.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_1064nm_45deg.png, id=91, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1064nm_45deg.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1064nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_45deg.png  used on input line 334.
+Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_45deg.png  used on input line 350.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 File: Figures/Fluence_Distribution_1064nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1064nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Cochlear.png  used on input line 340.
+Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Cochlear.png  used on input line 356.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_1064nm_Intranasal.png, id=92, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1064nm_Intranasal.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1064nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Intranasal.png  used on input line 346.
+Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Intranasal.png  used on input line 362.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_1550nm_CZ.png, id=93, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1550nm_CZ.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1550nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_CZ.png  used on input line 352.
+Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_CZ.png  used on input line 368.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_1550nm_45deg.png, id=94, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1550nm_45deg.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1550nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_45deg.png  used on input line 358.
+Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_45deg.png  used on input line 374.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 File: Figures/Fluence_Distribution_1550nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1550nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Cochlear.png  used on input line 364.
+Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Cochlear.png  used on input line 380.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 <Figures/Fluence_Distribution_1550nm_Intranasal.png, id=95, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1550nm_Intranasal.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1550nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Intranasal.png  used on input line 370.
+Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Intranasal.png  used on input line 386.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <7> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 375.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 391.
 
 Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
- [3 <./Figures/Fluence_Distribution_810nm_Cochlear.png> <./Figures/Fluence_Distribution_980nm_Cochlear.png> <./Figures/Fluence_Distribution_1064nm_Cochlear.png> <./Figures/Fluence_Distribution_1550nm_Cochlear.png> <./Figures/Fluence_Distribution_810nm_CZ.png> <./Figures/Fluence_Distribution_810nm_45deg.png>]
+ [3 <./Figures/Fluence_Distribution_810nm_Cochlear.png> <./Figures/Fluence_Distribution_980nm_Cochlear.png> <./Figures/Fluence_Distribution_1064nm_Cochlear.png> <./Figures/Fluence_Distribution_1550nm_Cochlear.png> <./Figures/Fluence_Distribution_810nm_CZ.png>]
 Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
- [4 <./Figures/Fluence_Distribution_810nm_Intranasal.png> <./Figures/Fluence_Distribution_980nm_CZ.png> <./Figures/Fluence_Distribution_980nm_45deg.png> <./Figures/Fluence_Distribution_980nm_Intranasal.png>]
+ [4 <./Figures/Fluence_Distribution_810nm_45deg.png> <./Figures/Fluence_Distribution_810nm_Intranasal.png> <./Figures/Fluence_Distribution_980nm_CZ.png> <./Figures/Fluence_Distribution_980nm_45deg.png>]
 Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
- [5 <./Figures/Fluence_Distribution_1064nm_CZ.png> <./Figures/Fluence_Distribution_1064nm_45deg.png> <./Figures/Fluence_Distribution_1064nm_Intranasal.png> <./Figures/Fluence_Distribution_1550nm_CZ.png> <./Figures/Fluence_Distribution_1550nm_45deg.png>]
+ [5 <./Figures/Fluence_Distribution_980nm_Intranasal.png> <./Figures/Fluence_Distribution_1064nm_CZ.png> <./Figures/Fluence_Distribution_1064nm_45deg.png> <./Figures/Fluence_Distribution_1064nm_Intranasal.png> <./Figures/Fluence_Distribution_1550nm_CZ.png>]
 Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
  [6
 
- <./Figures/Fluence_Distribution_1550nm_Intranasal.png>] (./SWING.aux)
+ <./Figures/Fluence_Distribution_1550nm_45deg.png> <./Figures/Fluence_Distribution_1550nm_Intranasal.png>] (./SWING.aux)
 Package rerunfilecheck Info: File `SWING.out' has not changed.
 (rerunfilecheck)             Checksum: 53F0BCC1778298C940D2D3918FB54837;872.
  ) 
 Here is how much of TeX's memory you used:
- 12659 strings out of 476097
- 206529 string characters out of 5795129
+ 12664 strings out of 476097
+ 206575 string characters out of 5795129
  1883845 words of memory out of 5000000
- 32812 multiletter control sequences out of 15000+600000
+ 32813 multiletter control sequences out of 15000+600000
  570998 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,19n,76p,668b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on SWING.pdf (6 pages, 5846154 bytes).
+Output written on SWING.pdf (6 pages, 5848871 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 232 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
  150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
