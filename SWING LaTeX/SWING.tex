@@ -8,6 +8,7 @@
 \usepackage{subcaption}
 \usepackage{textcomp}
 \usepackage{array}
+\usepackage{siunitx}
 \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \urlstyle{same}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -208,15 +209,17 @@ model can be utilized for experimental data validation.
 Table~\ref{CoefficientTable} displays the estimated absorption and scattering coefficients for each of the biological tissue 
 layers as well as each wavelength. These values were calculated using the interpolation-extrapolation method detailed in 
 Section~\ref{sec:methods}. To determine the reliability of this prediction method, SWING used the Python library scikit-learn\cite{b5} 
-to calculate the $R^2$ value when predicting known data. The $R^2$ value is calculated as referenced in \cite{b5} as follows:
+to calculate the $R^2$ value when predicting known data. Scitkit-learn calculated the $R^2$ value, as referenced in \cite{b5}, as follows:
+first, the residual sum of squares, $SS_{res}$,
 \begin{equation}
     SS_{res} = \sum_{i}{(y_i-f_i)^2}
 \end{equation}
-where $y_i$ is the known variable, $f_i$ is the predicted value,
+where $y_i$ is the known variable value, and $f_i$ is the predicted variable value.
+Next, the total sum of squares, $SS_{tot}$,
 \begin{equation}
     SS_{tot} = \sum_{i}{(y_i-\overline{y})^2}
 \end{equation}
-and $\overline{y}$ is the mean of the known data.
+where $\overline{y}$ is the mean of the known data.
 \begin{equation}
     R^2 = 1 - \frac{SS_{res}}{SS_{tot}}
 \end{equation}
@@ -251,10 +254,39 @@ explained by SWING's predicition model.
     \end{subfigure}
     
     \caption{Cochlear Fluence Distribution 810 nm - 1550 nm}
-    \label{fig:roc}
+    \label{fig:fluence_quarters}
 \end{figure}
 
+Fig. \ref{fig:fluence_quarters} shows the MCX simulations at the wavelengths 810, 980, 1064, and 1550 nm. Each simulation uses the same number
+of photons, \num{1.0e11}, and duration, \SI{100}{\milli\second}. The variables controlling the coverage of the light are 
+$\mu_{a}$, and $\mu_{s}^{'}$ found in Table \ref{CoefficientTable}. SWING's considerations for an effective wavelength for treatment are: 
+maximum achievable depth from the photon injection point, energy level at the points of interest 
+(dorsal striatum, ventral striatum, and motor cortex), and minimizing risk of unwanted side effects such as stimulation to other portions 
+of the brain, or damage to tissue. With these considerations in mind, 1550 nm was chosen as the best simulated wavelength. 1550 nm light 
+provides a depth sufficient for stimulating the striatum and motor cortex, and due to its lower energy compared to 810, 980, and 1064 nm has a 
+lower risk of causing tissue damage. While the former consideration is visually observable, the latter consideration is demonstrated by 
+Planck's equation for calculating the energy of a photon:
+\begin{equation}
+    E = \frac{hc}{\lambda}
+\end{equation}
+where $h$ is Planck's constant: \SI{6.626e-34}{\joule\second}, $c$ is the velocity of light: \SI{3.0e8}{\meter\per\second}, and $\lambda$ is 
+the wavelength of the photon, e.g. \SI{1550e-9}{\meter}.
 
+\begin{equation}
+    E = \frac{\num{6.626e-34}\cdot\num{3.0e8}}{\num{810e-9}} = \SI{2.454e-19}{\joule}
+\end{equation}
+
+\begin{equation}
+    E = \frac{\num{6.626e-34}\cdot\num{3.0e8}}{\num{980e-9}} = \SI{2.028e-19}{\joule}
+\end{equation}
+
+\begin{equation}
+    E = \frac{\num{6.626e-34}\cdot\num{3.0e8}}{\num{1064e-9}} = \SI{1.868e-19}{\joule}
+\end{equation}
+
+\begin{equation}
+    E = \frac{\num{6.626e-34}\cdot\num{3.0e8}}{\num{1550e-9}} = \SI{1.282e-19}{\joule}
+\end{equation}
 
 \section{Discussion}
 \label{sec:next steps}
