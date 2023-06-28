@@ -429,11 +429,6 @@ INPUT ./Figures/Fluence_Distribution_1550nm_Cochlear.png
 INPUT Figures/Fluence_Distribution_1550nm_Cochlear.png
 INPUT ./Figures/Fluence_Distribution_1550nm_Cochlear.png
 INPUT ./Figures/Fluence_Distribution_1550nm_Cochlear.png
-INPUT ./Figures/Avg1550.png
-INPUT ./Figures/Avg1550.png
-INPUT Figures/Avg1550.png
-INPUT ./Figures/Avg1550.png
-INPUT ./Figures/Avg1550.png
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvro7t.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/helvetic/phvro7t.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvro8r.tfm
@@ -441,6 +436,11 @@ INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT ./Figures/Avg1550.png
+INPUT ./Figures/Avg1550.png
+INPUT Figures/Avg1550.png
+INPUT ./Figures/Avg1550.png
+INPUT ./Figures/Avg1550.png
 INPUT ./Figures/Fluence_Distribution_810nm_CZ.png
 INPUT ./Figures/Fluence_Distribution_810nm_CZ.png
 INPUT Figures/Fluence_Distribution_810nm_CZ.png
@@ -479,6 +479,8 @@ INPUT ./Figures/Fluence_Distribution_980nm_Intranasal.png
 INPUT Figures/Fluence_Distribution_980nm_Intranasal.png
 INPUT ./Figures/Fluence_Distribution_980nm_Intranasal.png
 INPUT ./Figures/Fluence_Distribution_980nm_Intranasal.png
+INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT ./Figures/Fluence_Distribution_1064nm_CZ.png
 INPUT ./Figures/Fluence_Distribution_1064nm_CZ.png
 INPUT Figures/Fluence_Distribution_1064nm_CZ.png
@@ -517,8 +519,6 @@ INPUT ./Figures/Fluence_Distribution_1550nm_Intranasal.png
 INPUT Figures/Fluence_Distribution_1550nm_Intranasal.png
 INPUT ./Figures/Fluence_Distribution_1550nm_Intranasal.png
 INPUT ./Figures/Fluence_Distribution_1550nm_Intranasal.png
-INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT SWING.aux
 INPUT ./SWING.out
 INPUT ./SWING.out

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1687916445 "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" "SWING.pdf" "SWING" 1687916451 0
+["pdflatex"] 1687994846 "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" "SWING.pdf" "SWING" 1687994852 0
   "Figures/Avg1550.png" 1687916346 2588659 52ffad1fa3c6207731bd40e4751028e0 ""
   "Figures/ExtrapolationGraph.png" 1687916346 806739 6993ccbae7269b4f067dc8312fbd5595 ""
   "Figures/Fluence_Distribution_1064nm_45deg.png" 1687876989 395174 07b017981c1a5db25c935d185f29b777 ""
@@ -21,9 +21,9 @@
   "Figures/KnownCoefficients.png" 1687916346 439692 5344aa1695fa38e9b4f54cdb168fa646 ""
   "Figures/OverlapDemonstration.png" 1687916346 719246 006fd629dc310d78c7d6dd52ab83cda4 ""
   "LOGO-generic-web.eps" 1685565760 277078 8c03e5cf2f70479534c2bd188ccaef23 ""
-  "SWING.aux" 1687916451 8311 2e6ab66b78183b3e0af35ebb0a341f7b "pdflatex"
-  "SWING.out" 1687916451 872 591116d943c7df719f7b3e06a28aea7c "pdflatex"
-  "SWING.tex" 1687916444 25256 998a1aff98973a345d87fd9d54d9715a ""
+  "SWING.aux" 1687994852 10483 e7da49c42a1eedd1c9abba4c454f46e2 "pdflatex"
+  "SWING.out" 1687994852 1924 065ad8b79d21659af02f2d2318f3e826 "pdflatex"
+  "SWING.tex" 1687994838 28828 429c4a1a8760c2281d493a3cf390d9ce ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1684778437 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1684778880 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1684779220 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -153,7 +153,7 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1684782593 4683009 81ac55e6554f9124653631026fb1fc4e ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1684782795 7888781 41e60ff471aa4396cbcb39e3cf419962 ""
   "c:/texlive/2023/texmf.cnf" 1684782571 713 e69b156964470283e0530f5060668171 ""
-  "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" 1687916444 25256 998a1aff98973a345d87fd9d54d9715a ""
+  "d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex" 1687994838 28828 429c4a1a8760c2281d493a3cf390d9ce ""
   "generic.sty" 1684864158 192 e8d3ecc691fbbb2da183dfc84a675b29 ""
   "ieeecolor.cls" 1684864158 224773 9f9540495f1e1a992a162661c1be18be ""
   (generated)
