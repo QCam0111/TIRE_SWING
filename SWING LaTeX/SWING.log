@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.22)  31 MAY 2023 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.22)  27 JUN 2023 14:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -218,50 +218,226 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 \Gin@req@height=\dimen161
 \Gin@req@width=\dimen162
+) (c:/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+ (c:/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen163
+\captionmargin=\dimen164
+\caption@leftmargin=\dimen165
+\caption@rightmargin=\dimen166
+\caption@width=\dimen167
+\caption@indent=\dimen168
+\caption@parindent=\dimen169
+\caption@hangindent=\dimen170
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\fontencoding {T1} \fontfamily {phv} \fontseries {m} \fontshape {n} \fontsize {8}{10} \selectfont \scshape \ifx \@captype \@IEEEtablestring \@IEEEtablecaptionsabspace \begin {center} \if@myimage \ifdim \width > 255pt {\strut #1\color {black}}\\ {\footnotesize \scshape \if \boldmath #2\color {black}\null \else \strut \stupiddouble {\boldmath #2\color {black}\normalcolor }\fi } \else {\strut #1\color {black}}\\ {\footnotesize \scshape \if \boldmath #2\color {black}\null \else \strut \stupidsingle {\boldmath #2\color {black}\normalcolor }\fi } \fi \else \ifdim \width > 255pt {\strut #1}\\ {\footnotesize \scshape \if \boldmath #2\null \else \strut \stupiddouble {\boldmath #2\color {black}}\fi } \else {\strut #1}\\ {\if \boldmath #2\null \else \strut \stupidsingle {\boldmath #2\color {black}}\fi } \fi \fi \end {center}\@IEEEtablecaptionsbespace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\footnotesize #1.\color {black}\normalcolor ~~\sf \boldmath #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\footnotesize #1.\color {black}\normalcolor ~~ }\parbox [t]{\hsize }{\footnotesize \noindent \unhbox \@tempboxa \sf \boldmath #2}\else \ifcenterfigcaptions \hbox to\hsize {\footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\footnotesize \box \@tempboxa \hfil }\fi \fi \fi \color {black} on input line 1176.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count288
+\c@continuedfloat=\count289
+) (c:/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count290
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count291
 ) (c:/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ) (c:/texlive/2023/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen163
+\col@sep=\dimen171
 \ar@mcellbox=\box55
-\extrarowheight=\dimen164
+\extrarowheight=\dimen172
 \NC@list=\toks23
 \extratabsurround=\skip61
 \backup@length=\skip62
 \ar@cellbox=\box56
-) (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (c:/texlive/2023/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2023-04-13 v3.2.5 A comprehensive (SI) units package
+\l__siunitx_angle_tmp_dim=\dimen173
+\l__siunitx_angle_marker_box=\box57
+\l__siunitx_angle_unit_box=\box58
+\l__siunitx_compound_count_int=\count292
+ (c:/texlive/2023/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+ (c:/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count293
+) (c:/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (c:/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (c:/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+\l__siunitx_number_exponent_fixed_int=\count294
+\l__siunitx_number_min_decimal_int=\count295
+\l__siunitx_number_min_integer_int=\count296
+\l__siunitx_number_round_precision_int=\count297
+\l__siunitx_number_lower_threshold_int=\count298
+\l__siunitx_number_upper_threshold_int=\count299
+\l__siunitx_number_group_first_int=\count300
+\l__siunitx_number_group_size_int=\count301
+\l__siunitx_number_group_minimum_int=\count302
+\l__siunitx_table_tmp_box=\box59
+\l__siunitx_table_tmp_dim=\dimen174
+\l__siunitx_table_column_width_dim=\dimen175
+\l__siunitx_table_integer_box=\box60
+\l__siunitx_table_decimal_box=\box61
+\l__siunitx_table_uncert_box=\box62
+\l__siunitx_table_before_box=\box63
+\l__siunitx_table_after_box=\box64
+\l__siunitx_table_before_dim=\dimen176
+\l__siunitx_table_carry_dim=\dimen177
+\l__siunitx_unit_tmp_int=\count303
+\l__siunitx_unit_position_int=\count304
+\l__siunitx_unit_total_int=\count305
+) (c:/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-04-22 v7.00x Hypertext links for LaTeX
+ (c:/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (c:/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (c:/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (c:/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (c:/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (c:/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (c:/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+ (c:/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (c:/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (c:/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count306
+)
+\@linkdim=\dimen178
+\Hy@linkcounter=\count307
+\Hy@pagecounter=\count308
+ (c:/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-04-22 v7.00x Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (c:/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count309
+ (c:/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-04-22 v7.00x Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4182.
+Package hyperref Info: Link nesting OFF on input line 4187.
+Package hyperref Info: Hyper index ON on input line 4190.
+Package hyperref Info: Plain pages OFF on input line 4197.
+Package hyperref Info: Backreferencing OFF on input line 4202.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4449.
+\c@Hy@tempcnt=\count310
+ (c:/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4787.
+\XeTeXLinkMargin=\dimen179
+ (c:/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (c:/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count311
+\Field@Width=\dimen180
+\Fld@charsize=\dimen181
+Package hyperref Info: Hyper figures OFF on input line 6066.
+Package hyperref Info: Link nesting OFF on input line 6071.
+Package hyperref Info: Hyper index ON on input line 6074.
+Package hyperref Info: backreferencing OFF on input line 6081.
+Package hyperref Info: Link coloring OFF on input line 6086.
+Package hyperref Info: Link coloring with OCG OFF on input line 6091.
+Package hyperref Info: PDF/A mode OFF on input line 6096.
+ (c:/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count312
+\c@Item=\count313
+\c@Hfootnote=\count314
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (c:/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-04-22 v7.00x Hyperref driver for pdfTeX
+ (c:/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count315
+\c@bookmark@seq@number=\count316
+ (c:/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (c:/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip63
+)
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 22.
+ (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count288
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count317
+\l__pdf_internal_box=\box65
 ) (./SWING.aux)
 \openout1 = `SWING.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
  (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count289
-\scratchdimen=\dimen165
-\scratchbox=\box58
-\nofMPsegments=\count290
-\nofMParguments=\count291
+\scratchcounter=\count318
+\scratchdimen=\dimen182
+\scratchbox=\box66
+\nofMPsegments=\count319
+\nofMParguments=\count320
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count292
-\MPscratchDim=\dimen166
-\MPnumerator=\count293
-\makeMPintoPDFobject=\count294
+\MPscratchCnt=\count321
+\MPscratchDim=\dimen183
+\MPnumerator=\count322
+\makeMPintoPDFobject=\count323
 \everyMPtoPDFconversion=\toks25
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -269,36 +445,68 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package color Info: Redefining color nblue on input line 26.
-Package color Info: Redefining color mblue on input line 26.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 26.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (c:/texlive/2023/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 22.
+Package hyperref Info: Link coloring OFF on input line 22.
+\@outlinefile=\write3
+\openout3 = `SWING.out'.
+
+Package color Info: Redefining color nblue on input line 32.
+Package color Info: Redefining color mblue on input line 32.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 32.
  (c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <11> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 26.
-Package color Info: Redefining color nblue on input line 26.
-Package color Info: Redefining color mblue on input line 26.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 32.
+Package color Info: Redefining color nblue on input line 32.
+Package color Info: Redefining color mblue on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
  (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
  (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package color Info: Redefining color nblue on input line 28.
-Package color Info: Redefining color mblue on input line 28.
+Package color Info: Redefining color nblue on input line 33.
+Package color Info: Redefining color mblue on input line 33.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <9> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 28.
-Package color Info: Redefining color nblue on input line 46.
-Package color Info: Redefining color mblue on input line 46.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 50.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 33.
+Package color Info: Redefining color nblue on input line 49.
+Package color Info: Redefining color mblue on input line 49.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 53.
  (c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Citation `b2' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Citation `b3' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 63.
+
+
+LaTeX Warning: Citation `b4' on page 1 undefined on input line 63.
+
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 68.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 74.
+
+LaTeX Warning: Citation `b7' on page 1 undefined on input line 76.
+
+
+LaTeX Warning: Reference `fig:Known' on page 1 undefined on input line 105.
+
 Package epstopdf Info: Source file: <LOGO-generic-web.eps>
 (epstopdf)                    date: 2023-05-31 16:42:40
 (epstopdf)                    size: 277078 bytes
@@ -306,12 +514,12 @@ Package epstopdf Info: Source file: <LOGO-generic-web.eps>
 (epstopdf)                    date: 2023-05-31 16:42:43
 (epstopdf)                    size: 16928 bytes
 (epstopdf)             Command: <repstopdf --outfile=LOGO-generic-web-eps-converted-to.pdf LOGO-generic-web.eps>
-(epstopdf)             \includegraphics on input line 92.
+(epstopdf)             \includegraphics on input line 106.
 Package epstopdf Info: Output file is already uptodate.
-<LOGO-generic-web-eps-converted-to.pdf, id=1, 48.18pt x 24.09pt>
+<LOGO-generic-web-eps-converted-to.pdf, id=4, 48.18pt x 24.09pt>
 File: LOGO-generic-web-eps-converted-to.pdf Graphic file (type pdf)
 <use LOGO-generic-web-eps-converted-to.pdf>
-Package pdftex.def Info: LOGO-generic-web-eps-converted-to.pdf  used on input line 92.
+Package pdftex.def Info: LOGO-generic-web-eps-converted-to.pdf  used on input line 106.
 (pdftex.def)             Requested size: 48.0pt x 23.99985pt.
 
 Overfull \hbox (259.0pt too wide) has occurred while \output is active
@@ -335,149 +543,261 @@ Overfull \vbox (19.99985pt too high) has occurred while \output is active []
 
 
  <./LOGO-generic-web-eps-converted-to.pdf>]
-\width=\dimen167
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--153
-[]\OT1/ptm/m/n/8 ``Deep Brain stim-u-la-tion,`` in \OT1/ptm/m/it/8 Mayo Clinic\OT1/ptm/m/n/8 , Sep. 2021.
+LaTeX Warning: File `Figures/KnownCoefficients.png' not found on input line 109.
+
+
+d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex:109: Package pdftex.def Error: File `Figures/KnownCoefficients.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.109     {Figures/KnownCoefficients.png}
+                                         }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 109.
+(c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Overfull \hbox (2.08264pt too wide) detected at line 130
+[] \OT1/cmr/m/n/10 = [] [](\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U[]\OT1/cmr/m/n/10 ))
  []
 
 
-Overfull \hbox (52.74097pt too wide) in paragraph at lines 151--153
-[]$ 
- []
+LaTeX Warning: Reference `fig:Overlap' on page 2 undefined on input line 133.
 
 
-Underfull \hbox (badness 6808) in paragraph at lines 154--156
-[]\OT1/ptm/m/n/8 C. C. med-i-cal pro-fes-sional, ``Deep Brain Stim-u-la-tion (DBS):
- []
+LaTeX Warning: File `Figures/OverlapDemonstration.png' not found on input line 137.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--156
-\OT1/ptm/m/n/8 What it is, Pur-pose & pro-ce-dure,`` in \OT1/ptm/m/it/8 Cleve-land Clinic\OT1/ptm/m/n/8 ,
- []
+d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex:137: Package pdftex.def Error: File `Figures/OverlapDemonstration.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.137     {Figures/OverlapDemonstration.png}
+                                            }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (63.98845pt too wide) in paragraph at lines 154--156
-[]$ 
- []
+LaTeX Warning: Reference `fig:Extrapolation' on page 2 undefined on input line 154.
 
-<Figures/Fluence_Distribution_810nm_CZ.png, id=23, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_810nm_CZ.png Graphic file (type png)
-<use Figures/Fluence_Distribution_810nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_CZ.png  used on input line 161.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_810nm_45deg.png, id=24, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_810nm_45deg.png Graphic file (type png)
-<use Figures/Fluence_Distribution_810nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_45deg.png  used on input line 167.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_810nm_Cochlear.png, id=25, 1019.9706pt x 692.3466pt>
+
+LaTeX Warning: File `Figures/ExtrapolationGraph.png' not found on input line 157.
+
+
+d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex:157: Package pdftex.def Error: File `Figures/ExtrapolationGraph.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157     {Figures/ExtrapolationGraph.png}
+                                          }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `b6' on page 2 undefined on input line 173.
+
+
+Overfull \vbox (5.0pt too high) has occurred while \output is active []
+
+ [2]
+\width=\dimen184
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `CoefficientTable' on page 3 undefined on input line 222.
+
+
+LaTeX Warning: Reference `sec:methods' on page 3 undefined on input line 224.
+
+
+LaTeX Warning: Citation `b5' on page 3 undefined on input line 224.
+
+
+LaTeX Warning: Citation `b5' on page 3 undefined on input line 225.
+
+<Figures/Fluence_Distribution_810nm_Cochlear.png, id=43, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_810nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_810nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Cochlear.png  used on input line 173.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_810nm_Intranasal.png, id=26, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_810nm_Intranasal.png Graphic file (type png)
-<use Figures/Fluence_Distribution_810nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Intranasal.png  used on input line 179.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_980nm_CZ.png, id=27, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_980nm_CZ.png Graphic file (type png)
-<use Figures/Fluence_Distribution_980nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_CZ.png  used on input line 185.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_980nm_45deg.png, id=28, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_980nm_45deg.png Graphic file (type png)
-<use Figures/Fluence_Distribution_980nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_45deg.png  used on input line 191.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_980nm_Cochlear.png, id=29, 1019.9706pt x 692.3466pt>
+Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Cochlear.png  used on input line 245.
+(pdftex.def)             Requested size: 119.70154pt x 81.25037pt.
+<Figures/Fluence_Distribution_980nm_Cochlear.png, id=44, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_980nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_980nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Cochlear.png  used on input line 197.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_980nm_Intranasal.png, id=30, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_980nm_Intranasal.png Graphic file (type png)
-<use Figures/Fluence_Distribution_980nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Intranasal.png  used on input line 203.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1064nm_CZ.png, id=31, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1064nm_CZ.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1064nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_CZ.png  used on input line 209.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1064nm_45deg.png, id=32, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1064nm_45deg.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1064nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_45deg.png  used on input line 215.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1064nm_Cochlear.png, id=33, 1019.9706pt x 692.3466pt>
+Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Cochlear.png  used on input line 251.
+(pdftex.def)             Requested size: 126.0pt x 85.51837pt.
+<Figures/Fluence_Distribution_1064nm_Cochlear.png, id=45, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1064nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1064nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Cochlear.png  used on input line 221.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1064nm_Intranasal.png, id=34, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1064nm_Intranasal.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1064nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Intranasal.png  used on input line 227.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1550nm_CZ.png, id=35, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1550nm_CZ.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1550nm_CZ.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_CZ.png  used on input line 233.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1550nm_45deg.png, id=36, 1019.9706pt x 692.3466pt>
-File: Figures/Fluence_Distribution_1550nm_45deg.png Graphic file (type png)
-<use Figures/Fluence_Distribution_1550nm_45deg.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_45deg.png  used on input line 239.
-(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1550nm_Cochlear.png, id=37, 1019.9706pt x 692.3466pt>
+Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Cochlear.png  used on input line 258.
+(pdftex.def)             Requested size: 119.70154pt x 81.25037pt.
+<Figures/Fluence_Distribution_1550nm_Cochlear.png, id=46, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1550nm_Cochlear.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1550nm_Cochlear.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Cochlear.png  used on input line 245.
+Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Cochlear.png  used on input line 264.
+(pdftex.def)             Requested size: 126.0pt x 85.51837pt.
+
+LaTeX Warning: Reference `fig:fluence_quarters' on page 3 undefined on input line 273.
+
+
+LaTeX Warning: Reference `CoefficientTable' on page 3 undefined on input line 275.
+
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <7> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 282.
+
+Overfull \vbox (5.0pt too high) has occurred while \output is active []
+
+ [3 <./Figures/Fluence_Distribution_810nm_Cochlear.png> <./Figures/Fluence_Distribution_980nm_Cochlear.png> <./Figures/Fluence_Distribution_1064nm_Cochlear.png> <./Figures/Fluence_Distribution_1550nm_Cochlear.png>]
+
+LaTeX Warning: File `Figures/Avg1550.png' not found on input line 290.
+
+
+d:/OPREL-Git/TIRE_SWING/SWING LaTeX/SWING.tex:290: Package pdftex.def Error: File `Figures/Avg1550.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.290     {Figures/Avg1550.png}
+                               }
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `fig:Avg1550' on page 4 undefined on input line 294.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
+\OT1/ptm/m/n/8 mayoclinic . org / tests -[] procedures / deep -[] brain -[] stimulation / about / pac -[]
+ []
+
+<Figures/Fluence_Distribution_810nm_CZ.png, id=67, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_810nm_CZ.png Graphic file (type png)
+<use Figures/Fluence_Distribution_810nm_CZ.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_810nm_CZ.png  used on input line 352.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
-<Figures/Fluence_Distribution_1550nm_Intranasal.png, id=38, 1019.9706pt x 692.3466pt>
+<Figures/Fluence_Distribution_810nm_45deg.png, id=68, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_810nm_45deg.png Graphic file (type png)
+<use Figures/Fluence_Distribution_810nm_45deg.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_810nm_45deg.png  used on input line 358.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+File: Figures/Fluence_Distribution_810nm_Cochlear.png Graphic file (type png)
+<use Figures/Fluence_Distribution_810nm_Cochlear.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Cochlear.png  used on input line 364.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+<Figures/Fluence_Distribution_810nm_Intranasal.png, id=69, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_810nm_Intranasal.png Graphic file (type png)
+<use Figures/Fluence_Distribution_810nm_Intranasal.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_810nm_Intranasal.png  used on input line 370.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+<Figures/Fluence_Distribution_980nm_CZ.png, id=70, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_980nm_CZ.png Graphic file (type png)
+<use Figures/Fluence_Distribution_980nm_CZ.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_980nm_CZ.png  used on input line 376.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+<Figures/Fluence_Distribution_980nm_45deg.png, id=71, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_980nm_45deg.png Graphic file (type png)
+<use Figures/Fluence_Distribution_980nm_45deg.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_980nm_45deg.png  used on input line 382.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+File: Figures/Fluence_Distribution_980nm_Cochlear.png Graphic file (type png)
+<use Figures/Fluence_Distribution_980nm_Cochlear.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Cochlear.png  used on input line 388.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+<Figures/Fluence_Distribution_980nm_Intranasal.png, id=72, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_980nm_Intranasal.png Graphic file (type png)
+<use Figures/Fluence_Distribution_980nm_Intranasal.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_980nm_Intranasal.png  used on input line 394.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+<Figures/Fluence_Distribution_1064nm_CZ.png, id=73, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_1064nm_CZ.png Graphic file (type png)
+<use Figures/Fluence_Distribution_1064nm_CZ.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_CZ.png  used on input line 400.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+<Figures/Fluence_Distribution_1064nm_45deg.png, id=74, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_1064nm_45deg.png Graphic file (type png)
+<use Figures/Fluence_Distribution_1064nm_45deg.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_45deg.png  used on input line 406.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+File: Figures/Fluence_Distribution_1064nm_Cochlear.png Graphic file (type png)
+<use Figures/Fluence_Distribution_1064nm_Cochlear.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Cochlear.png  used on input line 412.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+<Figures/Fluence_Distribution_1064nm_Intranasal.png, id=75, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_1064nm_Intranasal.png Graphic file (type png)
+<use Figures/Fluence_Distribution_1064nm_Intranasal.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_1064nm_Intranasal.png  used on input line 418.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+<Figures/Fluence_Distribution_1550nm_CZ.png, id=76, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_1550nm_CZ.png Graphic file (type png)
+<use Figures/Fluence_Distribution_1550nm_CZ.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_CZ.png  used on input line 424.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+<Figures/Fluence_Distribution_1550nm_45deg.png, id=77, 1019.9706pt x 692.3466pt>
+File: Figures/Fluence_Distribution_1550nm_45deg.png Graphic file (type png)
+<use Figures/Fluence_Distribution_1550nm_45deg.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_45deg.png  used on input line 430.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+File: Figures/Fluence_Distribution_1550nm_Cochlear.png Graphic file (type png)
+<use Figures/Fluence_Distribution_1550nm_Cochlear.png>
+Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Cochlear.png  used on input line 436.
+(pdftex.def)             Requested size: 252.0pt x 171.0473pt.
+<Figures/Fluence_Distribution_1550nm_Intranasal.png, id=78, 1019.9706pt x 692.3466pt>
 File: Figures/Fluence_Distribution_1550nm_Intranasal.png Graphic file (type png)
 <use Figures/Fluence_Distribution_1550nm_Intranasal.png>
-Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Intranasal.png  used on input line 251.
+Package pdftex.def Info: Figures/Fluence_Distribution_1550nm_Intranasal.png  used on input line 442.
 (pdftex.def)             Requested size: 252.0pt x 171.0473pt.
 
 Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
- [2
-
-pdfTeX warning: pdflatex.exe: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex.exe: pop empty color page stack 0
- <./Figures/Fluence_Distribution_810nm_CZ.png (PNG copy)> <./Figures/Fluence_Distribution_810nm_45deg.png (PNG copy)>]
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <7> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 256.
-
+ [4]
 Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
- [3 <./Figures/Fluence_Distribution_810nm_Cochlear.png (PNG copy)> <./Figures/Fluence_Distribution_810nm_Intranasal.png (PNG copy)> <./Figures/Fluence_Distribution_980nm_CZ.png (PNG copy)> <./Figures/Fluence_Distribution_980nm_45deg.png (PNG copy)> <./Figures/Fluence_Distribution_980nm_Cochlear.png (PNG copy)> <./Figures/Fluence_Distribution_980nm_Intranasal.png (PNG copy)>]
+ [5 <./Figures/Fluence_Distribution_810nm_CZ.png> <./Figures/Fluence_Distribution_810nm_45deg.png> <./Figures/Fluence_Distribution_810nm_Intranasal.png> <./Figures/Fluence_Distribution_980nm_CZ.png> <./Figures/Fluence_Distribution_980nm_45deg.png>]
 Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
- [4 <./Figures/Fluence_Distribution_1064nm_CZ.png (PNG copy)> <./Figures/Fluence_Distribution_1064nm_45deg.png (PNG copy)> <./Figures/Fluence_Distribution_1064nm_Cochlear.png (PNG copy)> <./Figures/Fluence_Distribution_1064nm_Intranasal.png (PNG copy)> <./Figures/Fluence_Distribution_1550nm_CZ.png (PNG copy)> <./Figures/Fluence_Distribution_1550nm_45deg.png (PNG copy)>]
+ [6 <./Figures/Fluence_Distribution_980nm_Intranasal.png> <./Figures/Fluence_Distribution_1064nm_CZ.png> <./Figures/Fluence_Distribution_1064nm_45deg.png> <./Figures/Fluence_Distribution_1064nm_Intranasal.png>]
 Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
- [5
+ [7 <./Figures/Fluence_Distribution_1550nm_CZ.png> <./Figures/Fluence_Distribution_1550nm_45deg.png> <./Figures/Fluence_Distribution_1550nm_Intranasal.png>] (./SWING.aux)
 
- <./Figures/Fluence_Distribution_1550nm_Cochlear.png (PNG copy)> <./Figures/Fluence_Distribution_1550nm_Intranasal.png (PNG copy)>] (./SWING.aux) ) 
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `SWING.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `SWING.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  591116D943C7DF719F7B3E06A28AEA7C;872.
+ ) 
 Here is how much of TeX's memory you used:
- 4073 strings out of 476097
- 67268 string characters out of 5795129
+ 16384 strings out of 476097
+ 322492 string characters out of 5795129
  1881845 words of memory out of 5000000
- 24379 multiletter control sequences out of 15000+600000
- 575746 words of font info for 126 fonts, out of 8000000 for 9000
+ 36488 multiletter control sequences out of 15000+600000
+ 572620 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,19n,66p,668b,344s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on SWING.pdf (5 pages, 7927570 bytes).
+ 75i,19n,77p,668b,901s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on SWING.pdf (7 pages, 5882679 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
+ 54 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
