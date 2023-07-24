@@ -18,9 +18,9 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \markboth{\journalname, VOL. XX, NO. XX, May 2023}
-{Cameron R. \MakeLowercase{\textit{et al.}}: SWING: An Investigation of Deep Brain Photobiomodulation (May 2023)}
+{Cameron R. \MakeLowercase{\textit{et al.}}: SWING: Investigating 1550 nm Transcranial Photobiomodulation for Non-Invasive Deep-Brain Stimulation  (May 2023)}
 \begin{document}
-\title{SWING: An Investigation of Deep Brain Photobiomodulation}
+\title{SWING: Investigating 1550 nm Transcranial Photobiomodulation for Non-Invasive Deep-Brain Stimulation}
 \author{Cameron R. Author, \IEEEmembership{Member, IEEE}, Matthew T. Author, Bibhus L. Author, 
         Krishna S. Sponsor, \IEEEmembership{Member, IEEE}, John L. Mentor, \IEEEmembership{Member, IEEE}
 \thanks{ }
@@ -52,16 +52,12 @@ is the most compelling choice for further testing.
 
 \section{Introduction}
 \label{sec:introduction}
-\IEEEPARstart{T}{here} are many physical issues in the brain, including Parkinson's disease and functional 
-problems such as attention-deficit/hyperactivity disorder (ADHD) and depressive disorders. 
-A solution to such problems that has been explored recently in the Neurotech community is one that involves a direct stimulation of  
-neuronal connections in the brain \cite{b1,b2,b3}. Direct neuronal stimulation, whether it be through electric or photonic 
-stimulation, provides a way to control mechanisms in the brain and treat diseases and conditions. These treatments result 
-in an improvement of the effects caused by these diseases and conditions. However, most modern neuromodulation strategies 
-are invasive in nature, and there are limited options for a non-invasive approach to neuromodulation for medical benefit. Many invasive 
-techniques involve surgical implants and increase the risk of brain hemorrhage and worsening mental and emotional status for some patients,  
-that often make the cons worse for life-threatening conditions \cite{b1,b4}. As a result, the Short-Wave Infrared Neuromodulation Gadget (SWING) 
-looks to investigate a non-invasive method for neuromodulation using a near-infrared photonic stimulation method. 
+\IEEEPARstart{T}{ranscranial} photobiomodulation (tPBM) offers the potential to directly and non-invasively treat brain diseases, 
+including Parkinson's disease (PD) and major depressive disorder (MDD). Treating PD and MDD requires stimulating the striatum, deep 
+near the center of the brain. Near infrared (NIR) was traditionally used for tPBM, as it does not scatter on skin like visible light. 
+Prior tPBM research focused on wavelengths outside of the “third optical window” (1550 - 1870 nm). To investigate the feasibility of a deep-brain 
+tPBM device, lasers in 810nm, 980nm, 1064nm, and 1550nm were simulated on four locations on the human head. The purpose of this research was to 
+determine the feasibility and optimal operational parameters of a 1550nm laser tPBM device for non-invasive DBS. 
 
 
 \section{Methods}
@@ -173,58 +169,6 @@ extrapolation results and aid in understanding the estimated optical coefficient
     \caption{\label{fig:Extrapolation} Completed Extrapolation Graph}
 \end{figure}
 
-\subsection{Simulation using MCX}
-MCX, a Monte Carlo simulation tool \cite{b6}, is employed for visualizing the optical intensity and behavior of a laser source within the head and brain tissue. 
-It models the photon dispersion in biological tissue using optical coefficients obtained from experimental data or approximations, as in the case of SWING. 
-MCX creates a mesh model of the human brain using an accumulation of MRI images, incorporating layers such as scalp, skull, Cerebral Spinal Fluid (CSF), GM, WM, 
-and air bubbles. Thickness variations in the layers are specified using thinning or thickening operators. To create the simulation, the optical coefficients, 
-particularly the absorption and scattering coefficients, are input into the MCX software. This allows for the simulation of photon absorption and scattering as 
-light passes through the brain tissue, enabling visualization of beam intensity at different points in the brain. Additionally, SWING utilizes the software to 
-investigate various aspects of photon dispersion. This includes studying the impact of different tissue layers on beam intensity and exploring the effects of 
-laser parameters such as wavelength, illumination area size, and the number of incident photons on the phantom. The differences between absorption coefficients at 
-1550 nm compared to other wavelength be observed and noted in the figures, and this model can be utilized for experimental data validation.
-
-\section{Results}
-\label{sec:results}
-Table~\ref{CoefficientTable} displays the estimated absorption and scattering coefficients for each of the biological tissue 
-layers as well as each wavelength. These values were calculated using the interpolation-extrapolation method detailed in 
-Section~\ref{sec:methods}. 
-\begin{table}[hbt!]
-    \centering
-    \caption{Estimated Optical Coefficients}
-    \label{CoefficientTable}
-    \setlength{\tabcolsep}{3pt}
-    \renewcommand{\arraystretch}{1.5}
-    \resizebox{\columnwidth}{!}{%
-    \begin{tabular}{|L{45pt}|L{55pt}|C{80pt}|C{80pt}|}
-    \hline
-    Tissue Type & Wavelength, nm & Absorption Coefficient $\mu_{a}$, cm$^{-1}$ &  Scattering Coefficient $\mu_{s}^{'}$, cm$^{-1}$ \\
-    \hline
-    Scalp & 810 & 0.505 & 14.145 \\
-    &       980 & 0.365 & 16.714 \\
-    &       1064 & 0.168 & 17.029 \\
-    &       1550 & 1.649 & 14.578 \\
-    \hline
-    Skull & 810 & 0.099 & 19.248 \\
-    &       980 & 0.230 & 17.380 \\
-    &       1064 & 0.101 & 16.180 \\
-    &       1550 & 2.715 & 15.543 \\
-    \hline
-    Gray Matter & 810 & [0.455,0.605,0.744] & [3.896,6.030,8.211] \\
-    &       980 & [0.586,0.601,0.610] & [6.343,6.380,6.444] \\
-    &       1064 & [0.413,0.438,0.457] & [5.143,5.938,6.740] \\
-    &       1550 & [1.870,2.485,3.071] & [4.246,4.393,4.506] \\
-    \hline
-    White Matter & 810 & [0.737,0.888,1.027] & [24.237,26.403,28.617] \\
-    &       980 & [0.868,0.883,0.893] & [26.749,26.753,26.785] \\
-    &       1064 & [0.696,0.720,0.739] & [25.549,26.311,27.081] \\
-    &       1550 & [2.153,2.767,3.353] & [24.587,24.767,24.911] \\
-    \hline
-    \end{tabular}%
-    }
-    \label{tab1}
-\end{table}
-
 To determine the reliability of this prediction method, SWING used the Python library scikit-learn\cite{b7} 
 to calculate the $R^2$ value when predicting known data. Scitkit-learn calculated the $R^2$ value, as referenced in \cite{b7}, as follows:
 first, the residual sum of squares, $SS_{res}$,
@@ -247,44 +191,8 @@ where $\overline{y}$ is the mean of the known data.
 This $R^2$ value was calculated as 0.4980, indicating that 49.80\% of the variability in the unknown coefficients is 
 explained by SWING's prediction model.
 
-\begin{figure}[hbt!]
-    \begin{subfigure}{.475\linewidth}
-      \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_810nm_Cochlear.png}
-      \caption{810 nm Fluence Distribution}
-      \label{fig:810Fluence}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{.5\linewidth}
-      \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_980nm_Cochlear.png}
-      \caption{980 nm Fluence Distribution}
-      \label{fig:980Fluence}
-    \end{subfigure}
-    
-    \medskip
-    \begin{subfigure}{.475\linewidth}
-      \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_1064nm_Cochlear.png}
-      \caption{1064 nm Fluence Distribution}
-      \label{fig:1064Fluence}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{.5\linewidth}
-      \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_1550nm_Cochlear.png}
-      \caption{1550 nm Fluence Distribution}
-      \label{fig:1550Fluence}
-    \end{subfigure}
-    
-    \caption{Cochlear Fluence Distribution 810 nm - 1550 nm}
-    \label{fig:fluence_quarters}
-\end{figure}
-
-Fig. \ref{fig:fluence_quarters} shows the MCX simulations at the wavelengths 810, 980, 1064, and 1550 nm. Each simulation uses the same number
-of photons, \num{1.0e11}, and duration, \SI{100}{\milli\second}. The variables controlling the coverage of the light are 
-$\mu_{a}$, and $\mu_{s}^{'}$ found in Table \ref{CoefficientTable}. These simulations use the cochlear pathway for providing laser stimulation, the additional 
-positions considered are: the CZ position using the 10-20 system for electroencephalography (EEG), 45-degree position which sits at a 45-degree angle between the 
-cochlear and CZ positions, and the intranasal position. These simulations can be found in Appendices \ref{app:810Simulations}, \ref{app:980Simulations}, 
-\ref{app:1064Simulations}, and \ref{app:1550Simulations}
-
-SWING's considerations for an effective wavelength for treatment are: maximum achievable depth from the photon injection point, energy level at the points of interest 
+\subsection{Considerations for Effective Photon Wavelength}
+SWING's considerations for an effective wavelength for photobiomodulation are: maximum achievable depth from the photon injection point, energy level at the points of interest 
 (dorsal striatum, ventral striatum, and motor cortex), and minimizing risk of unwanted side effects such as stimulation to other portions 
 of the brain, or damage to tissue. With these considerations in mind, 1550 nm was chosen as the best simulated wavelength. 1550 nm light 
 provides a depth sufficient for stimulating the striatum and motor cortex, and due to its lower energy compared to 810, 980, and 1064 nm has a 
@@ -322,7 +230,93 @@ necessary level for neuron stimulation is \SI{2.468e-7}{\joule} \cite{b8}. In or
 \num{1.0e6} photons to \num{1.0e11} photons. Once SWING attempted to simulate \num{1.0e12} photons or more, the necessary time for one simulation to finish 
 increased from taking 30 minutes for \num{1.0e11} to 4 hours or longer.
 
+\subsection{Simulation using MCX}
+MCX, a Monte Carlo simulation tool \cite{b6}, is employed for visualizing the optical intensity and behavior of a laser source within the head and brain tissue. 
+It models the photon dispersion in biological tissue using optical coefficients obtained from experimental data or approximations, as in the case of SWING. 
+MCX creates a mesh model of the human brain using an accumulation of MRI images, incorporating layers such as scalp, skull, Cerebral Spinal Fluid (CSF), GM, WM, 
+and air bubbles. Thickness variations in the layers are specified using thinning or thickening operators. To create the simulation, the optical coefficients, 
+particularly the absorption and scattering coefficients, are input into the MCX software. This allows for the simulation of photon absorption and scattering as 
+light passes through the brain tissue, enabling visualization of beam intensity at different points in the brain. Additionally, SWING utilizes the software to 
+investigate various aspects of photon dispersion. This includes studying the impact of different tissue layers on beam intensity and exploring the effects of 
+laser parameters such as wavelength, illumination area size, and the number of incident photons on the phantom. The differences between absorption coefficients at 
+1550 nm compared to other wavelength be observed and noted in the figures, and this model can be utilized for experimental data validation.
+
+\section{Results}
+\label{sec:results}
+Table~\ref{CoefficientTable} displays the estimated absorption and scattering coefficients for each of the biological tissue 
+layers as well as each wavelength. These values were calculated using the interpolation-extrapolation method detailed in 
+Section~\ref{sec:methods}.
+\begin{table}[hbt!]
+    \centering
+    \caption{Estimated Optical Coefficients}
+    \label{CoefficientTable}
+    \setlength{\tabcolsep}{3pt}
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{|L{45pt}|L{55pt}|C{80pt}|C{80pt}|}
+    \hline
+    Tissue Type & Wavelength, nm & Absorption Coefficient $\mu_{a}$, cm$^{-1}$ &  Scattering Coefficient $\mu_{s}^{'}$, cm$^{-1}$ \\
+    \hline
+    Scalp & 810 & 0.505 & 14.145 \\
+    &       980 & 0.365 & 16.714 \\
+    &       1064 & 0.168 & 17.029 \\
+    &       1550 & 1.649 & 14.578 \\
+    \hline
+    Skull & 810 & 0.099 & 19.248 \\
+    &       980 & 0.230 & 17.380 \\
+    &       1064 & 0.101 & 16.180 \\
+    &       1550 & 2.715 & 15.543 \\
+    \hline
+    Gray Matter & 810 & [0.455,0.605,0.744] & [3.896,6.030,8.211] \\
+    &       980 & [0.586,0.601,0.610] & [6.343,6.380,6.444] \\
+    &       1064 & [0.413,0.438,0.457] & [5.143,5.938,6.740] \\
+    &       1550 & [1.870,2.485,3.071] & [4.246,4.393,4.506] \\
+    \hline
+    White Matter & 810 & [0.737,0.888,1.027] & [24.237,26.403,28.617] \\
+    &       980 & [0.868,0.883,0.893] & [26.749,26.753,26.785] \\
+    &       1064 & [0.696,0.720,0.739] & [25.549,26.311,27.081] \\
+    &       1550 & [2.153,2.767,3.353] & [24.587,24.767,24.911] \\
+    \hline
+    \end{tabular}%
+    }
+    \label{tab1}
+\end{table}
+
+Figs. \ref{fig:810Fluence},\ref{fig:980Fluence},\ref{fig:1064Fluence}, and \ref{fig:1550Fluence} shows the MCX simulations at the wavelengths 810, 980, 
+1064, and 1550 nm. Each simulation uses the same number of photons, \num{1.0e11}, and duration, \SI{100}{\milli\second}. The variables controlling the 
+coverage of the light are $\mu_{a}$, and $\mu_{s}^{'}$ found in Table \ref{CoefficientTable}. These simulations use the cochlear pathway for providing laser 
+stimulation, the additional positions considered are: the CZ position using the 10-20 system for electroencephalography (EEG), 45-degree position 
+which sits at a 45-degree angle between the cochlear and CZ positions, and the intranasal position. These simulations can be found 
+in Appendices \ref{app:810Simulations}, \ref{app:980Simulations}, \ref{app:1064Simulations}, and \ref{app:1550Simulations}
+
 \begin{figure}[hbt!]
+    \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_810nm_Cochlear.png}
+    \caption{810 nm Fluence Distribution}
+    \label{fig:810Fluence}
+\end{figure}
+
+\begin{figure}[hbt!]
+    \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_980nm_Cochlear.png}
+    \caption{980 nm Fluence Distribution}
+    \label{fig:980Fluence}
+\end{figure}
+
+\begin{figure}[hbt!]
+    \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_1064nm_Cochlear.png}
+    \caption{1064 nm Fluence Distribution}
+    \label{fig:1064Fluence}
+\end{figure}
+
+Figs. \ref{fig:810Fluence}, \ref{fig:980Fluence}, and \ref{fig:1064Fluence} show that photons at these wavelengths provide a whole-head stimulation. As a result, 
+these wavelengths show promise for generalized photobiomodulation of the entire brain. 
+
+\begin{figure}[hbt!]
+    \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_1550nm_Cochlear.png}
+    \caption{1550 nm Fluence Distribution}
+    \label{fig:1550Fluence}
+\end{figure}
+
+\begin{figure}[hbt]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Avg1550.png}}
     \caption{\label{fig:Avg1550} Average Energy and Fluence in the Striatum at 1550nm}
