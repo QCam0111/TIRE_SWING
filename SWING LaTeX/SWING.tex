@@ -322,10 +322,55 @@ these wavelengths show promise for generalized photobiomodulation of the entire 
     \caption{\label{fig:Avg1550} Average Energy and Fluence in the Striatum at 1550nm}
 \end{figure}
 
+
 The average energy in the striatum at 1550nm resulting from cochlear penetration, as shown in Fig. \ref{fig:Avg1550} is calculated to 
 be \SI{1.801e-4}{\joule}. Achieving this energy level is significant as it surpasses the necessary \SI{2.468e-7}{\joule} to provide stimulation by an order of three. 
 This excess energy could be decreased by lowering the output power of the injection laser in order to decrease the chance of unwanted neuron 
 activation in other regions of the brain.
+
+Table~\ref{CoefficientTable} displays the average energy at the striatum across different wavelengths and different source positions. The positions include the cochlear pathway, the intranasal pathway, a 45-degree pathway, and the CZ pathway.
+
+\begin{table}[hbt!]
+    \centering
+    \caption{Estimated Optical Coefficients}
+    \label{CoefficientTable}
+    \setlength{\tabcolsep}{3pt}
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{|L{45pt}|C{80pt}|C{80pt}|C{80pt}|C{80pt}|}
+    \hline
+    \textbf{Wavelength (nm)} & \textbf{Cochlear (J)} & \textbf{Intranasal (J)} & \textbf{45 Degree (J)} & \textbf{CZ (J)} \\
+    \hline
+    1550 & \num{1.11e-4} & \num{2.78e-11} & \num{5.21e-16} & \num{4.52e-20} \\
+    \hline
+    1064 & \num{3.07e-2} & \num{9.76e-5} & \num{5.26e-7} & \num{3.22e-9} \\
+    \hline
+    980 & \num{1.57e-2} & \num{1.09e-5} & \num{3.92e-8} & \num{1.46e-10} \\
+    \hline
+    810 & \num{8.05e-3} & \num{7.14e-6} & \num{1.74e-8} & \num{2.56e-11} \\
+    \hline
+    \end{tabular}%
+    }
+\end{table}
+
+
+To determine if there are any statistically significant differences in the average energy across different penetration regions and wavelengths, an analysis of variance (ANOVA) test was conducted, with significance level 0.05. The ANOVA test compares the means of multiple groups to determine if there is any significant variation between them.
+
+The results of the ANOVA test are as follows:
+
+\begin{itemize}
+    \item F-statistic: 4.375
+    \item p-value: 0.027
+\end{itemize}
+
+The F-statistic is a measure of the ratio of variance between groups to the variance within groups. In this case, the F-statistic value is 4.375. The p-value is a measure of the probability of obtaining the observed results under the assumption that there is no significant difference between the groups. The p-value obtained from the ANOVA test is 0.027.
+
+Since the p-value is less than the significance level, we reject the null hypothesis and conclude that there is a statistically significant difference in the average energy across different penetration regions and wavelengths. This suggests that the choice of penetration region and wavelength has a significant impact on the average energy at the striatum.
+
+
+
+
+
 
 \section{Discussion}
 \label{sec:next steps}
@@ -347,6 +392,10 @@ measuring the energy levels throughout the optical phantom. Additionally, as par
 clinical trials, which would include the development of a wearable prototype for testing. Lastly, the use of additional functional MRI (fMRI) scans
 for simulation would provide confidence in the expected photon fluence. These are the areas that the members of SWING identified as necessary for 
 additional exploration.
+
+Additionally, further post-hoc tests can be conducted to determine which specific pathways of laser stimulation are significantly different from each other. Tukey's honestly significant difference (HSD) test or pairwise t-tests are commonly used for this purpose.
+
+
 
 \section{Conclusion}
 \label{sec:conclusion}
