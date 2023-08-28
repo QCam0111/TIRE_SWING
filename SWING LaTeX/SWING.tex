@@ -18,9 +18,9 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \markboth{\journalname, VOL. XX, NO. XX, May 2023}
-{Cameron R. \MakeLowercase{\textit{et al.}}: SWING: Investigating 1550 nm Transcranial Photobiomodulation for Non-Invasive Deep-Brain Stimulation  (May 2023)}
+{Cameron R. \MakeLowercase{\textit{et al.}}: SWING: Investigating 1550~nm Transcranial Photobiomodulation for Non-Invasive Deep-Brain Stimulation  (May 2023)}
 \begin{document}
-\title{SWING: Investigating 1550nm Transcranial Photobiomodulation for Non-Invasive Deep-Brain Stimulation}
+\title{SWING: Investigating 1550~nm Transcranial Photobiomodulation for Non-Invasive Deep-Brain Stimulation}
 \author{Cameron R. Author, \IEEEmembership{Member, IEEE}, Matthew T. Author, Bibhus L. Author, 
         Krishna S. Sponsor, \IEEEmembership{Member, IEEE}, John L. Mentor, \IEEEmembership{Member, IEEE}
 \thanks{ }
@@ -31,13 +31,19 @@
 \maketitle
 
 \begin{abstract}
-Direct neural stimulation of the brain can potentially treat many diseases, such as Parkinson’s or Alzheimer’s disease. Such stimulation, including electric or photonic modalities, have long provided a way to treat diseases and conditions. However, invasive stimulation has risks that can lead to worsening the condition or cause infection. The Short-Wave Infrared Neuromodulation Gad- get (SWING) is a proof of concept system for non-invasive optical stimulation via infrared transcranial photobiomodulation (tPBM).
+Direct neural stimulation of the brain can potentially treat many diseases, such as Parkinson's or Alzheimer's disease. Such stimulation, 
+including electric or photonic modalities, have long provided a way to treat diseases and conditions. However, invasive stimulation has risks that 
+can lead to worsening the condition or cause infection. The Short-Wave Infrared Neuromodulation Gadget (SWING) is a proof of concept 
+system for non-invasive optical stimulation via infrared transcranial photobiomodulation (tPBM).
 
-As the literature on 1550nm tPBM was sparse, cubic extrapolation was used to approximate the optical coefficients of biological tissue. The model was then used to predict the expected photon distribution and intensity throughout a model of the human head, simulating tPBM at different wavelengths and positions around the head. Based on the results, tPBM at 1550nm is a viable option for non-invasive deep brain stimulation utilizing infracochlear or intranasal positioning. The results were used to build a prototype laser for further testing and optimization.
+As the literature on 1550~nm tPBM was sparse, cubic extrapolation was used to approximate the optical coefficients of biological tissue. The model was 
+then used to predict the expected photon distribution and intensity throughout a model of the human head, simulating tPBM at different wavelengths and 
+positions around the head. Based on the results, tPBM at 1550~nm is a viable option for non-invasive deep brain stimulation utilizing intracochlear or 
+intranasal positioning. The results were used to build a prototype laser for further testing and optimization.
 \end{abstract}
 
 \begin{IEEEkeywords}
-
+ 
 \end{IEEEkeywords}
 
 \section{Introduction}
@@ -45,9 +51,9 @@ As the literature on 1550nm tPBM was sparse, cubic extrapolation was used to app
 \IEEEPARstart{T}{ranscranial} photobiomodulation (tPBM) offers the potential to directly and non-invasively treat brain diseases, 
 including Parkinson's disease (PD) and major depressive disorder (MDD). Treating PD and MDD requires stimulating the striatum, deep 
 near the center of the brain. Near infrared (NIR) was traditionally used for tPBM, as it does not scatter on skin like visible light. 
-Prior tPBM research focused on wavelengths outside of the “third optical window” (1550 - 1870 nm). To investigate the feasibility of a deep-brain 
-tPBM device, lasers in 810nm, 980nm, 1064nm, and 1550nm were simulated on four locations on the human head. The purpose of this research was to 
-determine the feasibility and optimal operational parameters of a 1550nm laser tPBM device for non-invasive deep brain stimulation (DBS). 
+Prior tPBM research focused on wavelengths, measured in nanometers (nm) outside of the “third optical window” (1550~nm~-~1870~nm). To investigate the feasibility of a deep-brain 
+tPBM device, photons at 810~nm, 980~nm, 1064~nm, and 1550~nm were simulated on four locations on the human head. The purpose of this research was to 
+determine the feasibility and optimal operational parameters of a 1550~nm laser tPBM device for non-invasive deep brain stimulation (DBS). 
 
 Additionally, DBS
 
@@ -55,19 +61,19 @@ Additionally, DBS
 \section{Methods}
 \label{sec:methods}
 SWING's software and simulation consisted of two main components: software for data preprocessing and simulation for modeling and photon distribution. 
-The preprocessing stage involved approximating optical coefficients at 1550nm. Monte Carlo eXtreme (MCX) \cite{b6} is used for simulating the 
-behavior of the laser as it scatters and is absorbed through brain tissue, providing a model of photon dispersion in biological tissue using known or 
+The preprocessing stage involved approximating optical coefficients at 1550~nm. Monte Carlo eXtreme (MCX) \cite{b6} is used for simulating the 
+behavior of the laser as it scatters and is absorbed through the brain tissues, providing a prediction of photon dispersion in biological tissue using the known or 
 approximated optical coefficients.
 
 \subsection{Software Preprocessing}
-In the software preprocessing stage, the model approximated the optical coefficients of layers in the brain where it is unknown for 1550nm sources. 
-Optical coefficient data for the scalp, skull, gray matter (GM), and white matter (WM) are obtained from \cite{b5}. The wavelength ranges for each layer are as follows: 
-scalp (805-2000nm), skull (801-2000nm), gray matter (400-1300nm), and white matter (400-1300nm). The data for scalp and skull cover the wavelength of interest 
-(1550nm), but the data for GM and WM do not. To address this, cubic extrapolation and interpolation methods are used to process the data and extrapolate the 
-unknown layers to 1550nm. 
+The cubic interpolation-extrapolation model was utilized in the software preprocessing stage to estimate the optical coefficients of each biological tissue in the head, 
+specifically for 1550~nm sources, where these coefficients were not previously known. Optical coefficient data for the scalp, skull, gray matter (GM), and white matter (WM) 
+are obtained from \cite{b5}. The wavelength ranges for each layer are as follows: scalp (805~nm~-~2000~nm), skull (801~nm~-~2000~nm), gray matter (400~nm~-~1300~nm), 
+and white matter (400~nm~-~1300~nm). The data for scalp and skull cover the wavelength of interest (1550~nm), but the data for GM and WM do not. To address this, cubic extrapolation 
+and interpolation methods are used to process the data and extrapolate the unknown layers to 1550~nm. 
 
-The cubic interpolation method approximates the optical coefficients for the gray matter (GM) and white matter (WM) layers at 1550nm based on the 
-known data points. Let $x$ represent the wavelength and $y$ represent the absorption coefficient. The cubic interpolation function can be defined as follows:
+The cubic interpolation method approximates the optical coefficients for the GM and WM layers at 1550~nm based on the known data points. Let $x$ represent the wavelength and $y$ 
+represent the optical coefficient. The cubic interpolation function can be defined as follows:
 \begin{equation}
     \label{eq:cubicEq1}
     y(x) = a(x-x_1)^3 + b(x-x_1)^2 + c(x-x_1) + d
@@ -94,9 +100,9 @@ To determine the coefficients $a$, $b$, $c$, and $d$, the model solves the follo
 Solving this system of equations provides the coefficients $a$, $b$, $c$, and $d$ specific to the cubic interpolation for the respective layer.
 
 To apply the cubic interpolation in this study, Python programming language was used to process the known data points and calculate the coefficients. 
-Once the coefficients are obtained, the cubic interpolation function is used to estimate the absorption coefficient at any desired wavelength within the range. 
+Once the coefficients are obtained, the cubic interpolation function is used to estimate the optical coefficients at any desired wavelength within the range. 
 This cubic interpolation provides a complex fit while preventing over-fitting in the initial steps. This allows extrapolation of the gray and white matter 
-absorption coefficients to 1550 nm within the overlapping region (801-1300 nm), providing continuous lines for the unknown layers, as seen in Figure \ref{fig:Known}.
+optical coefficients to 1550~nm using the overlapping region (801~nm~-~1300~nm), providing continuous lines for the unknown layers, as seen in Figure \ref{fig:Known}.
 
 \begin{figure}[!htb]
     \center{\includegraphics[width=\columnwidth]
@@ -104,8 +110,8 @@ absorption coefficients to 1550 nm within the overlapping region (801-1300 nm), 
     \caption{\label{fig:Known} Cubic interpolation of known optical coefficients}
 \end{figure}
 
-To extrapolate the optical coefficients of the gray matter (GM) and white matter (WM) layers to 1550 nm, the overlapping region of the four tissues 
-(801-1300 nm) is examined. Vertical offset values between the unknown layers (GM and WM) and the known layers (scalp and skull) are calculated throughout 
+To extrapolate the optical coefficients of the GM and WM layers to 1550~nm, the overlapping region of the four tissues 
+(801~nm~-~1300~nm) is examined. Vertical offset values between the unknown layers (GM and WM) and the known layers (scalp and skull) are calculated throughout 
 this overlapping region.
 
 Let \( \lambda \) represent the wavelength and \( \mu \) represent the absorption coefficient. The vertical offset values can be calculated as the 
@@ -126,34 +132,32 @@ The average vertical offsets of the gray matter and white matter can be expresse
     \label{eq:AvgWM}
     \begin{aligned}
     \overline{\mu}_{WM, Tissue} = \frac{1}{N} \sum_{i=1}^{N} (\mu_{WM,known}(\lambda_i) - \mu_{Tissue, known}(\lambda_i))
-
     \end{aligned}
 \end{equation}
 where \( N \) represents the number of data points, \( \mu_{\text{GM,known}}(\lambda_i) \) and \( \mu_{\text{WM, known}}(\lambda_i) \) 
-denote the empirical absorption coefficients at the \( i \)-th wavelength, and \( \mu_{Tissue,known}(\lambda_i) \) denotes 
-the empirical absorption coefficients at the \( i \)-th wavelength within the overlapping region. This is illustrated in Figure \ref{fig:Overlap}.
+denote the empirical optical coefficients at the \( i \)-th wavelength, and \( \mu_{Tissue,known}(\lambda_i) \) denotes 
+the empirical optical coefficients at the \( i \)-th wavelength within the overlapping region. This is illustrated in Figure \ref{fig:Overlap}.
 
 \begin{figure}[!htb]
     \center{\includegraphics[width=\columnwidth]
     {Figures/OverlapDemonstration.png}}
     \caption{\label{fig:Overlap} Vertical Offset between different structures used for extrapolation process}
 \end{figure}
-In this study, Python programming language was used to process the absorption coefficient data and calculate the vertical offset values. 
+In this study, Python programming language was used to process the optical coefficient data and calculate the vertical offset values. 
 The following equations were used to perform the extrapolation:
 \begin{equation}
     \label{eq:GMextrapolate}
-    \mu_{\text{GM,extrapolated}}(\lambda) = \mu_{\text{GM,known}}(\lambda) + \text{AvgOffsetGM}
+    \mu_{\text{GM,extrapolated}}(\lambda) = \mu_{\text{GM,known}}(\lambda) + \overline{\mu}_{GM, Tissue}
 \end{equation}
 \begin{equation}
     \label{eq:WMextrapolate}
-    \mu_{\text{WM,extrapolated}}(\lambda) = \mu_{\text{WM,known}}(\lambda) + \text{AvgOffsetWM}
+    \mu_{\text{WM,extrapolated}}(\lambda) = \mu_{\text{WM,known}}(\lambda) + \overline{\mu}_{WM, Tissue}
 \end{equation}
-
 To ensure accuracy and account for variations, this process of calculating vertical offsets and performing extrapolation is repeated for 
-multiple data points within the overlapping region.
+all data points within the overlapping region.
 
-Figure \ref{fig:Extrapolation} visualizes the results of the extrapolation process.  These figures, generated using Python, provide a graphical representation of the 
-extrapolation results and aid in understanding the estimated optical coefficients of the GM and WM layers at the wavelength of interest.
+Figure \ref{fig:Extrapolation} visualizes the results of the interpolation-extrapolation process. These figures, generated using Python, 
+provide a graphical representation of the interpolation-extrapolation results, and aid in understanding the estimated optical coefficients of the GM and WM layers at 1550~nm.
 \begin{figure}[htb]
     \center{\includegraphics[width=\columnwidth]
     {Figures/ExtrapolationGraph.png}}
@@ -161,28 +165,33 @@ extrapolation results and aid in understanding the estimated optical coefficient
 \end{figure}
 
 To determine the reliability of this prediction method, SWING used the Python library scikit-learn\cite{b7} 
-to calculate the $R^2$ value when predicting known data. 
-
-This $R^2$ value was calculated as 0.4980, indicating that 49.80\% of the variability in the unknown coefficients is 
-explained by SWING's prediction model.
-
-
+to calculate the $R^2$ value when predicting known data. This $R^2$ value was calculated as 0.4980, indicating 
+that 49.80\% of the variability in the unknown coefficients is explained by SWING's prediction model. The derivation 
+of the $R^2$ value can be found in Appendix \ref{app:r-squared}.
 
 \subsection{Simulation using MCX}
-MCX, a Monte Carlo simulation tool \cite{b6}, is employed for visualizing the optical intensity and behavior of a laser source within the head and brain tissue. 
+MCX, a Monte Carlo simulation tool \cite{b6}, is used to visualize the optical intensity and behavior of a transcranial laser source as it injects photons into the head and brain tissues. 
 It models the photon dispersion in biological tissue using optical coefficients obtained from experimental data or approximations, as in the case of SWING. 
 MCX creates a mesh model of the human brain using an accumulation of MRI images, incorporating layers such as scalp, skull, Cerebral Spinal Fluid (CSF), GM, WM, 
 and air bubbles. Thickness variations in the layers are specified using thinning or thickening operators. \cite{b9} To create the simulation, the optical coefficients, 
-particularly the absorption and scattering coefficients, are input into the MCX software. The MCX software then compiles a full-head atlas based on MRI images of the human head, separating into the aforementioned regions. \cite {b10} This allows for the simulation of photon absorption and scattering as 
-light passes through the brain tissue, enabling visualization of beam intensity at different points in the brain. Additionally, SWING utilizes the software to 
-investigate various aspects of photon dispersion. This includes studying the impact of different tissue layers on beam intensity and exploring the effects of 
-laser parameters such as wavelength, illumination area size, and the number of incident photons on the phantom. The differences between absorption coefficients at 
-1550 nm compared to other wavelength be observed and noted in the figures, and this model can be utilized for experimental data validation.
+particularly the absorption and scattering coefficients, are input into the MCX software. The MCX software then compiles a full-head atlas based on MRI images of the human head, separating into the 
+aforementioned regions\cite {b10}. This allows for the simulation of photon absorption and scattering as light passes through the brain tissue, enabling visualization of beam intensity 
+at different points in the brain. Additionally, SWING utilizes the software to investigate various aspects of photon dispersion. This includes studying the impact of different tissue layers 
+on beam intensity and exploring the effects of laser parameters such as wavelength, illumination area size, and the number of incident photons on the phantom. The differences between 
+optical coefficients at 1550~nm compared to other wavelength be observed and noted in the figures, and this model can be utilized for experimental data validation.
 
 \subsection{Prototype of Neuromodulation Gadget}
-The neuromodulation gadget refers to any optical light emitting or receiving devices, as well as any lenses or optical apertures involved in the physical setup. As aforementioned, the wavelength requirement for this gadget is 1550 nm. There is a surplus of purchasable lasers at this wavelength, the main considerations which narrow down the selection process are: form factor, laser power, a pulsed or continuous wave (CW) laser, and cost. ThorLabs was the main supplier used for investigating commercial lasers for use in the neuromodulation gadget. The first consideration addressed was the laser’s form factor, initially a fiber-coupled laser was preferred due to its placement convenience. That is, the laser’s optical fiber is flexible enough to use in small areas or at different points on the Optical Phantom. However, fiber-coupled lasers range between \$1,000 and \$7,000. The next laser form factor explored was the Transistor Outline (TO) package which was offered in multiple sizes from 5 mm to 9 mm starting at a more cost-effect. Lastly, the decision between a CW and a pulsed laser was made, for a pulsed laser was deemed suitable for neuron activation.  
-
-With these considerations decided upon, the remaining considerations, cost and laser power, were narrowed down to a small selection of lasers from ThorLabs. The initial design utilizes a 5mW, 1550nm laser housed in a 5.6mm TO package. The chosen laser comes with an aspheric lens attached which provides collimation of the light resulting in more light intensity from the laser. Next to ensure neuron activation, the laser will be pulsed with a laser diode controller using a function generator as its modulator. 
+The neuromodulation gadget refers to any optical light emitting or receiving devices, as well as any lenses or optical apertures involved in the physical setup. 
+As aforementioned, the wavelength requirement for this gadget is 1550~nm. There is a surplus of purchasable lasers at this wavelength, the main considerations 
+which narrow down the selection process are: form factor, laser power, a pulsed or continuous wave (CW) laser, and cost. Thorlabs was the main supplier used for 
+investigating commercial lasers for use in the neuromodulation gadget. The first consideration addressed was the laser's form factor, initially a fiber-coupled laser 
+was investigated due to its placement convenience. That is, the laser's optical fiber is flexible enough to use in small areas or at different points on the Optical Phantom, although to achieve 
+uniform photon injection a collimating lens is necessary, and fiber-coupled lasers range between \$1,000 and \$7,000. The next laser form factor explored was the Transistor Outline (TO) 
+package which was offered in multiple sizes from \SI{5}{\milli\meter} to \SI{9}{\milli\meter} starting at a more cost-effective \$90. Namely, the two lasers under consideration were the 
+Thorlabs FPL1009S (\$1,512.85, \SI{100}{\milli\watt}) and L1550P5DFB (\$90.55, \SI{5}{\milli\watt}). Initially, the design incorporated the L1550P5DFB TO packaged laser for its low cost 
+and convenience as it is an all-in-one laser solution. The L1550P5DFB's form factor was convenient because it was packaged with an aspheric lens for photon collimation. 
+However, upon further consideration the FPL1009S fiber-coupled packaged laser was chosen because it had the higher power capability of \SI{100}{\milli\watt}. This additional power allowed for 
+more diverse testing and less limitation for photon injection. Lastly, the chosen laser diode was able to operate in both CW and pulsed output modes with a function generator as a source modulator.
 
 \begin{figure}[hbt]
     \center{\includegraphics[width=\columnwidth]
@@ -190,10 +199,14 @@ With these considerations decided upon, the remaining considerations, cost and l
     \caption{\label{fig:LaserSetup} Neuromodulation Gadget Lab Setup}
 \end{figure}
 
-Fig. \ref{fig:LaserSetup} shows SWING’s optical table along with the labeled and completed laser setup. SWING’s fiber-coupled laser sits in a 14-pin laser diode mount which is connected to the LDC and TEC via 9-pin D-Sub connectors. Next, the laser’s fiber (white, right) is joined to the Aspheric Lens’s fiber (yellow, left) using an L-Bracket Mating Sleeve. Finally, there are two BNC connections, one from the PD the Oscilloscope (unlabeled, resting on the LDC and TEC), and the other from the Function Generator to the LDC’s “MOD IN” connection. Connecting the PD and Oscilloscope allows the PD’s signal to be measured, and the LDC’s “MOD IN” connection allows TIRE to pulse the LDC’s output current. Another point to note during the build process is the use of optical posts, post holders, and adapter mounts. Optical posts screw into the Integrating Sphere, Adapter Mount (black, mount for the Aspheric Lens), and in some configurations the PD. These optical posts are then secured to the optical table using post holders. 
-
-Additionally, to assist the photo detector's ability to detect higher optical power from the 1550nm laser, optical density (OD) filters were used to filter a percentage of all wavelengths. 
-
+Fig. \ref{fig:LaserSetup} shows SWING's optical table along with the labeled and completed laser setup. SWING's fiber-coupled laser sits in a 14-pin laser diode 
+mount which is connected to the Laser Diode Controller (LDC) and Thermoelectric Temperature Controller (TEC) via 9-pin D-Sub connectors. Next, the laser's fiber 
+(white, right) is joined to the Aspheric Lens's fiber (yellow, left) using an L-Bracket Mating Sleeve. Finally, there are two BNC connections, one from the Photodetector (PD) to 
+the Oscilloscope (unlabeled, resting on the LDC and TEC), and the other from the Function Generator to the LDC's “MOD IN” connection. Connecting the PD and Oscilloscope allowed 
+the PD's signal to be measured, and the LDC's “MOD IN” connection allowed the LDC's output current to be pulsed instead of CW. Another point to note during the build process is the use of optical 
+posts, post holders, and adapter mounts. Optical posts screw into the Integrating Sphere, Adapter Mount (black, mount for the Aspheric Lens), and in some configurations the PD. 
+These optical posts are then secured to the optical table using post holders. The PD was the Newport model 2153 Femtowatt detector with a damage threshold of \SI{10}{\milli\watt}, 
+to increase the PD's ability to detect optical power output from the 1550~nm laser, optical density (OD) filters were used.
 
 \section{Results}
 \subsection{Simulation Results}
@@ -238,7 +251,7 @@ Section~\ref{sec:methods}.
 \end{table}
 
 Figs. \ref{fig:810Fluence},\ref{fig:980Fluence},\ref{fig:1064Fluence}, and \ref{fig:1550Fluence} shows the MCX simulations at the wavelengths 810, 980, 
-1064, and 1550 nm. Each simulation uses the same number of photons, \num{1.0e11}, and duration, \SI{100}{\milli\second}. The variables controlling the 
+1064, and 1550~nm. Each simulation uses the same number of photons, \num{1.0e11}, and duration, \SI{100}{\milli\second}. The variables controlling the 
 coverage of the light are $\mu_{a}$, and $\mu_{s}^{'}$ found in Table \ref{CoefficientTable}. These simulations use the cochlear pathway for providing laser 
 stimulation, the additional positions considered are: the CZ position using the 10-20 system for electroencephalography (EEG), 45-degree position 
 which sits at a 45-degree angle between the cochlear and CZ positions, and the intranasal position. These simulations can be found 
@@ -246,19 +259,19 @@ in Appendices \ref{app:810Simulations}, \ref{app:980Simulations}, \ref{app:1064S
 
 \begin{figure}[hbt!]
     \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_810nm_Cochlear.png}
-    \caption{810 nm Fluence Distribution}
+    \caption{810~nm Fluence Distribution}
     \label{fig:810Fluence}
 \end{figure}
 
 \begin{figure}[hbt!]
     \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_980nm_Cochlear.png}
-    \caption{980 nm Fluence Distribution}
+    \caption{980~nm Fluence Distribution}
     \label{fig:980Fluence}
 \end{figure}
 
 \begin{figure}[hbt!]
     \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_1064nm_Cochlear.png}
-    \caption{1064 nm Fluence Distribution}
+    \caption{1064~nm Fluence Distribution}
     \label{fig:1064Fluence}
 \end{figure}
 
@@ -267,28 +280,29 @@ these wavelengths show promise for generalized photobiomodulation of the entire 
 
 \begin{figure}[hbt!]
     \includegraphics[width=\linewidth]{Figures/Fluence_Distribution_1550nm_Cochlear.png}
-    \caption{1550 nm Fluence Distribution}
+    \caption{1550~nm Fluence Distribution}
     \label{fig:1550Fluence}
 \end{figure}
 
 \begin{figure}[hbt]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Avg1550.png}}
-    \caption{\label{fig:Avg1550} Average Energy and Fluence in the Striatum at 1550nm}
+    \caption{\label{fig:Avg1550} Average Energy and Fluence in the Striatum at 1550~nm}
 \end{figure}
 
 
-The average energy in the striatum at 1550nm resulting from cochlear penetration, as shown in Fig. \ref{fig:Avg1550} is calculated to 
+The average energy in the striatum at 1550~nm resulting from cochlear penetration, as shown in Fig. \ref{fig:Avg1550} is calculated to 
 be \SI{1.801e-4}{\joule}. Achieving this energy level is significant as it surpasses the necessary \SI{2.468e-7}{\joule} to provide stimulation by an order of three. 
 This excess energy could be decreased by lowering the output power of the injection laser in order to decrease the chance of unwanted neuron 
 activation in other regions of the brain.
 
-Table~\ref{CoefficientTable} displays the average energy at the striatum across different wavelengths and different source positions. The positions include the cochlear pathway, the intranasal pathway, a 45-degree pathway, and the CZ pathway.
+Table~\ref{AverageEnergy} displays the average energy at the striatum across different wavelengths and different source positions. The positions include the cochlear 
+pathway, the intranasal pathway, a 45-degree pathway, and the CZ pathway.
 
 \begin{table}[hbt!]
     \centering
-    \caption{Estimated Optical Coefficients}
-    \label{CoefficientTable}
+    \caption{Average Energy at the Striatum}
+    \label{AverageEnergy}
     \setlength{\tabcolsep}{3pt}
     \renewcommand{\arraystretch}{1.5}
     \resizebox{\columnwidth}{!}{%
@@ -309,7 +323,9 @@ Table~\ref{CoefficientTable} displays the average energy at the striatum across 
 \end{table}
 
 
-To determine if there are any statistically significant differences in the average energy across different penetration regions and wavelengths, an analysis of variance (ANOVA) test was conducted, with significance level 0.05. The ANOVA test compares the means of multiple groups to determine if there is any significant variation between them.
+To determine if there are any statistically significant differences in the average energy across different penetration regions and wavelengths, an analysis of 
+variance (ANOVA) test was conducted, with significance level 0.05. The ANOVA test compares the means of multiple groups to determine if there is any significant 
+variation between them.
 
 The results of the ANOVA test are as follows:
 
@@ -318,27 +334,41 @@ The results of the ANOVA test are as follows:
     \item p-value: 0.027
 \end{itemize}
 
-The F-statistic is a measure of the ratio of variance between groups to the variance within groups. In this case, the F-statistic value is 4.375. The p-value is a measure of the probability of obtaining the observed results under the assumption that there is no significant difference between the groups. The p-value obtained from the ANOVA test is 0.027.
+The F-statistic is a measure of the ratio of variance between groups to the variance within groups. In this case, the F-statistic value is 4.375. The p-value is a 
+measure of the probability of obtaining the observed results under the assumption that there is no significant difference between the groups. The p-value obtained 
+from the ANOVA test is 0.027.
 
-Since the p-value is less than the significance level, we reject the null hypothesis and conclude that there is a statistically significant difference in the average energy across different penetration regions and wavelengths. This suggests that the choice of penetration region and wavelength has a significant impact on the average energy at the striatum.
+Since the p-value is less than the significance level, we reject the null hypothesis and conclude that there is a statistically significant difference in the average 
+energy across different penetration regions and wavelengths. This suggests that the choice of penetration region and wavelength has a significant impact on the average 
+energy at the striatum.
 
 \subsection{Neuromodulation Gadget Performance}
 
-To begin using SWING’s laser setup, the first thing to be done prior to turning on any of the instruments is that laser goggles should always be worn, when in doubt, assume the laser is turned on. \cite{b10} Once the goggles are on, turn on the LDC, TEC, Oscilloscope, Function Generator, and PD. To power the 1550 nm laser, rotate the LDC’s knob as far counterclockwise as it will go, then make sure the current limit (
+To begin using SWING's laser setup, the first thing to be done prior to turning on any of the instruments is that laser goggles should always be worn, when in doubt, 
+assume the laser is turned on\cite{b10}. Once the goggles are on, turn on the LDC, TEC, Oscilloscope, Function Generator, and PD. To power the 1550~nm laser, rotate 
+the LDC's knob as far counterclockwise as it will go, then make sure the current limit (
 ILIM 
-) is set to the maximum current for SWING’s 100 mW laser which is 500 mA. Next, move the display to show the load current (
+) is set to the maximum current for SWING's \SI{100}{\milli\watt} laser which is \SI{500}{\milli\ampere}. Next, move the display to show the load current (
 ILD 
-), this is the current supplied to the laser. To supply current to the laser, toggle the “LASER ON” button, and rotate the knob clockwise to increase the current supply. Once current is supplied to the laser, the Function Generator can be adjusted to modulate the LDC to the desired wave shape, frequency, pulse width, or duty cycle. 
+), this is the current supplied to the laser. To supply current to the laser, toggle the “LASER ON” button, and rotate the knob clockwise to increase the 
+current supply. Once current is supplied to the laser, the Function Generator can be adjusted to modulate the LDC to the desired wave shape, frequency, pulse 
+width, or duty cycle. 
 
 Moving to the TEC again rotate the knob as far counterclockwise as it will go. Then, set the display to the desired temperature (
 TSET 
-) and rotate the knob clockwise until the desired temperature is displayed. Change the display to the laser’s temperature (
+) and rotate the knob clockwise until the desired temperature is displayed. Change the display to the laser's temperature (
 TACT 
-) and toggle the TEC’s output by pressing the “TEC ON” button. 
+) and toggle the TEC's output by pressing the “TEC ON” button. 
 
-Finally, set the PD to the “DC Low” option for CW measurements or “AC Low” and “AC High” for Pulsed measurements. Once the PD is powered on, connect the PD to the Oscilloscope with a BNC cable, and ensure that the Oscilloscope channel’s display is enabled. The Oscilloscope is likely the only instrument that would require diagnosis, specifically ensuring that the correct measurements are displayed. For a CW test the maximum of the signal should be measured, whereas with a Pulsed measurement the amplitude of the signal should be measured. 
+Finally, set the PD to the “DC Low” option for CW measurements or “AC Low” and “AC High” for Pulsed measurements. Once the PD is powered on, connect the PD to the 
+Oscilloscope with a BNC cable, and ensure that the Oscilloscope channel's display is enabled. The Oscilloscope is likely the only instrument that would require 
+diagnosis, specifically ensuring that the correct measurements are displayed. For a CW test the maximum of the signal should be measured, whereas with a Pulsed 
+measurement the amplitude of the signal should be measured. 
 
-Throughout the course of testing the neuromodulation gadget, it was found to be beneficial to include Optical Density (OD) filters to the lens of the laser to assist the photo detector's ability to detect a higher optical power from the 1550nm laser. These OD filters will filter a percentage of all wavelengths. Most commonly, the OD4 filter was used which allows 0.01\% of light to pass through. By adding this filter to the photodetector, optical samples can be tested above the 1550 nm laser’s threshold current of 33.1 mA. 
+Throughout the course of testing the neuromodulation gadget, it was found to be beneficial to include Optical Density (OD) filters to the lens of the laser to assist 
+the photo detector's ability to detect a higher optical power from the 1550~nm laser. These OD filters will filter a percentage of all wavelengths. Most commonly, the 
+OD4 filter was used which allows 0.01\% of light to pass through. By adding this filter to the photodetector, optical samples can be tested above the 1550~nm laser’s 
+threshold current of 33.1 mA. 
 
 \subsection{Comparision with Different Modalities}
 SWING's novel method was compared against existing methods of deep neuronal stimulation: deep brain stimulation (DBS), and trans-cranial magnetic stimulation (TMS). 
@@ -348,9 +378,9 @@ SWING's novel method was compared against existing methods of deep neuronal stim
 \section{Discussion}
 \label{sec:next steps}
 In this paper, SWING presented justification for further exploration of using photobiomodulation for non-invasive deep brain stimulation. While 
-shorter wavelengths considered in this paper (810 nm, 980 nm, and 1064 nm) provided deep brain stimulation, they also provided large area stimulation. 
-This result could lead to undesired activation of non-targeted portions of the brain. Through these simulations, SWING presented 1550 nm as a candidate for 
-providing targeted deep brain stimulation. Specifically, SWING identified that 1550 nm light provides a platform for further development in targeted 
+shorter wavelengths considered in this paper (810~nm, 980~nm, and 1064~nm) provided deep brain stimulation, they also provided large area stimulation. 
+This result could lead to undesired activation of non-targeted portions of the brain. Through these simulations, SWING presented 1550~nm as a candidate for 
+providing targeted deep brain stimulation. Specifically, SWING identified that 1550~nm light provides a platform for further development in targeted 
 stimulation of the dorsal striatum, ventral striatum, and the motor cortex for treatment of diseases like Parkinson's, Alzheimer's, Dementia, and many others.
 
 The nature of exploring novel techniques introduces limitations. Consideration of the empirical results is presented in the light of these limitations. One such
@@ -366,19 +396,20 @@ clinical trials, which would include the development of a wearable prototype for
 for simulation would provide confidence in the expected photon fluence. These are the areas that the members of SWING identified as necessary for 
 additional exploration.
 
-Additionally, further post-hoc tests can be conducted to determine which specific pathways of laser stimulation are significantly different from each other. Tukey's honestly significant difference (HSD) test or pairwise t-tests are commonly used for this purpose.
+Additionally, further post-hoc tests can be conducted to determine which specific pathways of laser stimulation are significantly different from each other. Tukey's 
+honestly significant difference (HSD) test or pairwise t-tests are commonly used for this purpose.
 
 
 
 \section{Conclusion}
 \label{sec:conclusion}
-The work presented by SWING represents a novel method for direct stimulation of neurons in the brain using 1550 nm light. This holds significant potential 
+The work presented by SWING represents a novel method for direct stimulation of neurons in the brain using 1550~nm light. This holds significant potential 
 for the treatment of various diseases such as Parkinson's, Alzheimer's, and various mental afflictions. 
 While invasive stimulation methods carry risks of exacerbating the condition or causing infections, SWING explored a non-invasive optical stimulation approach. 
 With funding from the KIND Laboratory's Brain IMPACT project, and as part of the Electrical and Computer Engineering capstone sequence at The Ohio State University, 
-SWING utilized a cubic extrapolation to approximate the optical coefficients of biological tissue up to and past 1550 nm. Through extensive simulations conducted on 
+SWING utilized a cubic extrapolation to approximate the optical coefficients of biological tissue up to and past 1550~nm. Through extensive simulations conducted on 
 the Ohio State Supercomputer using MCX, non-invasive deep brain stimulation demonstrated feasibility at various wavelengths. Notably, 
-the MCX results compel further investigation and testing of the 1550 nm wavelength as the most promising choice for future endeavors in this field. 
+the MCX results compel further investigation and testing of the 1550~nm wavelength as the most promising choice for future endeavors in this field. 
 
 \section*{Acknowledgment}
 
@@ -417,115 +448,115 @@ vol. 2017, p. 6, Feb. 2017. doi:\url{10.1155/2017/6207141}
 
 \appendices
 
-\section{810 nm Fluence Distribution}
+\section{810~nm Fluence Distribution}
 \label{app:810Simulations}
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_810nm_CZ.png}}
-    \caption{\label{fig:810-CZ} 810 nm CZ Position}
+    \caption{\label{fig:810-CZ} 810~nm CZ Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_810nm_45deg.png}}
-    \caption{\label{fig:810-45} 810 nm 45 Degree Position}
+    \caption{\label{fig:810-45} 810~nm 45 Degree Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_810nm_Cochlear.png}}
-    \caption{\label{fig:810-Cochlear} 810 nm Cochlear Position}
+    \caption{\label{fig:810-Cochlear} 810~nm Cochlear Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_810nm_Intranasal.png}}
-    \caption{\label{fig:810-Intra} 810 nm Intranasal Position}
+    \caption{\label{fig:810-Intra} 810~nm Intranasal Position}
 \end{figure}
 \newpage
-\section{980 nm Fluence Distribution}
+\section{980~nm Fluence Distribution}
 \label{app:980Simulations}
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_980nm_CZ.png}}
-    \caption{\label{fig:980-CZ} 980 nm CZ Position}
+    \caption{\label{fig:980-CZ} 980~nm CZ Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_980nm_45deg.png}}
-    \caption{\label{fig:980-45} 980 nm 45 Degree Position}
+    \caption{\label{fig:980-45} 980~nm 45 Degree Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_980nm_Cochlear.png}}
-    \caption{\label{fig:980-Cochlear} 980 nm Cochlear Position}
+    \caption{\label{fig:980-Cochlear} 980~nm Cochlear Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_980nm_Intranasal.png}}
-    \caption{\label{fig:980-Intra} 980 nm Intranasal Position}
+    \caption{\label{fig:980-Intra} 980~nm Intranasal Position}
 \end{figure}
 \newpage
-\section{1064 nm Fluence Distribution}
+\section{1064~nm Fluence Distribution}
 \label{app:1064Simulations}
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_1064nm_CZ.png}}
-    \caption{\label{fig:1064-CZ} 1064 nm CZ Position}
+    \caption{\label{fig:1064-CZ} 1064~nm CZ Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_1064nm_45deg.png}}
-    \caption{\label{fig:1064-45} 1064 nm 45 Degree Position}
+    \caption{\label{fig:1064-45} 1064~nm 45 Degree Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_1064nm_Cochlear.png}}
-    \caption{\label{fig:1064-Cochlear} 1064 nm Cochlear Position}
+    \caption{\label{fig:1064-Cochlear} 1064~nm Cochlear Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_1064nm_Intranasal.png}}
-    \caption{\label{fig:1064-Intra} 1064 nm Intranasal Position}
+    \caption{\label{fig:1064-Intra} 1064~nm Intranasal Position}
 \end{figure}
 \newpage
-\section{1550 nm Fluence Distribution}
+\section{1550~nm Fluence Distribution}
 \label{app:1550Simulations}
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_1550nm_CZ.png}}
-    \caption{\label{fig:1550-CZ} 1550 nm CZ Position}
+    \caption{\label{fig:1550-CZ} 1550~nm CZ Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_1550nm_45deg.png}}
-    \caption{\label{fig:1550-45} 1550 nm 45 Degree Position}
+    \caption{\label{fig:1550-45} 1550~nm 45 Degree Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_1550nm_Cochlear.png}}
-    \caption{\label{fig:1550-Cochlear} 1550 nm Cochlear Position}
+    \caption{\label{fig:1550-Cochlear} 1550~nm Cochlear Position}
 \end{figure}
 
 \begin{figure}[htb!]
     \center{\includegraphics[width=\columnwidth]
     {Figures/Fluence_Distribution_1550nm_Intranasal.png}}
-    \caption{\label{fig:1550-Intra} 1550 nm Intranasal Position}
+    \caption{\label{fig:1550-Intra} 1550~nm Intranasal Position}
 \end{figure}
 \section{Derivations}
 \subsection{Considerations for Effective Photon Wavelength}
 SWING's considerations for an effective wavelength for photobiomodulation are: maximum achievable depth from the photon injection point, energy level at the points of interest 
 (dorsal striatum, ventral striatum, and motor cortex), and minimizing risk of unwanted side effects such as stimulation to other portions 
-of the brain, or damage to tissue. With these considerations in mind, 1550 nm was chosen as the best simulated wavelength. 1550 nm light 
-provides a depth sufficient for stimulating the striatum and motor cortex, and due to its lower energy compared to 810, 980, and 1064 nm has a 
+of the brain, or damage to tissue. With these considerations in mind, 1550~nm was chosen as the best simulated wavelength. 1550~nm light 
+provides a depth sufficient for stimulating the striatum and motor cortex, and due to its lower energy compared to 810, 980, and 1064~nm has a 
 lower risk of causing tissue damage. While the former consideration is visually observable, the latter consideration is demonstrated by 
 Planck's equation for calculating the energy of a photon:
 \begin{equation}
@@ -554,12 +585,14 @@ the wavelength of the photon, e.g. \SI{1550e-9}{\meter}.
     \label{eq:1550Energy}
     E = \frac{\num{6.626e-34}\cdot\num{3.0e8}}{\num{1550e-9}} = \SI{1.282e-19}{\joule}
 \end{equation}
-Eq. \eqref{eq:1550Energy} shows that a 1550 nm photon has an energy of \SI{1.282e-19}{\joule}, which is lower than that of 810 nm, 980 nm, and 1064 nm. However, 
-the energy of one 1550 nm photon is not enough to activate a neuron or a group of neurons. The energy needed to activate a neuron considered by SWING as a 
+Eq. \eqref{eq:1550Energy} shows that a 1550~nm photon has an energy of \SI{1.282e-19}{\joule}, which is lower than that of 810~nm, 980~nm, and 1064~nm. However, 
+the energy of one 1550~nm photon is not enough to activate a neuron or a group of neurons. The energy needed to activate a neuron considered by SWING as a 
 necessary level for neuron stimulation is \SI{2.468e-7}{\joule} \cite{b8}. In order to achieve this energy level deep within the brain SWING simulated from 
 \num{1.0e6} photons to \num{1.0e11} photons. Once SWING attempted to simulate \num{1.0e12} photons or more, the necessary time for one simulation to finish 
 increased from taking 30 minutes for \num{1.0e11} to 4 hours or longer.
-\subsection{Derivation of $R^2$ value}
+
+\subsection{Derivation of R-squared value}
+\label{app:r-squared}
 Scitkit-learn calculated the $R^2$ value, as referenced in \cite{b7}, as follows:
 first, the residual sum of squares, $SS_{res}$,
 \begin{equation}
